@@ -8,12 +8,22 @@ DOCS={'INSTALL.md','USE.md','PLUGINS.md','SECURITY.md','ECOSYSTEM.md','RELEASE-V
 EXCLUDED={'.git','node_modules','dist','.astro','test-results','playwright-report','.lighthouseci','backups','.playwright-cli','__pycache__','release','publication'}
 TEXT={'.md','.py','.mjs','.sh','.ts','.astro','.html','.css','.json','.toml','.glsl','.frag','.vert','.yml','.yaml'}
 
+# Pattern fragments are split so this file never matches itself.
+SECRET=re.compile(rb'(sk-[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|thk' rb'_live_|xox[bp]-[A-Za-z0-9-]{10,}|AKIA(?!IOSFODNN7EXAMPLE)[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIV' rb'ATE KEY)')
+ROOT_ONLY={'release','publication'}
+
 def sensitive_name(rel):
- # Files named like credentials or tokens are never exported, including library/ code and design-token files.
- return any(k in rel.name.lower() for k in ('token','api-key','apikey'))
+ # Credential-looking file names outside the third-party library are never exported. Library files are judged by
+ # content instead (design-token files are legitimate there): see has_secret().
+ return rel.parts[0]!='library' and any(k in rel.name.lower() for k in ('token','api-key','apikey'))
+
+def has_secret(path):
+ try:return bool(SECRET.search(path.read_bytes()))
+ except OSError:return True
 
 def include(rel):
- if any(p in EXCLUDED for p in rel.parts):return False
+ if any(p in EXCLUDED for p in rel.parts[:-1] if rel.parts[0]!='library' or p not in ROOT_ONLY):return False
+ if rel.parts[0] in ROOT_ONLY:return False
  if sensitive_name(rel):return False
  if rel.parts[0]=='library':return True
  if rel.name.startswith('.env') or rel.name in {'auth.json','.credentials.json','service.json'}:return False
@@ -34,6 +44,7 @@ def export(destination):
  for p in sorted(ROOT.rglob('*')):
   rel=p.relative_to(ROOT)
   if not p.is_file() or p.is_symlink() or not include(rel):continue
+  if has_secret(p):print('SKIPPED (secret pattern):',rel);continue
   target=destination/rel;target.parent.mkdir(parents=True,exist_ok=True)
   if p.suffix in TEXT:
    try:text=p.read_bytes().decode('utf-8')

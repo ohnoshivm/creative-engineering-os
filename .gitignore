@@ -15,7 +15,7 @@ reports/raw/
 **/docs/QA/**/video/
 __pycache__/
 
-release/
-publication/
+/release/
+/publication/
 docs/*-SMOKE.json
 docs/CONFIG-PRESERVATION.json

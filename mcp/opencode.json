@@ -1,0 +1,1 @@
+{"mcp":{"chrome-devtools":{"type":"local","command":["npx","--yes","chrome-devtools-mcp@1.11.0","--isolated","--headless","--no-usage-statistics","--no-performance-crux"],"enabled":true,"timeout":20000}}}

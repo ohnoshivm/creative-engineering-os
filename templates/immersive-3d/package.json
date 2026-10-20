@@ -1,0 +1,30 @@
+{
+  "name": "ceos-immersive-3d",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "check": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 4176 --strictPort",
+    "test": "playwright test --grep-invert @visual",
+    "test:visual": "playwright test --grep @visual",
+    "test:update-snapshots": "playwright test --grep @visual --update-snapshots",
+    "lhci": "npx --yes @lhci/cli@0.15.1 autorun",
+    "assets:inspect": "npx --yes @gltf-transform/cli@4.5.1 inspect",
+    "assets:optimize": "npx --yes @gltf-transform/cli@4.5.1 optimize --compress meshopt --texture-compress webp --texture-size 2048",
+    "audit:visual": "node ../../tooling/visual-audit/capture.mjs --url http://localhost:4176 --out docs/QA/latest"
+  },
+  "dependencies": {
+    "gsap": "3.15.0",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.64.1",
+    "@types/three": "0.186.0",
+    "typescript": "5.9.3",
+    "vite": "8.3.4"
+  }
+}

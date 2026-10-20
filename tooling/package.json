@@ -1,0 +1,14 @@
+{
+  "name": "ceos-tooling",
+  "private": true,
+  "type": "module",
+  "description": "Shared browser QA tooling for the Creative Engineering OS (visual audit capture, frame probe).",
+  "scripts": {
+    "audit": "node visual-audit/capture.mjs",
+    "probe": "node perf/frame-probe.mjs"
+  },
+  "dependencies": {
+    "playwright": "1.64.1",
+    "@axe-core/playwright": "4.14.0"
+  }
+}

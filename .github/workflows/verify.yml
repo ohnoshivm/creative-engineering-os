@@ -1,0 +1,33 @@
+name: Verify bundle
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: python3 tests/verify-structure.py
+      - run: python3 tests/installer.test.py
+      - run: node --test tests/mirror.test.mjs
+      - run: python3 tests/repository-hygiene.py
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        directory: [templates/editorial, templates/motion-heavy, templates/immersive-3d, templates/experimental-graphics, demo/signal-study]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+        working-directory: ${{ matrix.directory }}
+      - run: npm run build
+        working-directory: ${{ matrix.directory }}

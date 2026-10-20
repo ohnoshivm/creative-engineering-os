@@ -1,0 +1,23 @@
+# Studio benchmark entry points
+
+Checked **2026-10-20** using live first-party text retrieval. **Visual analysis, animation timing, responsiveness, accessibility and performance are unverified.** Study questions below are proposed investigations, not descriptions of observed visuals. These are commercial studios with publicly viewable portfolios, not OSS asset libraries. All exercises require original content, assets and composition.
+
+| Official entry point | Discipline / use case / difficulty | Strength to investigate | Limitation of this check | Original practical exercise | Verified |
+| --- | --- | --- | --- | --- | --- |
+| [Lusion](https://lusion.co/) | 3D storytelling; brand experience research; advanced | How a central concept coordinates spatial content and user interaction | Text identifies 3D/interactive work; no rendered or frame-time evidence | Describe an original product mechanism using one interactive object and an HTML explanation | 2026-10-20, content |
+| [Buttermax](https://buttermax.net/) | Creative studio benchmark; exploratory interaction research; advanced | Whether unusual interactions remain discoverable and readable | Page title only, zero extracted content; no visual claims | Prototype one unfamiliar input with visible instructions and an equivalent keyboard control | 2026-10-20, shell |
+| [14islands](https://www.14islands.com/) | Product/brand experience; content and interaction research; intermediate–advanced | How project narratives connect business goals and user needs | Text and work index retrieved; no visual or interaction review | Present a real case study with problem, decision and result in an original editorial layout | 2026-10-20, content |
+| [Active Theory](https://activetheory.net/) | Creative digital experiences; immersive interaction research; advanced | How navigation, feedback and exploration coexist | Corrected candidate official domain returns a JavaScript-required shell; visual review pending | Build a spatial index with a fully usable semantic list alternative | 2026-10-20, title/shell |
+| [Resn](https://resn.co.nz/) | Interactive storytelling; exploratory experience research; advanced | How feedback helps users learn an unfamiliar interaction | Only title/image extracted; no observed behaviour | Build a small original interaction with clear start, feedback and exit states | 2026-10-20, title/shell |
+| [makemepulse](https://www.makemepulse.com/) | Immersive campaigns and games; participation research; advanced | How an experience communicates its objective before asking for interaction | Text/case-study index only; no verified runtime behaviour | Create a 20-second original interactive story with visible objective and a static story alternative | 2026-10-20, content |
+| [Locomotive](https://locomotive.ca/en) | Digital brand identity; editorial and navigation research; intermediate–advanced | How typographic identity supports a large body of work | Text retrieved; no measured scroll, layout or motion | Design a portfolio index with project-specific typography rules and native scroll first | 2026-10-20, content |
+| [Dogstudio](https://dogstudio.co/) | Art/design/technology; brand character research; advanced | How a memorable visual idea relates to useful case-study navigation | Text retrieved; showreel and visuals not inspected | Translate a brand characteristic into one original interaction and test content readability around it | 2026-10-20, content |
+| [Immersive Garden](https://immersive-g.com/) | Immersive brand worlds; narrative pacing research; advanced | How atmosphere, pacing and project content support a coherent story | Text/project descriptions retrieved; no materials, lighting or motion analysis | Storyboard three original scenes with content purpose, camera intent and mobile/static alternatives | 2026-10-20, content |
+
+## Domain correction
+
+The requested `https://active-theory.com/` redirected to `https://ww19.active-theory.com/` and exposed parking/privacy content on 2026-10-20. It is **not retained as a trusted studio reference**. `https://activetheory.net/` returned the title “Active Theory · Creative Digital Experiences” and a JavaScript-required shell. Reconfirm identity and inspect that site in a real browser before using it for a project study.
+
+## Required study record
+
+For a real benchmark study, record the exact page URL, date, screenshots at relevant viewport sizes, interaction steps, observed principle, user benefit, project-specific adaptation and an explicit difference from the source. Capture traces before making performance claims. Award status or studio reputation is not a substitute for this evidence.

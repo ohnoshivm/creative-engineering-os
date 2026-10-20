@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab — Experimental graphics template</title>
+  <meta name="description" content="Template D of the Creative Engineering OS: a lab for shader and GPU experiments.">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <main class="lab">
+    <canvas id="gl" aria-hidden="true"></canvas>
+    <section class="panel" aria-labelledby="lab-title">
+      <h1 id="lab-title">Graphics lab</h1>
+      <p id="exp-desc">Pick an experiment. Move the pointer over the canvas.</p>
+      <div class="switch" role="group" aria-label="Experiment">
+        <button type="button" data-exp="raymarch" aria-pressed="false" disabled>Raymarch</button>
+        <button type="button" data-exp="feedback" aria-pressed="false" disabled>Feedback</button>
+      </div>
+      <p class="stats" aria-live="polite"><span id="stat">—</span></p>
+      <p id="fallback" class="fallback" hidden>WebGL2 is unavailable in this browser, so the experiments and their controls are disabled.</p>
+      <noscript><p class="fallback">JavaScript is required to run these graphics experiments. Enable it to explore raymarching and pointer-driven feedback.</p></noscript>
+    </section>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

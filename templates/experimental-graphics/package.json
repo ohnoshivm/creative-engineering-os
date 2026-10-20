@@ -1,0 +1,26 @@
+{
+  "name": "ceos-experimental-graphics",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "check": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 4177 --strictPort",
+    "test": "playwright test --grep-invert @visual",
+    "test:visual": "playwright test --grep @visual",
+    "test:update-snapshots": "playwright test --grep @visual --update-snapshots",
+    "audit:visual": "node ../../tooling/visual-audit/capture.mjs --url http://localhost:4177 --out docs/QA/latest"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.64.1",
+    "@types/three": "0.186.0",
+    "typescript": "5.9.3",
+    "vite": "8.3.4"
+  }
+}

@@ -1,0 +1,3 @@
+[mcp_servers.chrome-devtools]
+command = "npx"
+args = ["--yes", "chrome-devtools-mcp@1.11.0", "--isolated", "--headless", "--no-usage-statistics", "--no-performance-crux"]

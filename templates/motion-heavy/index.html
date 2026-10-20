@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tempo — Motion template</title>
+  <meta name="description" content="Template B of the Creative Engineering OS: scroll choreography, kinetic type and a horizontal sequence, all readable without motion.">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="bar">
+    <a class="wordmark" href="/">Tempo</a>
+    <a class="action" href="#contact">Book a session</a>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <i class="hero-beat beat" style="--bpm: 84" aria-hidden="true"></i>
+      <h1 id="hero-title" class="display" data-split>Every word arrives on the beat.</h1>
+      <p class="lead">A starter for scroll-driven stories: one pinned reading scene, a horizontal run of tempos, and nothing that moves while you read.</p>
+    </section>
+
+    <section class="read" aria-labelledby="read-title">
+      <h2 id="read-title" class="visually-hidden">The idea</h2>
+      <div class="read-pin">
+        <p class="statement" data-readalong>Scroll sets the tempo. Each word lights as you reach it, so the page reads at your pace, not ours. Stop scrolling and the sentence waits for you.</p>
+        <svg class="pulse-line" viewBox="0 0 1000 40" aria-hidden="true"><path d="M0 20 H380 l20 -16 l20 32 l20 -32 l20 16 H1000" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+      </div>
+    </section>
+
+    <section class="tempos" aria-labelledby="tempos-title">
+      <h2 id="tempos-title" class="head">Four tempos</h2>
+      <ol class="tempo-track">
+        <li class="tempo" style="--bpm: 50"><span class="tempo-name">Largo</span><span class="tempo-bpm">50 bpm · broad, slow</span><i class="beat" aria-hidden="true"></i></li>
+        <li class="tempo" style="--bpm: 84"><span class="tempo-name">Andante</span><span class="tempo-bpm">84 bpm · walking pace</span><i class="beat" aria-hidden="true"></i></li>
+        <li class="tempo" style="--bpm: 132"><span class="tempo-name">Allegro</span><span class="tempo-bpm">132 bpm · quick, bright</span><i class="beat" aria-hidden="true"></i></li>
+        <li class="tempo" style="--bpm: 176"><span class="tempo-name">Presto</span><span class="tempo-bpm">176 bpm · very fast</span><i class="beat" aria-hidden="true"></i></li>
+      </ol>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="head">Set your own tempo</h2>
+      <p class="lead">Replace this with the project's real call to action.</p>
+      <a class="button" href="mailto:hello@example.com?subject=Session">Email us</a>
+    </section>
+  </main>
+  <footer class="foot"><p>Template B · Creative Engineering OS</p></footer>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+@layer reset, tokens, base, components, motion;
+
+@layer reset {
+  *, *::before, *::after { box-sizing: border-box; }
+  body, h1, h2, p, ol { margin: 0; }
+  ol { padding: 0; list-style: none; }
+  svg { display: block; }
+}
+
+@layer tokens {
+  :root {
+    --ground: #101a2b;        /* night blue */
+    --ink: #f2efe6;           /* 15.5:1 on ground */
+    --soft: #aab3c2;          /* 8.3:1 on ground  */
+    --accent: #ffcf3f;        /* marigold, the beat; 12:1 on ground */
+    --font: "Avenir Next", Avenir, "Helvetica Neue", system-ui, sans-serif;
+    --step-small: clamp(0.8125rem, 0.78rem + 0.15vw, 0.9375rem);
+    --step-body: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+    --step-lead: clamp(1.25rem, 1.05rem + 0.9vw, 1.75rem);
+    --step-head: clamp(2.25rem, 1.4rem + 3.6vw, 4.5rem);
+    --step-display: clamp(3rem, 1rem + 8.4vw, 10rem);
+    --margin: clamp(16px, 2.6vw, 40px);
+    --section: clamp(96px, 14vw, 220px);
+    --ease-out: cubic-bezier(.16, 1, .3, 1);
+  }
+}
+
+@layer base {
+  html { color-scheme: dark; }
+  body { background: var(--ground); color: var(--ink); font: 500 var(--step-body)/1.5 var(--font); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  h1, h2 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+
+@layer components {
+  .skip { position: absolute; left: var(--margin); top: -100px; background: var(--accent); color: var(--ground); padding: 10px 14px; z-index: 9; }
+  .skip:focus { top: 10px; }
+  .bar { position: fixed; inset: 0 0 auto; z-index: 5; display: flex; justify-content: space-between; align-items: center; padding: 14px var(--margin); }
+  .wordmark { font-weight: 800; text-decoration: none; letter-spacing: -0.01em; min-height: 44px; display: inline-flex; align-items: center; }
+  .action, .button { display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: var(--accent); color: var(--ground); font-weight: 700; text-decoration: none; transition: transform 240ms var(--ease-out); }
+  .action:hover, .button:hover { transform: translateY(-2px); }
+
+  .display { font-size: var(--step-display); line-height: 0.92; letter-spacing: -0.045em; font-weight: 800; max-width: 12ch; }
+  .head { font-size: var(--step-head); line-height: 1; letter-spacing: -0.03em; font-weight: 800; }
+  .lead { font-size: var(--step-lead); line-height: 1.35; color: var(--soft); max-width: 40ch; }
+
+  .hero { min-height: 100svh; display: grid; align-content: end; gap: 28px; padding: 120px var(--margin) var(--section); }
+  .hero { position: relative; }
+  .hero-beat { position: absolute; top: 50%; right: var(--margin); width: clamp(140px, 28vw, 420px); height: clamp(140px, 28vw, 420px); transform-origin: 50% 50%; margin-top: calc(clamp(140px, 28vw, 420px) / -2); }
+  @media (max-width: 760px) { .hero-beat { top: 120px; margin-top: 0; width: 34vw; height: 34vw; } }
+  .read { padding: 0 var(--margin); }
+  .read-pin { min-height: 100svh; display: grid; align-content: center; gap: 48px; }
+  .statement { font-size: clamp(1.75rem, 1rem + 3vw, 3.75rem); line-height: 1.12; letter-spacing: -0.02em; font-weight: 700; max-width: 22ch; }
+  .pulse-line { width: min(100%, 900px); color: var(--accent); }
+
+  .tempos { padding: var(--section) 0; overflow: hidden; }
+  .tempos .head { padding: 0 var(--margin) 48px; }
+  .tempo-track { display: grid; gap: 4px; padding: 0 var(--margin); }
+  .tempo { position: relative; display: grid; gap: 8px; align-content: end; min-height: 60svh; padding: 32px; background: #17243a; }
+  .tempo-name { font-size: clamp(3.5rem, 2rem + 8vw, 11rem); line-height: 0.85; letter-spacing: -0.05em; font-weight: 800; }
+  .tempo-bpm { color: var(--soft); }
+  .beat { position: absolute; top: 32px; right: 32px; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); }
+
+  .contact { padding: 0 var(--margin) var(--section); display: grid; gap: 24px; justify-items: start; }
+  .foot { padding: 32px var(--margin); color: var(--soft); font-size: var(--step-small); border-top: 2px solid #26354f; }
+}
+
+@layer motion {
+  @media (prefers-reduced-motion: no-preference) {
+    /* The beat is the one ambient motion; its period is the tempo itself. */
+    .beat { animation: beat calc(60s / var(--bpm)) cubic-bezier(.2, .7, .2, 1) infinite; }
+    @keyframes beat { 0% { transform: scale(1); opacity: 1; } 60%, 100% { transform: scale(0.55); opacity: 0.5; } }
+
+    /* Horizontal run only when JS has set it up (fails open as a vertical list). */
+    .js-motion .tempo-track { grid-auto-flow: column; grid-auto-columns: min(78vw, 980px); width: max-content; }
+    .js-motion .tempo { min-height: 72svh; }
+    .js-motion [data-readalong] .w { opacity: 0.42; } /* 3.66:1 — unlit words stay legible (large text needs 3:1) */
+    .js-motion [data-split] .w { display: inline-block; opacity: 0; transform: translateY(0.4em); }
+  }
+}

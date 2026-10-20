@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="On margins — Editorial template" description="Template A of the Creative Engineering OS: a type-led, HTML-first editorial page.">
+  <div class="page">
+    <header class="masthead">
+      <a href="/">Margins</a>
+      <nav aria-label="Primary"><a href="#method">Method</a><a href="#contact">Contact</a></nav>
+    </header>
+
+    <main id="main" class="page" style="grid-column: full;">
+      <h1 class="title"><span class="line">The margin is</span><span class="line">where a page breathes.</span></h1>
+      <p class="standfirst">An editorial starter that treats type as the main material: one reading measure, one grid, a few deliberate sizes and a single moment of motion.</p>
+
+      <article class="article">
+        <p>Most pages are built from boxes. This one is built from a measure. The running text holds to about sixty-five characters a line, because that is where the eye travels comfortably from the end of one line to the start of the next. Everything else on the page is placed in relation to that column.</p>
+        <aside class="note" aria-label="Note on measure"><b>Measure.</b> 45–75 characters per line; this template sets 64ch as the maximum and lets the grid decide the rest.</aside>
+        <p>The left side of the grid is not empty. It carries notes, figures and captions that belong to the paragraph beside them, the way a printed book uses its outer margin. On a phone those notes fall into the text flow, directly after the paragraph they explain.</p>
+
+        <h2 id="method">A few sizes, chosen on purpose</h2>
+        <p>There are five type sizes on this page, and each one has a job: display for the title, a lead size for the standfirst and statements, a heading size, the body, and a small size for notes and the footer. Large type is set tight; small type is given a little air.</p>
+        <blockquote class="pull"><p>Hierarchy comes from scale and space before it comes from colour.</p></blockquote>
+        <p>Colour is used sparingly. The page has a paper ground, an ink, a softer ink for secondary text, and one mark colour that appears only on focus and on the single live element.</p>
+
+        <figure class="figure">
+          <svg viewBox="0 0 640 220" role="img" aria-labelledby="fig-title">
+            <title id="fig-title">A twelve-column grid with the text column spanning columns four to ten</title>
+            <g fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="1" width="638" height="218" />
+            </g>
+            <g fill="currentColor" opacity="0.12">
+              <rect x="10" y="10" width="40" height="200"/><rect x="62" y="10" width="40" height="200"/><rect x="114" y="10" width="40" height="200"/>
+              <rect x="530" y="10" width="40" height="200"/><rect x="582" y="10" width="40" height="200"/>
+            </g>
+            <rect x="166" y="10" width="352" height="200" fill="currentColor" opacity="0.85"/>
+          </svg>
+          <figcaption>The reading column spans seven of twelve columns; notes live in the first three.</figcaption>
+        </figure>
+
+        <h2>Motion, once</h2>
+        <p>The title unmasks line by line when the page opens, and nothing else moves on its own. With reduced motion requested, the title is simply there. Without JavaScript, it is there too.</p>
+      </article>
+
+      <footer class="end" id="contact">
+        <span>Template A · Creative Engineering OS</span>
+        <a href="mailto:hello@example.com?subject=Editorial%20project">Email the studio</a>
+      </footer>
+    </main>
+  </div>
+  <script>import '../scripts/title-reveal';</script>
+</Base>

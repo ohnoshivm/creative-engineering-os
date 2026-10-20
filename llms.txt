@@ -1,0 +1,52 @@
+# Creative Engineering OS
+
+> A method and skill library for building original, premium websites with AI agents: 14 core studio skills, 386 bundled reference skills, four tested starters and browser QA tools.
+
+## Start
+
+- [START-HERE.md](START-HERE.md): what this is, the folder map, the 10-step route and first commands.
+- [Router skill](skills/ceos-start-here/SKILL.md): maps each website task to the skill to load next.
+- [Studio workflow](skills/ceos-studio-workflow/SKILL.md): frames a project end to end with quality gates.
+
+## Core skills
+
+- [ceos-3d-asset-pipeline](skills/ceos-3d-asset-pipeline/SKILL.md): Produces web-ready 3D assets — Blender modelling/lookdev hand-off, baking lighting/AO, glTF/GLB export, optimisation with glTF-Transform and meshoptimizer (gltfpack), Draco/meshopt geometry compression, KTX2/Basis texture compression, animation export, and per-asset size/performance budgets.
+- [ceos-art-direction](skills/ceos-art-direction/SKILL.md): Turns an approved concept into a visual system — composition, grid and proportion, typographic hierarchy and type setting, colour roles and relationships, imagery and material direction, rhythm, responsive art direction — written as tokens, then critiques rendered pages against it.
+- [ceos-creative-coding](skills/ceos-creative-coding/SKILL.md): Invents original procedural and generative visuals for the web with Canvas 2D, SVG and WebGL — noise fields, flow fields, particle systems, physics and springs, computational geometry, procedural shapes and organic animation — designed as art-directed systems, not pasted demos.
+- [ceos-creative-direction](skills/ceos-creative-direction/SKILL.md): Researches benchmark digital experiences for principles (not looks), generates genuinely different website concepts, writes the creative narrative, tests originality against imitation, and produces a CONCEPT.md that requires owner approval before large implementation.
+- [ceos-frontend-architecture](skills/ceos-frontend-architecture/SKILL.md): Chooses and structures the frontend for creative websites — Astro vs Vite vs Next.js/React, TypeScript, modern CSS (cascade layers, container queries, custom properties), component boundaries, rendering lifecycle, animation and WebGL integration, state ownership, asset loading and maintainability.
+- [ceos-interaction-architecture](skills/ceos-interaction-architecture/SKILL.md): Designs information architecture, user journeys and the interaction model of a website — navigation and route transitions, pointer, touch, gesture and keyboard behaviour, focus management, semantic structure, state machines for complex UI, and spatial/3D interfaces — with accessibility built in.
+- [ceos-motion-direction](skills/ceos-motion-direction/SKILL.md): Designs and engineers motion as a coordinated system — motion tokens, easing and timing, choreography and sequencing, scroll choreography with GSAP ScrollTrigger, kinetic typography, SVG animation, cinematic and route transitions, gesture- and physics-driven motion, interruption and cleanup, reduced-motion alternatives, and frame scheduling/profiling.
+- [ceos-performance-engineering](skills/ceos-performance-engineering/SKILL.md): Measures and fixes performance of creative, animated and WebGL websites — Core Web Vitals (LCP, INP, CLS), DevTools performance traces, main-thread long tasks, GPU/frame-time stability, memory leaks, bundle and asset weight, loading strategy, adaptive quality and progressive enhancement.
+- [ceos-production-quality](skills/ceos-production-quality/SKILL.md): Production verification for creative websites — Playwright smoke and interaction tests, visual regression snapshots, automated accessibility (axe-core) plus keyboard checks, responsive and cross-browser runs, console/error budgets, build verification, basic security review and deployment/release validation with rollback.
+- [ceos-realtime-3d](skills/ceos-realtime-3d/SKILL.md): Architects and art-directs realtime 3D for websites with Three.js, React Three Fiber or OGL — scene graph, cameras and camera direction, PBR materials and lighting, environment maps, textures and colour management, render targets and post-processing, instancing, GPU memory and disposal, render-loop ownership, DOM/canvas coordination, adaptive quality and mobile.
+- [ceos-shader-engineering](skills/ceos-shader-engineering/SKILL.md): Writes, debugs and optimises GPU shaders for the web — GLSL ES 3.0 and WGSL, Three.js ShaderMaterial/onBeforeCompile and TSL (WebGPU), coordinate spaces, procedural noise and textures, signed distance fields and raymarching, vertex displacement, image and page transitions, GPGPU particles, multi-pass/ping-pong rendering, precision and cross-browser fallbacks.
+- [ceos-start-here](skills/ceos-start-here/SKILL.md): Entry point and router for the Creative Engineering OS.
+- [ceos-studio-workflow](skills/ceos-studio-workflow/SKILL.md): Orchestrates a premium website project end to end — research, concept, art direction, UX, motion spec, architecture, prototype, build, real-browser review, critique, audit, refinement, deploy — with explicit quality gates and agent handoffs.
+- [ceos-visual-audit](skills/ceos-visual-audit/SKILL.md): Independent, evidence-based visual and creative critique of a rendered website in a real browser — originality, typography, composition, spacing, alignment, hierarchy, colour, imagery, motion quality, interaction clarity, consistency, responsive fidelity and design-to-spec accuracy — producing a prioritised defect report where every issue has evidence and a precise fix.
+
+## Library
+
+- [Library catalogue](library/CATALOG.md): the 386 bundled third-party skills by discipline, one line each. Not auto-loaded.
+- [Upstream sources](library/UPSTREAM.md): where the 484 further skills are published. Not redistributed here.
+- [Library notices](library/NOTICES.md): licences for bundled library skills.
+
+## Templates
+
+- [editorial](templates/editorial/README.md): Astro, type-led editorial site.
+- [motion-heavy](templates/motion-heavy/README.md): GSAP and Lenis scroll choreography.
+- [immersive-3d](templates/immersive-3d/README.md): Three.js scene with GSAP.
+- [experimental-graphics](templates/experimental-graphics/README.md): raw GLSL raymarching and feedback.
+
+## Tooling
+
+- [Visual audit capture](tooling/visual-audit/capture.mjs): screenshots, axe accessibility and console capture.
+- [Frame probe](tooling/perf/frame-probe.mjs): frame-time measurement for animated pages.
+- [Creative auditor agent](agents/creative-auditor.md): read-only independent critique of a rendered page.
+
+## Standards
+
+- [Quality standard](standards/STANDARD.md): the non-negotiable quality floor.
+- [QA report template](standards/QA-REPORT.md): how review findings are recorded.
+- [System](SYSTEM.md): how the studio roles, skills, gates and handoffs fit together.
+- [Licences](THIRD_PARTY_NOTICES.md): third-party licence notices.

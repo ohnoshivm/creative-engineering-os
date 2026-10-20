@@ -1,0 +1,11 @@
+{
+  "name": "creative-engineering-os",
+  "version": "1.0.0",
+  "description": "14 core studio skills, a 386-skill on-demand reference library, an independent auditor, four templates and isolated Chrome diagnostics.",
+  "author": {"name": "ohnoshivm"},
+  "homepage": "https://github.com/ohnoshivm/creative-engineering-os",
+  "repository": "https://github.com/ohnoshivm/creative-engineering-os",
+  "license": "MIT",
+  "keywords": ["creative-development", "gsap", "threejs", "visual-qa"],
+  "agents": ["./agents/creative-auditor.md"]
+}

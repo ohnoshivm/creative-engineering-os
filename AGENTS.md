@@ -1,5 +1,7 @@
 # Creative Engineering OS
 
+Agents: read START-HERE.md and load the `ceos-start-here` skill before any other work.
+
 This repo is the reusable local toolkit, not the Pixelard website. Read SYSTEM.md, standards/STANDARD.md and the scoped task artifact. Use the relevant ceos specialist skill. Existing user/project instructions and host tool permissions take precedence.
 
 Keep dependencies pinned and scoped to tooling/templates/demo. Never open or print backups, auth files, provider config values or environment dumps. Client configs are outside the repo; change only owned additions after private backup and semantic preservation checks.

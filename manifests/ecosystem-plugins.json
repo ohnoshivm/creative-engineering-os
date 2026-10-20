@@ -1,0 +1,1746 @@
+{
+  "schema_version": 1,
+  "generated_on": "2026-10-20",
+  "inventory_only": true,
+  "privacy": {
+    "paths": "Home-relative; opaque app identifiers replaced with app-<plugin-id>",
+    "excluded": "Authors, accounts, install timestamps, auth/provider/MCP configuration, environment and credential data",
+    "upstream_urls": "Only independently unauthenticated-public verified GitHub repository roots; no query strings or credentials"
+  },
+  "completeness": {
+    "scope": "Seven named roots; reachable SKILL.md files including symlink aliases and historical plugin-cache versions; excludes trash/backup/data and dependency internals",
+    "roots": {
+      "~/.claude/skills": {
+        "exists": true,
+        "skill_discoveries": 468
+      },
+      "~/.agents/skills": {
+        "exists": true,
+        "skill_discoveries": 138
+      },
+      "~/.codex/skills": {
+        "exists": true,
+        "skill_discoveries": 204
+      },
+      "~/.config/opencode/skills": {
+        "exists": true,
+        "skill_discoveries": 124
+      },
+      "~/.gemini/antigravity/skills": {
+        "exists": true,
+        "skill_discoveries": 13
+      },
+      "~/.claude/plugins/cache": {
+        "exists": true,
+        "skill_discoveries": 169
+      },
+      "~/.codex/plugins/cache": {
+        "exists": true,
+        "skill_discoveries": 186
+      }
+    },
+    "issues": [],
+    "public_repository_checks": 21,
+    "public_repository_verified": 17,
+    "public_repository_unverified_or_unavailable": 4
+  },
+  "summary": {
+    "plugin_packages": 60,
+    "registered_install_records": 17,
+    "distinct_plugin_names": 53,
+    "registered_plugin_names": 14,
+    "cache_package_entries": 56,
+    "registered_package_entries": 10,
+    "cache_activation_unverified_entries": 46,
+    "provenance_counts": {
+      "upstream_install": 25,
+      "provenance_unknown": 35
+    }
+  },
+  "plugins": [
+    {
+      "id": "plugin-a412977e157ec0ed",
+      "name": "21st",
+      "provider": "claude",
+      "marketplace": "21st-dev",
+      "version": "1.0.1",
+      "cache_revision": "1.0.1",
+      "discovery_location": "~/.claude/plugins/cache/21st-dev/21st/1.0.1",
+      "registration": "registered_installed",
+      "registered_records": 1,
+      "skill_discovery_count": 1,
+      "metadata": [
+        {
+          "name": "21st",
+          "version": "1.0.1",
+          "repository": "https://github.com/21st-dev/magic-mcp",
+          "license": "ISC",
+          "path": "~/.claude/plugins/cache/21st-dev/21st/1.0.1/.claude-plugin/plugin.json",
+          "repository_public_verified": true
+        },
+        {
+          "name": "21st",
+          "version": "1.0.1",
+          "repository": "https://github.com/21st-dev/magic-mcp",
+          "license": "ISC",
+          "path": "~/.claude/plugins/cache/21st-dev/21st/1.0.1/.codex-plugin/plugin.json",
+          "repository_public_verified": true
+        },
+        {
+          "name": "21st",
+          "version": "1.0.1",
+          "repository": "https://github.com/21st-dev/magic-mcp",
+          "license": "ISC",
+          "path": "~/.claude/plugins/cache/21st-dev/21st/1.0.1/.cursor-plugin/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": "https://github.com/21st-dev/magic-mcp",
+      "git": null,
+      "registry_commits": [
+        "6b5299e8a83ceffa73d4fc4e148905bb3eeeeb55"
+      ],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-5fa4cea1f59a0607",
+      "name": "facebook-skills",
+      "provider": "claude",
+      "marketplace": "local-desktop-app-uploads",
+      "version": "1.0.27",
+      "registration": "registered_cache_not_in_scanned_roots",
+      "registered_records": 1,
+      "discovery_location": "~/.claude/plugins/installed_plugins.json",
+      "skill_discovery_count": 0,
+      "metadata": [],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-83f53735b821d842",
+      "name": "figma",
+      "provider": "claude",
+      "marketplace": "claude-plugins-official",
+      "version": "2.2.120",
+      "cache_revision": "2.2.120",
+      "discovery_location": "~/.claude/plugins/cache/claude-plugins-official/figma/2.2.120",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 30,
+      "metadata": [
+        {
+          "name": "figma",
+          "version": "2.2.120",
+          "repository": null,
+          "license": null,
+          "path": "~/.claude/plugins/cache/claude-plugins-official/figma/2.2.120/.claude-plugin/plugin.json",
+          "repository_public_verified": false
+        },
+        {
+          "name": "figma",
+          "version": "2.2.120",
+          "repository": "https://github.com/figma/mcp-server-guide",
+          "license": null,
+          "path": "~/.claude/plugins/cache/claude-plugins-official/figma/2.2.120/.cursor-plugin/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": "https://github.com/anthropics/claude-plugins-official",
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-b86d453e0d32707c",
+      "name": "figma",
+      "provider": "claude",
+      "marketplace": "claude-plugins-official",
+      "version": "2.2.157",
+      "cache_revision": "2.2.157",
+      "discovery_location": "~/.claude/plugins/cache/claude-plugins-official/figma/2.2.157",
+      "registration": "registered_installed",
+      "registered_records": 1,
+      "skill_discovery_count": 32,
+      "metadata": [
+        {
+          "name": "figma",
+          "version": "2.2.157",
+          "repository": null,
+          "license": null,
+          "path": "~/.claude/plugins/cache/claude-plugins-official/figma/2.2.157/.claude-plugin/plugin.json",
+          "repository_public_verified": false
+        },
+        {
+          "name": "figma",
+          "version": "2.2.157",
+          "repository": "https://github.com/figma/mcp-server-guide",
+          "license": null,
+          "path": "~/.claude/plugins/cache/claude-plugins-official/figma/2.2.157/.cursor-plugin/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": "https://github.com/anthropics/claude-plugins-official",
+      "git": null,
+      "registry_commits": [
+        "f2789420e7e8b4e2465dfeb1e12e1fc6a31397e5"
+      ],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-700e70a508e4fd9a",
+      "name": "frontend-design",
+      "provider": "claude",
+      "marketplace": "claude-plugins-official",
+      "version": "a0b04d9ddcca",
+      "cache_revision": "a0b04d9ddcca",
+      "discovery_location": "~/.claude/plugins/cache/claude-plugins-official/frontend-design/a0b04d9ddcca",
+      "registration": "registered_installed",
+      "registered_records": 1,
+      "skill_discovery_count": 1,
+      "metadata": [
+        {
+          "name": "frontend-design",
+          "version": null,
+          "repository": null,
+          "license": null,
+          "path": "~/.claude/plugins/cache/claude-plugins-official/frontend-design/a0b04d9ddcca/.claude-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": "https://github.com/anthropics/claude-plugins-official",
+      "git": null,
+      "registry_commits": [
+        "a0b04d9ddccaabe1976645f68b0eda50f74e7022"
+      ],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-c314e26ed2a950ca",
+      "name": "frontend-design",
+      "provider": "claude",
+      "marketplace": "claude-plugins-official",
+      "version": "d4226d062928",
+      "cache_revision": "d4226d062928",
+      "discovery_location": "~/.claude/plugins/cache/claude-plugins-official/frontend-design/d4226d062928",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 1,
+      "metadata": [
+        {
+          "name": "frontend-design",
+          "version": null,
+          "repository": null,
+          "license": null,
+          "path": "~/.claude/plugins/cache/claude-plugins-official/frontend-design/d4226d062928/.claude-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": "https://github.com/anthropics/claude-plugins-official",
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-ff4f32c070807720",
+      "name": "frontend-design",
+      "provider": "claude",
+      "marketplace": "claude-plugins-official",
+      "version": "ea10b213686c",
+      "cache_revision": "ea10b213686c",
+      "discovery_location": "~/.claude/plugins/cache/claude-plugins-official/frontend-design/ea10b213686c",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 1,
+      "metadata": [
+        {
+          "name": "frontend-design",
+          "version": null,
+          "repository": null,
+          "license": null,
+          "path": "~/.claude/plugins/cache/claude-plugins-official/frontend-design/ea10b213686c/.claude-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": "https://github.com/anthropics/claude-plugins-official",
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-b4c818126714556b",
+      "name": "instagram-skills",
+      "provider": "claude",
+      "marketplace": "local-desktop-app-uploads",
+      "version": "1.0.27",
+      "registration": "registered_cache_not_in_scanned_roots",
+      "registered_records": 1,
+      "discovery_location": "~/.claude/plugins/installed_plugins.json",
+      "skill_discovery_count": 0,
+      "metadata": [],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-f5cc8b2efb4053bd",
+      "name": "linkedin-skills",
+      "provider": "claude",
+      "marketplace": "local-desktop-app-uploads",
+      "version": "1.1.19",
+      "registration": "registered_cache_not_in_scanned_roots",
+      "registered_records": 1,
+      "discovery_location": "~/.claude/plugins/installed_plugins.json",
+      "skill_discovery_count": 0,
+      "metadata": [],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-32ebf1728353361c",
+      "name": "nateherk-design",
+      "provider": "claude",
+      "marketplace": "nateherk",
+      "version": "0.3.0",
+      "cache_revision": "0.3.0",
+      "discovery_location": "~/.claude/plugins/cache/nateherk/nateherk-design/0.3.0",
+      "registration": "registered_installed",
+      "registered_records": 1,
+      "skill_discovery_count": 1,
+      "metadata": [
+        {
+          "name": "nateherk-design",
+          "version": "0.3.0",
+          "repository": "https://github.com/nateherkai/scroll-craft",
+          "license": "MIT",
+          "path": "~/.claude/plugins/cache/nateherk/nateherk-design/0.3.0/.claude-plugin/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": "https://github.com/nateherkai/scroll-craft",
+      "git": null,
+      "registry_commits": [
+        "0b816225945e45380397d6a0487efa3c98916858"
+      ],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-6f7c9dd75bc46815",
+      "name": "stitch-build",
+      "provider": "claude",
+      "marketplace": "google-labs-code-stitch-skills",
+      "version": "1.0.0",
+      "cache_revision": "0337446dadde",
+      "discovery_location": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-build/0337446dadde",
+      "registration": "registered_installed",
+      "registered_records": 2,
+      "skill_discovery_count": 5,
+      "metadata": [
+        {
+          "name": "stitch-build",
+          "version": "1.0.0",
+          "repository": null,
+          "license": null,
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-build/0337446dadde/.claude-plugin/plugin.json",
+          "repository_public_verified": false
+        },
+        {
+          "name": "stitch-build",
+          "version": "1.0.0",
+          "repository": "https://github.com/google-labs-code/stitch-skills",
+          "license": "Apache-2.0",
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-build/0337446dadde/.codex-plugin/plugin.json",
+          "repository_public_verified": true
+        },
+        {
+          "name": "stitch-build",
+          "version": "1.0.0",
+          "repository": "https://github.com/google-labs-code/stitch-skills",
+          "license": "Apache-2.0",
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-build/0337446dadde/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": "https://github.com/google-labs-code/stitch-skills",
+      "git": null,
+      "registry_commits": [
+        "0337446dadde6f8c94210444e2aa9d546126480f"
+      ],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-d7c76b7ab5233f31",
+      "name": "stitch-build",
+      "provider": "claude",
+      "marketplace": "google-labs-code-stitch-skills",
+      "version": "1.0.0",
+      "cache_revision": "1.0.0",
+      "discovery_location": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-build/1.0.0",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 5,
+      "metadata": [
+        {
+          "name": "stitch-build",
+          "version": "1.0.0",
+          "repository": null,
+          "license": null,
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-build/1.0.0/.claude-plugin/plugin.json",
+          "repository_public_verified": false
+        },
+        {
+          "name": "stitch-build",
+          "version": "1.0.0",
+          "repository": "https://github.com/google-labs-code/stitch-skills",
+          "license": "Apache-2.0",
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-build/1.0.0/.codex-plugin/plugin.json",
+          "repository_public_verified": true
+        },
+        {
+          "name": "stitch-build",
+          "version": "1.0.0",
+          "repository": "https://github.com/google-labs-code/stitch-skills",
+          "license": "Apache-2.0",
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-build/1.0.0/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": "https://github.com/google-labs-code/stitch-skills",
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-b089ad70dc4ee06f",
+      "name": "stitch-design",
+      "provider": "claude",
+      "marketplace": "google-labs-code-stitch-skills",
+      "version": "1.0.0",
+      "cache_revision": "1.0.0",
+      "discovery_location": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-design/1.0.0",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 6,
+      "metadata": [
+        {
+          "name": "stitch-design",
+          "version": "1.0.0",
+          "repository": null,
+          "license": null,
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-design/1.0.0/.claude-plugin/plugin.json",
+          "repository_public_verified": false
+        },
+        {
+          "name": "stitch-design",
+          "version": "1.0.0",
+          "repository": "https://github.com/google-labs-code/stitch-skills",
+          "license": "Apache-2.0",
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-design/1.0.0/.codex-plugin/plugin.json",
+          "repository_public_verified": true
+        },
+        {
+          "name": "stitch-design",
+          "version": "1.0.0",
+          "repository": "https://github.com/google-labs-code/stitch-skills",
+          "license": "Apache-2.0",
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-design/1.0.0/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": "https://github.com/google-labs-code/stitch-skills",
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-b6defa33acb15bb3",
+      "name": "stitch-design",
+      "provider": "claude",
+      "marketplace": "google-labs-code-stitch-skills",
+      "version": "1.0.0",
+      "cache_revision": "0337446dadde",
+      "discovery_location": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-design/0337446dadde",
+      "registration": "registered_installed",
+      "registered_records": 2,
+      "skill_discovery_count": 6,
+      "metadata": [
+        {
+          "name": "stitch-design",
+          "version": "1.0.0",
+          "repository": null,
+          "license": null,
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-design/0337446dadde/.claude-plugin/plugin.json",
+          "repository_public_verified": false
+        },
+        {
+          "name": "stitch-design",
+          "version": "1.0.0",
+          "repository": "https://github.com/google-labs-code/stitch-skills",
+          "license": "Apache-2.0",
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-design/0337446dadde/.codex-plugin/plugin.json",
+          "repository_public_verified": true
+        },
+        {
+          "name": "stitch-design",
+          "version": "1.0.0",
+          "repository": "https://github.com/google-labs-code/stitch-skills",
+          "license": "Apache-2.0",
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-design/0337446dadde/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": "https://github.com/google-labs-code/stitch-skills",
+      "git": null,
+      "registry_commits": [
+        "0337446dadde6f8c94210444e2aa9d546126480f"
+      ],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-bc209d90e1db2ebf",
+      "name": "stitch-utilities",
+      "provider": "claude",
+      "marketplace": "google-labs-code-stitch-skills",
+      "version": "1.0.0",
+      "cache_revision": "0337446dadde",
+      "discovery_location": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-utilities/0337446dadde",
+      "registration": "registered_installed",
+      "registered_records": 2,
+      "skill_discovery_count": 5,
+      "metadata": [
+        {
+          "name": "stitch-utilities",
+          "version": "1.0.0",
+          "repository": null,
+          "license": null,
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-utilities/0337446dadde/.claude-plugin/plugin.json",
+          "repository_public_verified": false
+        },
+        {
+          "name": "stitch-utilities",
+          "version": "1.0.0",
+          "repository": "https://github.com/google-labs-code/stitch-skills",
+          "license": "Apache-2.0",
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-utilities/0337446dadde/.codex-plugin/plugin.json",
+          "repository_public_verified": true
+        },
+        {
+          "name": "stitch-utilities",
+          "version": "1.0.0",
+          "repository": "https://github.com/google-labs-code/stitch-skills",
+          "license": "Apache-2.0",
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-utilities/0337446dadde/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": "https://github.com/google-labs-code/stitch-skills",
+      "git": null,
+      "registry_commits": [
+        "0337446dadde6f8c94210444e2aa9d546126480f"
+      ],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-beb0c73265c8f7c5",
+      "name": "stitch-utilities",
+      "provider": "claude",
+      "marketplace": "google-labs-code-stitch-skills",
+      "version": "1.0.0",
+      "cache_revision": "1.0.0",
+      "discovery_location": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-utilities/1.0.0",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 5,
+      "metadata": [
+        {
+          "name": "stitch-utilities",
+          "version": "1.0.0",
+          "repository": null,
+          "license": null,
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-utilities/1.0.0/.claude-plugin/plugin.json",
+          "repository_public_verified": false
+        },
+        {
+          "name": "stitch-utilities",
+          "version": "1.0.0",
+          "repository": "https://github.com/google-labs-code/stitch-skills",
+          "license": "Apache-2.0",
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-utilities/1.0.0/.codex-plugin/plugin.json",
+          "repository_public_verified": true
+        },
+        {
+          "name": "stitch-utilities",
+          "version": "1.0.0",
+          "repository": "https://github.com/google-labs-code/stitch-skills",
+          "license": "Apache-2.0",
+          "path": "~/.claude/plugins/cache/google-labs-code-stitch-skills/stitch-utilities/1.0.0/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": "https://github.com/google-labs-code/stitch-skills",
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-6c18452f3c013b39",
+      "name": "ui-ux-pro-max",
+      "provider": "claude",
+      "marketplace": "ui-ux-pro-max-skill",
+      "version": "2.13.0",
+      "cache_revision": "2.13.0",
+      "discovery_location": "~/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.13.0",
+      "registration": "registered_installed",
+      "registered_records": 1,
+      "skill_discovery_count": 13,
+      "metadata": [
+        {
+          "name": "ui-ux-pro-max",
+          "version": "2.13.0",
+          "repository": null,
+          "license": "MIT",
+          "path": "~/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.13.0/.claude-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "git": null,
+      "registry_commits": [
+        "09170eec67eefd46a7ae85de61b40c194020f997"
+      ],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-56f1c5417f9df4bd",
+      "name": "vercel",
+      "provider": "claude",
+      "marketplace": "claude-plugins-official",
+      "version": "0.50.0",
+      "cache_revision": "0.50.0",
+      "discovery_location": "~/.claude/plugins/cache/claude-plugins-official/vercel/0.50.0",
+      "registration": "registered_installed",
+      "registered_records": 1,
+      "skill_discovery_count": 56,
+      "metadata": [
+        {
+          "name": "vercel",
+          "version": "0.50.0",
+          "repository": "https://github.com/vercel/vercel-plugin",
+          "license": "Apache-2.0",
+          "path": "~/.claude/plugins/cache/claude-plugins-official/vercel/0.50.0/.claude-plugin/plugin.json",
+          "repository_public_verified": true
+        },
+        {
+          "name": "vercel",
+          "version": "0.50.0",
+          "repository": "https://github.com/vercel/vercel-plugin",
+          "license": "Apache-2.0",
+          "path": "~/.claude/plugins/cache/claude-plugins-official/vercel/0.50.0/.cursor-plugin/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": "https://github.com/anthropics/claude-plugins-official",
+      "git": null,
+      "registry_commits": [
+        "882e66c2698689324c341b7bb8fd8beb92c27bf6"
+      ],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-202d359a9c1d1018",
+      "name": "watch",
+      "provider": "claude",
+      "marketplace": "claude-video",
+      "version": "0.3.2",
+      "cache_revision": "0.3.2",
+      "discovery_location": "~/.claude/plugins/cache/claude-video/watch/0.3.2",
+      "registration": "registered_installed",
+      "registered_records": 1,
+      "skill_discovery_count": 1,
+      "metadata": [
+        {
+          "name": "watch",
+          "version": "0.3.2",
+          "repository": "https://github.com/bradautomates/claude-video",
+          "license": "MIT",
+          "path": "~/.claude/plugins/cache/claude-video/watch/0.3.2/.claude-plugin/plugin.json",
+          "repository_public_verified": true
+        },
+        {
+          "name": "watch",
+          "version": "0.3.2",
+          "repository": "https://github.com/bradautomates/claude-video",
+          "license": "MIT",
+          "path": "~/.claude/plugins/cache/claude-video/watch/0.3.2/.codex-plugin/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": "https://github.com/bradautomates/claude-video",
+      "git": null,
+      "registry_commits": [
+        "03ceb42f7fa2c4439aca01752118044baabffb8f"
+      ],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-5e882a3824cecff9",
+      "name": "x-skills",
+      "provider": "claude",
+      "marketplace": "local-desktop-app-uploads",
+      "version": "1.0.31",
+      "registration": "registered_cache_not_in_scanned_roots",
+      "registered_records": 1,
+      "discovery_location": "~/.claude/plugins/installed_plugins.json",
+      "skill_discovery_count": 0,
+      "metadata": [],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-ce9708fc0bce40d3",
+      "name": "AdAnalyze",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "1.0.0",
+      "cache_revision": "1.0.0",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/app-<plugin-id>/1.0.0",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 0,
+      "metadata": [
+        {
+          "name": "AdAnalyze",
+          "version": "1.0.0",
+          "repository": null,
+          "license": null,
+          "path": "~/.codex/plugins/cache/openai-curated-remote/app-<plugin-id>/1.0.0/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-0b2c90fb5c7c0608",
+      "name": "Atria",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "2.1.0",
+      "cache_revision": "2.1.0",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/app-<plugin-id>/2.1.0",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 0,
+      "metadata": [
+        {
+          "name": "Atria",
+          "version": "2.1.0",
+          "repository": null,
+          "license": null,
+          "path": "~/.codex/plugins/cache/openai-curated-remote/app-<plugin-id>/2.1.0/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-9bdcadfb9166f04c",
+      "name": "GSC Wizard",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "2.0.0",
+      "cache_revision": "2.0.0",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/app-<plugin-id>/2.0.0",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 0,
+      "metadata": [
+        {
+          "name": "GSC Wizard",
+          "version": "2.0.0",
+          "repository": null,
+          "license": null,
+          "path": "~/.codex/plugins/cache/openai-curated-remote/app-<plugin-id>/2.0.0/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-bff9d1344616284b",
+      "name": "LinkedIn",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "1.0.0",
+      "cache_revision": "1.0.0",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/app-<plugin-id>/1.0.0",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 0,
+      "metadata": [
+        {
+          "name": "LinkedIn",
+          "version": "1.0.0",
+          "repository": null,
+          "license": null,
+          "path": "~/.codex/plugins/cache/openai-curated-remote/app-<plugin-id>/1.0.0/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-c8b640fdf6dc1487",
+      "name": "The Economist - Graphs",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "2.0.0",
+      "cache_revision": "2.0.0",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/app-<plugin-id>/2.0.0",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 0,
+      "metadata": [
+        {
+          "name": "The Economist - Graphs",
+          "version": "2.0.0",
+          "repository": null,
+          "license": null,
+          "path": "~/.codex/plugins/cache/openai-curated-remote/app-<plugin-id>/2.0.0/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-0f10a4d2c5d06036",
+      "name": "browser",
+      "provider": "codex",
+      "marketplace": "openai-bundled",
+      "version": "26.1013.40934",
+      "cache_revision": "26.1013.40934",
+      "discovery_location": "~/.codex/plugins/cache/openai-bundled/browser/26.1013.40934",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 0,
+      "metadata": [
+        {
+          "name": "browser",
+          "version": "26.1013.40934",
+          "repository": null,
+          "license": "Proprietary",
+          "path": "~/.codex/plugins/cache/openai-bundled/browser/26.1013.40934/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-38215d351c0814a7",
+      "name": "canva",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "17.0.1",
+      "cache_revision": "17.0.1",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/canva/17.0.1",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 0,
+      "metadata": [
+        {
+          "name": "canva",
+          "version": "17.0.1",
+          "repository": null,
+          "license": null,
+          "path": "~/.codex/plugins/cache/openai-curated-remote/canva/17.0.1/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-e64978557ff42279",
+      "name": "chatcut-desktop",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "1.10.14",
+      "cache_revision": "1.10.14",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/chatcut-desktop/1.10.14",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 17,
+      "metadata": [
+        {
+          "name": "chatcut-desktop",
+          "version": "1.10.14",
+          "repository": "https://github.com/ChatCut-Inc/agent-plugin",
+          "license": "GPL-3.0-only",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/chatcut-desktop/1.10.14/.codex-plugin/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-35bef2d62e8b0457",
+      "name": "code-review",
+      "provider": "codex",
+      "marketplace": "openai-bundled",
+      "version": "26.1013.40934",
+      "cache_revision": "26.1013.40934",
+      "discovery_location": "~/.codex/plugins/cache/openai-bundled/code-review/26.1013.40934",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 0,
+      "metadata": [
+        {
+          "name": "code-review",
+          "version": "26.1013.40934",
+          "repository": null,
+          "license": "Proprietary",
+          "path": "~/.codex/plugins/cache/openai-bundled/code-review/26.1013.40934/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-9c24fd4b69c2322d",
+      "name": "codex-app-tools",
+      "provider": "codex",
+      "marketplace": "openai-bundled",
+      "version": "0.1.6",
+      "cache_revision": "0.1.6",
+      "discovery_location": "~/.codex/plugins/cache/openai-bundled/codex-app-tools/0.1.6",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 0,
+      "metadata": [
+        {
+          "name": "codex-app-tools",
+          "version": "0.1.6",
+          "repository": null,
+          "license": "Proprietary",
+          "path": "~/.codex/plugins/cache/openai-bundled/codex-app-tools/0.1.6/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-8d74389847df983d",
+      "name": "computer-use",
+      "provider": "codex",
+      "marketplace": "openai-bundled",
+      "version": "1.0.1001501",
+      "cache_revision": "1.0.1001501",
+      "discovery_location": "~/.codex/plugins/cache/openai-bundled/computer-use/1.0.1001501",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 0,
+      "metadata": [
+        {
+          "name": "computer-use",
+          "version": "1.0.1001501",
+          "repository": null,
+          "license": "Proprietary",
+          "path": "~/.codex/plugins/cache/openai-bundled/computer-use/1.0.1001501/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-a7eaa052eb36cbf6",
+      "name": "creative-production",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "0.1.25",
+      "cache_revision": "0.1.25",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/creative-production/0.1.25",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 2,
+      "metadata": [
+        {
+          "name": "creative-production",
+          "version": "0.1.25",
+          "repository": null,
+          "license": "Proprietary",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/creative-production/0.1.25/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-37e106fbe88d601e",
+      "name": "data-analytics",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "1.0.11",
+      "cache_revision": "1.0.11",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/data-analytics/1.0.11",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 20,
+      "metadata": [
+        {
+          "name": "data-analytics",
+          "version": "1.0.11",
+          "repository": null,
+          "license": "Proprietary",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/data-analytics/1.0.11/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-9a3d94fc5e4935d2",
+      "name": "documents",
+      "provider": "codex",
+      "marketplace": "openai-primary-runtime",
+      "version": "26.1015.12040",
+      "cache_revision": "26.1015.12040",
+      "discovery_location": "~/.codex/plugins/cache/openai-primary-runtime/documents/26.1015.12040",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 1,
+      "metadata": [
+        {
+          "name": "documents",
+          "version": "26.1015.12040",
+          "repository": null,
+          "license": "MIT",
+          "path": "~/.codex/plugins/cache/openai-primary-runtime/documents/26.1015.12040/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-ee02ad18f6812fe8",
+      "name": "figma",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "16.0.0",
+      "cache_revision": "16.0.0",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 16,
+      "metadata": [
+        {
+          "name": "figma",
+          "version": "16.0.0",
+          "repository": null,
+          "license": null,
+          "path": "~/.codex/plugins/cache/openai-curated-remote/figma/16.0.0/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-0ea300b43116968f",
+      "name": "frontend-design-premium",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "1.4.0",
+      "cache_revision": "1.4.0",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/frontend-design-premium/1.4.0",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 2,
+      "metadata": [
+        {
+          "name": "frontend-design-premium",
+          "version": "1.4.0",
+          "repository": "https://github.com/TryHand-Co-Ltd/frontend-design-premium",
+          "license": "Apache-2.0",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/frontend-design-premium/1.4.0/.codex-plugin/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-04ba388aa34ab7a7",
+      "name": "github",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "0.1.12-5f7cd798dc99",
+      "cache_revision": "0.1.12-5f7cd798dc99",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/github/0.1.12-5f7cd798dc99",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 0,
+      "metadata": [
+        {
+          "name": "github",
+          "version": "0.1.12-5f7cd798dc99",
+          "repository": "https://github.com/openai/plugins",
+          "license": "MIT",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/github/0.1.12-5f7cd798dc99/.codex-plugin/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-9cdc143a93a537e5",
+      "name": "google-calendar",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "1.2.7",
+      "cache_revision": "1.2.7",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/google-calendar/1.2.7",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 0,
+      "metadata": [
+        {
+          "name": "google-calendar",
+          "version": "1.2.7",
+          "repository": "https://github.com/openai/plugins",
+          "license": "MIT",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/google-calendar/1.2.7/.codex-plugin/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-f3e0cad6f12195a7",
+      "name": "google-drive",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "0.1.22",
+      "cache_revision": "0.1.22",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.22",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 5,
+      "metadata": [
+        {
+          "name": "google-drive",
+          "version": "0.1.22",
+          "repository": "https://github.com/openai/plugins",
+          "license": "MIT",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.22/.codex-plugin/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-4eec9992563b5adc",
+      "name": "heygen",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "4.1.0",
+      "cache_revision": "4.1.0",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/heygen/4.1.0",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 1,
+      "metadata": [
+        {
+          "name": "heygen",
+          "version": "4.1.0",
+          "repository": null,
+          "license": null,
+          "path": "~/.codex/plugins/cache/openai-curated-remote/heygen/4.1.0/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-aa26428679894971",
+      "name": "hyperframes",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "0.1.2",
+      "cache_revision": "0.1.2",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/hyperframes/0.1.2",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 5,
+      "metadata": [
+        {
+          "name": "hyperframes",
+          "version": "0.1.2",
+          "repository": "https://github.com/heygen-com/hyperframes",
+          "license": "Apache-2.0",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/hyperframes/0.1.2/.codex-plugin/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-b5bb35a465bda4b7",
+      "name": "juicylucy-ads",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "0.27.0",
+      "cache_revision": "0.27.0",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/juicylucy-ads/0.27.0",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 23,
+      "metadata": [
+        {
+          "name": "juicylucy-ads",
+          "version": "0.27.0",
+          "repository": null,
+          "license": "Proprietary",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/juicylucy-ads/0.27.0/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-1937a93aa56a9915",
+      "name": "notion",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "3.0.1",
+      "cache_revision": "3.0.1",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/notion/3.0.1",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 5,
+      "metadata": [
+        {
+          "name": "notion",
+          "version": "3.0.1",
+          "repository": null,
+          "license": null,
+          "path": "~/.codex/plugins/cache/openai-curated-remote/notion/3.0.1/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-78905838283099ef",
+      "name": "open-design",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "0.5.2",
+      "cache_revision": "0.5.2",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/open-design/0.5.2",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 1,
+      "metadata": [
+        {
+          "name": "open-design",
+          "version": "0.5.2",
+          "repository": "https://github.com/nexu-io/open-design-agent-plugins",
+          "license": "Apache-2.0",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/open-design/0.5.2/.codex-plugin/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-4964a3228d13c457",
+      "name": "openai-templates",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "0.1.6",
+      "cache_revision": "0.1.6",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.6",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 27,
+      "metadata": [
+        {
+          "name": "openai-templates",
+          "version": "0.1.6",
+          "repository": null,
+          "license": "Proprietary",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.6/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-9c51784355d17640",
+      "name": "pdf",
+      "provider": "codex",
+      "marketplace": "openai-primary-runtime",
+      "version": "26.1015.12040",
+      "cache_revision": "26.1015.12040",
+      "discovery_location": "~/.codex/plugins/cache/openai-primary-runtime/pdf/26.1015.12040",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 1,
+      "metadata": [
+        {
+          "name": "pdf",
+          "version": "26.1015.12040",
+          "repository": null,
+          "license": "MIT",
+          "path": "~/.codex/plugins/cache/openai-primary-runtime/pdf/26.1015.12040/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-e6849826b93f3417",
+      "name": "plugin-management",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "0.1.0",
+      "cache_revision": "0.1.0",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/plugin-management/0.1.0",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 1,
+      "metadata": [
+        {
+          "name": "plugin-management",
+          "version": "0.1.0",
+          "repository": null,
+          "license": "Proprietary",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/plugin-management/0.1.0/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-c62f38aff3eeb8c9",
+      "name": "presentations",
+      "provider": "codex",
+      "marketplace": "openai-primary-runtime",
+      "version": "26.1015.12040",
+      "cache_revision": "26.1015.12040",
+      "discovery_location": "~/.codex/plugins/cache/openai-primary-runtime/presentations/26.1015.12040",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 1,
+      "metadata": [
+        {
+          "name": "presentations",
+          "version": "26.1015.12040",
+          "repository": null,
+          "license": "MIT",
+          "path": "~/.codex/plugins/cache/openai-primary-runtime/presentations/26.1015.12040/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-72b280bad885f6fd",
+      "name": "product-design",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "0.1.56",
+      "cache_revision": "0.1.56",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/product-design/0.1.56",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 10,
+      "metadata": [
+        {
+          "name": "product-design",
+          "version": "0.1.56",
+          "repository": null,
+          "license": "Proprietary",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/product-design/0.1.56/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-3c12e33f7f5a6566",
+      "name": "remotion",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "4.0.534",
+      "cache_revision": "4.0.534",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/remotion/4.0.534",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 12,
+      "metadata": [
+        {
+          "name": "remotion",
+          "version": "4.0.534",
+          "repository": "https://github.com/remotion-dev/remotion",
+          "license": "MIT",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/remotion/4.0.534/.codex-plugin/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-9602e69c8e8699b1",
+      "name": "sales",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "1.1.3",
+      "cache_revision": "1.1.3",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/sales/1.1.3",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 18,
+      "metadata": [
+        {
+          "name": "sales",
+          "version": "1.1.3",
+          "repository": null,
+          "license": "Proprietary",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/sales/1.1.3/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-18fe595279f0329f",
+      "name": "shiro",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "1.0.1",
+      "cache_revision": "1.0.1",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/shiro/1.0.1",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 1,
+      "metadata": [
+        {
+          "name": "shiro",
+          "version": "1.0.1",
+          "repository": null,
+          "license": "Apache-2.0",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/shiro/1.0.1/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-28cdd585d0ddce78",
+      "name": "shopify",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "4.1.2",
+      "cache_revision": "4.1.2",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/shopify/4.1.2",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 2,
+      "metadata": [
+        {
+          "name": "shopify",
+          "version": "4.1.2",
+          "repository": "https://github.com/Shopify/Shopify-AI-Toolkit",
+          "license": "MIT",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/shopify/4.1.2/.codex-plugin/plugin.json",
+          "repository_public_verified": true
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "upstream_install"
+    },
+    {
+      "id": "plugin-130aa466b68870bc",
+      "name": "sites",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "1.1.0",
+      "cache_revision": "1.1.0",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/sites/1.1.0",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 2,
+      "metadata": [
+        {
+          "name": "sites",
+          "version": "1.1.0",
+          "repository": null,
+          "license": "Proprietary",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/sites/1.1.0/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-404a1273bddfd430",
+      "name": "spreadsheets",
+      "provider": "codex",
+      "marketplace": "openai-primary-runtime",
+      "version": "26.1015.12040",
+      "cache_revision": "26.1015.12040",
+      "discovery_location": "~/.codex/plugins/cache/openai-primary-runtime/spreadsheets/26.1015.12040",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 2,
+      "metadata": [
+        {
+          "name": "spreadsheets",
+          "version": "26.1015.12040",
+          "repository": null,
+          "license": "MIT",
+          "path": "~/.codex/plugins/cache/openai-primary-runtime/spreadsheets/26.1015.12040/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-588a942ed6052be5",
+      "name": "template-creator",
+      "provider": "codex",
+      "marketplace": "openai-primary-runtime",
+      "version": "26.1015.12040",
+      "cache_revision": "26.1015.12040",
+      "discovery_location": "~/.codex/plugins/cache/openai-primary-runtime/template-creator/26.1015.12040",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 1,
+      "metadata": [
+        {
+          "name": "template-creator",
+          "version": "26.1015.12040",
+          "repository": null,
+          "license": "Proprietary",
+          "path": "~/.codex/plugins/cache/openai-primary-runtime/template-creator/26.1015.12040/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-1bb7faeba48bda17",
+      "name": "unified-computer-use",
+      "provider": "codex",
+      "marketplace": "openai-bundled",
+      "version": "26.1013.40934",
+      "cache_revision": "26.1013.40934",
+      "discovery_location": "~/.codex/plugins/cache/openai-bundled/unified-computer-use/26.1013.40934",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 0,
+      "metadata": [
+        {
+          "name": "unified-computer-use",
+          "version": "26.1013.40934",
+          "repository": null,
+          "license": null,
+          "path": "~/.codex/plugins/cache/openai-bundled/unified-computer-use/26.1013.40934/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-bea11670d06217f1",
+      "name": "visualize",
+      "provider": "codex",
+      "marketplace": "openai-bundled",
+      "version": "1.0.50",
+      "cache_revision": "1.0.50",
+      "discovery_location": "~/.codex/plugins/cache/openai-bundled/visualize/1.0.50",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 1,
+      "metadata": [
+        {
+          "name": "visualize",
+          "version": "1.0.50",
+          "repository": null,
+          "license": "Proprietary",
+          "path": "~/.codex/plugins/cache/openai-bundled/visualize/1.0.50/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-d1545cb59641cca3",
+      "name": "wix",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "11.0.0",
+      "cache_revision": "11.0.0",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/wix/11.0.0",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 6,
+      "metadata": [
+        {
+          "name": "wix",
+          "version": "11.0.0",
+          "repository": null,
+          "license": null,
+          "path": "~/.codex/plugins/cache/openai-curated-remote/wix/11.0.0/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    },
+    {
+      "id": "plugin-2a3388acbac82bae",
+      "name": "work-pets",
+      "provider": "codex",
+      "marketplace": "openai-curated-remote",
+      "version": "0.1.6",
+      "cache_revision": "0.1.6",
+      "discovery_location": "~/.codex/plugins/cache/openai-curated-remote/work-pets/0.1.6",
+      "registration": "cache_present_activation_unverified",
+      "registered_records": 0,
+      "skill_discovery_count": 3,
+      "metadata": [
+        {
+          "name": "work-pets",
+          "version": "0.1.6",
+          "repository": null,
+          "license": "Proprietary",
+          "path": "~/.codex/plugins/cache/openai-curated-remote/work-pets/0.1.6/.codex-plugin/plugin.json",
+          "repository_public_verified": false
+        }
+      ],
+      "marketplace_repository": null,
+      "git": null,
+      "registry_commits": [],
+      "provenance_status": "provenance_unknown"
+    }
+  ]
+}

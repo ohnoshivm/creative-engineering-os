@@ -22,6 +22,6 @@ class Scripts(unittest.TestCase):
    target=pathlib.Path(t)/'skills';target.mkdir();foreign=target/'ceos-art-direction';foreign.symlink_to('/nonexistent/foreign');real=target/'ceos-creative-direction';real.mkdir()
    for _ in range(2):
     r=self.run_script('link-skills.sh',target);self.assertEqual(r.returncode,0,r.stderr)
-   self.assertEqual(str(foreign.readlink()),'/nonexistent/foreign');self.assertFalse(real.is_symlink());self.assertEqual(len(list(target.iterdir())),13)
+   self.assertEqual(str(foreign.readlink()),'/nonexistent/foreign');self.assertFalse(real.is_symlink());self.assertEqual(len(list(target.iterdir())),14)
    self.assertEqual((target/'ceos-realtime-3d').resolve(),ROOT/'skills/ceos-realtime-3d')
 if __name__=='__main__':unittest.main()

@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "snapshotDate": "2026-10-20",
+  "policy": "Names/transport/environment variable names only. No original arguments, URLs, headers, environment values, auth or routing exported. Only the reviewed chrome-devtools launch definition is bundled.",
+  "clients": {
+    "claude": [
+      {
+        "name": "chatcut_desktop",
+        "transport": "stdio",
+        "commandName": "chatcut-mcp",
+        "environmentKeys": [
+          "CHATCUT_MCP_CLIENT"
+        ],
+        "setup": "app-managed",
+        "launchDefinitionIncluded": false
+      },
+      {
+        "name": "rea",
+        "transport": "stdio",
+        "commandName": "npx",
+        "environmentKeys": [
+          "HOPPER_LAUNCHER_PATH"
+        ],
+        "setup": "machine-local",
+        "launchDefinitionIncluded": false
+      },
+      {
+        "name": "stitch",
+        "transport": "http",
+        "commandName": null,
+        "environmentKeys": [],
+        "setup": "credentials-required",
+        "launchDefinitionIncluded": false
+      },
+      {
+        "name": "chrome-devtools",
+        "transport": "stdio",
+        "commandName": "npx",
+        "environmentKeys": [],
+        "setup": "portable",
+        "launchDefinitionIncluded": true
+      }
+    ],
+    "codex": [
+      {
+        "name": "node_repl",
+        "transport": "stdio",
+        "commandName": "node_repl",
+        "environmentKeys": [
+          "BROWSER_USE_AVAILABLE_BACKENDS",
+          "BROWSER_USE_CODEX_APP_BUILD_FLAVOR",
+          "BROWSER_USE_CODEX_APP_VERSION",
+          "BROWSER_USE_TINYSKY_ENABLED",
+          "CODEX_CLI_PATH",
+          "CODEX_HOME",
+          "NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER",
+          "NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME",
+          "NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE",
+          "NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS",
+          "NODE_REPL_NODE_MODULE_DIRS",
+          "NODE_REPL_NODE_PATH",
+          "NODE_REPL_TRUSTED_CODE_PATHS",
+          "NODE_REPL_TRUSTED_SERVICES",
+          "SKY_CUA_SERVICE_PATH"
+        ],
+        "setup": "app-managed",
+        "launchDefinitionIncluded": false
+      },
+      {
+        "name": "rea",
+        "transport": "stdio",
+        "commandName": "npx",
+        "environmentKeys": [
+          "HOPPER_LAUNCHER_PATH"
+        ],
+        "setup": "machine-local",
+        "launchDefinitionIncluded": false
+      },
+      {
+        "name": "gsc",
+        "transport": "stdio",
+        "commandName": "node",
+        "environmentKeys": [],
+        "setup": "machine-local",
+        "launchDefinitionIncluded": false
+      },
+      {
+        "name": "dataforseo",
+        "transport": "remote",
+        "commandName": null,
+        "environmentKeys": [],
+        "setup": "credentials-required",
+        "launchDefinitionIncluded": false
+      },
+      {
+        "name": "google-analytics",
+        "transport": "stdio",
+        "commandName": "analytics-mcp",
+        "environmentKeys": [],
+        "setup": "credentials-required",
+        "launchDefinitionIncluded": false
+      },
+      {
+        "name": "chrome-devtools",
+        "transport": "stdio",
+        "commandName": "npx",
+        "environmentKeys": [],
+        "setup": "portable",
+        "launchDefinitionIncluded": true
+      }
+    ],
+    "opencode": [
+      {
+        "name": "rea",
+        "transport": "local",
+        "commandName": "rea",
+        "environmentKeys": [
+          "HOPPER_LAUNCHER_PATH"
+        ],
+        "setup": "machine-local",
+        "launchDefinitionIncluded": false
+      },
+      {
+        "name": "whop",
+        "transport": "remote",
+        "commandName": null,
+        "environmentKeys": [],
+        "setup": "credentials-required",
+        "launchDefinitionIncluded": false
+      },
+      {
+        "name": "shopify-dev",
+        "transport": "local",
+        "commandName": "node",
+        "environmentKeys": [],
+        "setup": "machine-local",
+        "launchDefinitionIncluded": false
+      },
+      {
+        "name": "chrome-devtools",
+        "transport": "local",
+        "commandName": "npx",
+        "environmentKeys": [],
+        "setup": "portable",
+        "launchDefinitionIncluded": true
+      }
+    ],
+    "antigravity": [
+      {
+        "name": "chrome-devtools",
+        "transport": "stdio",
+        "commandName": "npx",
+        "environmentKeys": [],
+        "setup": "portable",
+        "launchDefinitionIncluded": true
+      }
+    ]
+  }
+}

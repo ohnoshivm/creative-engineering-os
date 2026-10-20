@@ -1,0 +1,15 @@
+{
+  "name": "creative-engineering-os",
+  "owner": {
+    "name": "ohnoshivm"
+  },
+  "plugins": [
+    {
+      "name": "creative-engineering-os",
+      "source": "./",
+      "description": "A portable creative engineering studio: 14 core skills, a 386-skill on-demand library, four templates, QA tooling and Chrome diagnostics.",
+      "version": "1.0.0"
+    }
+  ],
+  "description": "Creative studio skills, project starters, diagnostics and a portable setup workflow."
+}

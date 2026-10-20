@@ -1,5 +1,9 @@
 # Creative Engineering OS
 
+![Creative Engineering OS](docs/assets/banner.svg)
+
+Built by **ohnoshivm** — with **3rd Wrong** (design) × **AgentKindLabs** (AI & agents).
+
 A portable creative development studio for AI coding agents: **14 core studio skills, a 386-skill on-demand library, four production-tested starters, graphics and motion examples, browser QA tooling, a Claude Code plugin and a complete ecosystem catalogue.**
 
 It connects research, art direction, UX, typography, GSAP motion, Three.js/GLSL, asset production, independent visual criticism and release verification. Choose a concept and the smallest stack that serves it; this is a toolkit, not a promise that every generated site is world-class.
@@ -74,5 +78,15 @@ npm run test:visual
 The original local system passed five production builds, 92 browser smoke checks and 20 visual comparisons. New installer/export/plugin tests and fresh-clone validation are recorded in [release verification](docs/RELEASE-VALIDATION.md). Local measurements are not physical-device, Safari or field-CWV certification.
 
 [Install](docs/INSTALL.md) · [Use](docs/USE.md) · [Plugin](docs/PLUGINS.md) · [System](SYSTEM.md) · [Skills](skills/ceos-studio-workflow/SKILL.md) · [Team](docs/AGENT-TEAM.md) · [Reference library](references/README.md)
+
+## Made by
+
+- **ohnoshivm** (Shivam) is the author and maintainer of Creative Engineering OS. [shivam.lol](https://shivam.lol) · [GitHub](https://github.com/ohnoshivm)
+- **3rd Wrong** is a design company, and contributed a large part of the toolkit, mainly the design and art-direction side. [Instagram](https://instagram.com/3rdwrong)
+- **AgentKindLabs** is an AI and agents company, and contributed a large part of the toolkit, mainly the agent, skills and automation side. [Instagram](https://instagram.com/agentkindlabs)
+
+Follow: [X @ohnoshivm](https://x.com/ohnoshivm) · [Instagram @ohnoshivm](https://instagram.com/ohnoshivm) · [@3rdwrong](https://instagram.com/3rdwrong) · [@agentkindlabs](https://instagram.com/agentkindlabs) · [shivam.lol](https://shivam.lol)
+
+Credits and third-party notes: [CREDITS.md](CREDITS.md).
 
 MIT for original bundle content; upstream software keeps its own licenses. Download a versioned archive and checksum from [Releases](https://github.com/ohnoshivm/creative-engineering-os/releases).

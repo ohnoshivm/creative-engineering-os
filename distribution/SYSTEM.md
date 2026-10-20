@@ -25,3 +25,5 @@ The Claude plugin loads the 14 core studio skills, auditor and isolated Chrome d
 The manifests distinguish bundled original content from upstream-install and unknown provenance. They include historical plugin caches as separate observations, not claims that every cached plugin is enabled. Source/license/public availability can change. See docs/ECOSYSTEM.md and THIRD_PARTY_NOTICES.md.
 
 Public releases are generated through an allowlist into a clean publication checkout. Personal installation reports/raw captures/config snapshots and original private commit history are omitted. The source package includes original procedural demo art and reviewed visual-test baselines, not reference-site assets.
+
+Built by **ohnoshivm** — with **3rd Wrong** (design) × **AgentKindLabs** (AI & agents).

@@ -50,3 +50,9 @@
 - [QA report template](standards/QA-REPORT.md): how review findings are recorded.
 - [System](SYSTEM.md): how the studio roles, skills, gates and handoffs fit together.
 - [Licences](THIRD_PARTY_NOTICES.md): third-party licence notices.
+
+## Credits
+
+- [ohnoshivm](https://shivam.lol): author and maintainer. [X](https://x.com/ohnoshivm), [Instagram](https://instagram.com/ohnoshivm), [GitHub](https://github.com/ohnoshivm)
+- [3rd Wrong](https://instagram.com/3rdwrong): design company; contributed a large part of the toolkit, mainly the design and art-direction side.
+- [AgentKindLabs](https://instagram.com/agentkindlabs): AI and agents company; contributed a large part of the toolkit, mainly the agent, skills and automation side.

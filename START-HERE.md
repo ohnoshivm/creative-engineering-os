@@ -91,3 +91,5 @@ node --test tests/mirror.test.mjs
 - `llms.txt`: a machine-readable index of this toolkit.
 - `library/CATALOG.md`: every library skill by discipline. `library/UPSTREAM.md`: 484 more skills listed but not redistributed.
 - `THIRD_PARTY_NOTICES.md` and `library/NOTICES.md`: licences for bundled third-party material.
+
+Built by **ohnoshivm** — with **3rd Wrong** (design) × **AgentKindLabs** (AI & agents). See [CREDITS.md](CREDITS.md).

@@ -2,7 +2,7 @@
 """Export a public source bundle by allowlist into a new directory, without private history or machine reports."""
 import argparse,pathlib,re,shutil,json
 ROOT=pathlib.Path(__file__).resolve().parents[1]
-FILES={'.gitignore','AGENTS.md','LICENSE','THIRD_PARTY_NOTICES.md','Brewfile','.mcp.json','START-HERE.md','llms.txt'}
+FILES={'.gitignore','AGENTS.md','LICENSE','THIRD_PARTY_NOTICES.md','Brewfile','.mcp.json','START-HERE.md','llms.txt','CREDITS.md'}
 TREES={'.github','.claude-plugin','skills','standards','references','mcp','manifests','scripts','tooling','templates','demo','tests','library'}
 DOCS={'INSTALL.md','USE.md','PLUGINS.md','SECURITY.md','ECOSYSTEM.md','RELEASE-VALIDATION.md','OPTIONAL-TOOLING.md'}
 EXCLUDED={'.git','node_modules','dist','.astro','test-results','playwright-report','.lighthouseci','backups','.playwright-cli','__pycache__','release','publication'}
@@ -65,8 +65,11 @@ def export(destination):
  if not asset.exists():asset=ROOT/'docs/assets/signal-study.png'
  if asset.exists():
   out=destination/'docs/assets/signal-study.png';out.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(asset,out)
+ for name in ('banner.svg','social-preview.png'):
+  src=ROOT/'docs/assets'/name
+  if src.exists():shutil.copy2(src,destination/'docs/assets'/name)
  # Keep generated local verification outputs and release artifacts out of future commits.
- with (destination/'.gitignore').open('a') as out:out.write('\nrelease/\npublication/\ndocs/*-SMOKE.json\ndocs/CONFIG-PRESERVATION.json\n')
+ with (destination/'.gitignore').open('a') as out:out.write('\n/release/\n/publication/\ndocs/*-SMOKE.json\ndocs/CONFIG-PRESERVATION.json\n')
  print('Exported public bundle to',destination)
 
 if __name__=='__main__':

@@ -3,6 +3,8 @@ name: creative-auditor
 tools: Read, Glob, Grep, WebFetch, WebSearch
 disallowedTools: Write, Edit, Bash, NotebookEdit
 description: Independent creative and visual auditor. Reviews a rendered website in a real browser against its approved concept, art direction and the Creative Engineering OS standard, and returns a prioritised, evidence-backed defect report. Read-only — never edits the work it audits. Use before any page is declared done, after major visual changes, or when someone needs an unbiased critique.
+model: opus
+effort: medium
 ---
 
 # Independent Creative Auditor

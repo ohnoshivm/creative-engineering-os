@@ -1,6 +1,7 @@
 {
   "name": "ceos-immersive-3d",
   "private": true,
+  "author": "ohnoshivm (https://shivam.lol)",
   "version": "0.1.0",
   "type": "module",
   "scripts": {

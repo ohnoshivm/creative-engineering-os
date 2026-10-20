@@ -1,7 +1,8 @@
 {
   "name": "creative-engineering-os",
   "owner": {
-    "name": "ohnoshivm"
+    "name": "ohnoshivm",
+    "url": "https://shivam.lol"
   },
   "plugins": [
     {

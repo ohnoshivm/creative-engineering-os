@@ -66,7 +66,7 @@ def export(destination):
  if asset.exists():
   out=destination/'docs/assets/signal-study.png';out.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(asset,out)
  # Keep generated local verification outputs and release artifacts out of future commits.
- with (destination/'.gitignore').open('a') as out:out.write('\nrelease/\npublication/\ndocs/*-SMOKE.json\ndocs/CONFIG-PRESERVATION.json\n')
+ with (destination/'.gitignore').open('a') as out:out.write('\n/release/\n/publication/\ndocs/*-SMOKE.json\ndocs/CONFIG-PRESERVATION.json\n')
  print('Exported public bundle to',destination)
 
 if __name__=='__main__':

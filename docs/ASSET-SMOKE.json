@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-20T12:55:16Z",
+  "steps": [
+    {
+      "tool": "blender",
+      "operation": "export",
+      "exitCode": 0
+    },
+    {
+      "tool": "npx",
+      "operation": "inspect",
+      "exitCode": 0
+    },
+    {
+      "tool": "npx",
+      "operation": "optimize",
+      "exitCode": 0
+    },
+    {
+      "tool": "npx",
+      "operation": "inspect",
+      "exitCode": 0
+    }
+  ],
+  "sourceBytes": 1936,
+  "meshoptBytes": 1948,
+  "extensionsUsed": [
+    "EXT_meshopt_compression",
+    "KHR_mesh_quantization"
+  ]
+}

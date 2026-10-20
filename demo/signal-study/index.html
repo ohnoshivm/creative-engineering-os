@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signal study — Creative Engineering OS</title>
+  <meta name="description" content="An interactive study of interference, light and movement. Move across the surface, change its tension, or read at your own pace.">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><a class="wordmark" href="#main">Creative Engineering OS</a><span>A small interaction study</span></header>
+<main id="main" tabindex="-1">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy"><h1 id="hero-title">Signal study.</h1><p>A surface shaped by interference.<br>Give it a little tension.</p></div>
+  <div class="instrument">
+    <div class="stage" data-stage role="img" aria-label="A blue interference surface; adjust tension using the control below">
+      <svg class="poster" viewBox="0 0 1000 500" aria-hidden="true"><defs><pattern id="lines" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 8 Q4 0 8 8 T16 8" fill="none" stroke="#234bda" stroke-width="2"/></pattern></defs><path d="M80 280 Q280 20 500 210 T920 220 L880 400 Q680 250 500 340 T120 400Z" fill="url(#lines)"/><path d="M80 280 Q280 20 500 210 T920 220" fill="none" stroke="#234bda" stroke-width="4"/></svg>
+    </div>
+    <noscript><p class="static-note">A still illustration is shown because JavaScript is off.</p><style>.controls .tension,.controls button,.controls #instructions{display:none}</style></noscript><div class="controls"><p id="instructions">Move across the surface.<br>Scroll to shift its phase.</p><div class="tension"><label for="tension">Surface tension <output id="tension-value" for="tension">40%</output></label><input id="tension" type="range" min="0" max="100" value="40"></div><button id="pause" type="button" aria-pressed="false">Pause motion</button></div>
+  </div>
+  <a class="read-link" href="#reading">Read the study <span aria-hidden="true">↓</span></a>
+</section>
+<section id="reading" class="reading" aria-labelledby="reading-title"><h2 id="reading-title">One surface.<br>Several ways in.</h2><div><p>Two crossing waves create this sheet. Their peaks add together, their troughs fall away. Move your pointer to bend the field; use surface tension to make the interference more pronounced.</p><p>As you scroll, the waves slip out of phase. There is no fixed path and no right end state. The movement is yours to set.</p><p class="note">Prefer a quiet view? Pause the motion. Your system’s reduced-motion preference also keeps the surface still. The tension control works with the arrow keys.</p></div></section>
+</main>
+<footer class="foot"><span>Creative Engineering OS</span><span>Independent capability demonstration · 2026</span></footer>
+<script type="module" src="/src/main.ts"></script>
+</body></html>

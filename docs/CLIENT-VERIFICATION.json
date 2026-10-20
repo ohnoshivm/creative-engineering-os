@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-20",
+  "codex": {
+    "ceosSkillsInLiveInjectedCatalog": 13,
+    "nativeSpecialistTasksExecuted": 3,
+    "chromeDevtoolsConfigParsed": true,
+    "newMCPToolsInjectedIntoThisSession": false
+  },
+  "claude": {
+    "chromeDevtoolsNativeGet": "Connected",
+    "auditorFilePresent": true,
+    "auditorModelInvocation": "not verified",
+    "secondaryAccount": "unchanged"
+  },
+  "opencode": {
+    "ceosSkillsDiscovered": 13,
+    "auditorResolvedDenyPermissions": [
+      "edit",
+      "bash",
+      "task"
+    ],
+    "chromeDevtoolsNativeList": "connected",
+    "isolation": "throwaway XDG_DATA_HOME; user config unchanged",
+    "defaultDatabase": "prior schema mismatch preserved"
+  },
+  "antigravity": {
+    "ownedSkillLinks": 13,
+    "documentedMCPConfigPresent": true,
+    "runtimeActivation": "BLOCKED: Google account verification gate returned before task execution",
+    "T3TaskId": "node:delegated-task:command%3Amcp%3Af5d810f9-2cbd-4796-8472-b1759c1b1185%3Adelegate-task%3Aceos-antigravity-smoke-20261020-v1"
+  },
+  "t3": {
+    "liveCapabilityCatalog": true,
+    "nativeChildTasks": true,
+    "previewOpenAndNavigate": true,
+    "previewSnapshotReliability": "host disconnect; Playwright fallback used"
+  }
+}

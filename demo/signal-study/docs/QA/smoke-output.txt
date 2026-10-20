@@ -1,0 +1,50 @@
+
+> signal-study@0.1.0 test
+> playwright test --grep-invert @visual --workers=2
+
+
+Running 40 tests using 2 workers
+
+  ✓   2 [desktop] › tests/smoke.spec.ts:10:1 › stage capability and no-webgl poster (741ms)
+  ✓   3 [desktop] › tests/smoke.spec.ts:15:1 › keyboard focus and tension control (330ms)
+  ✓   1 [desktop] › tests/smoke.spec.ts:3:1 › content, console and responsive layout (1.4s)
+  ✓   5 [desktop] › tests/smoke.spec.ts:24:1 › native scroll and pointer change the wave (394ms)
+  -   6 [desktop] › tests/smoke.spec.ts:27:1 › reduced motion stays still and content remains complete
+  ✓   4 [desktop] › tests/smoke.spec.ts:20:1 › pause stops frames and resumes (1.2s)
+  ✓   8 [desktop] › tests/smoke.spec.ts:33:1 › complete HTML without JavaScript (300ms)
+  ✓   7 [desktop] › tests/smoke.spec.ts:30:1 › axe has no serious or critical violations (624ms)
+  ✓   9 [desktop] › tests/smoke.spec.ts:36:1 › instructions match input and motion preference (298ms)
+  ✓  10 [desktop] › tests/smoke.spec.ts:37:1 › controls fit desktop and tablet viewports (437ms)
+  ✓  12 [mobile] › tests/smoke.spec.ts:10:1 › stage capability and no-webgl poster (588ms)
+  ✓  11 [mobile] › tests/smoke.spec.ts:3:1 › content, console and responsive layout (686ms)
+  -  13 [mobile] › tests/smoke.spec.ts:15:1 › keyboard focus and tension control
+  -  15 [mobile] › tests/smoke.spec.ts:24:1 › native scroll and pointer change the wave
+  -  16 [mobile] › tests/smoke.spec.ts:27:1 › reduced motion stays still and content remains complete
+  ✓  17 [mobile] › tests/smoke.spec.ts:30:1 › axe has no serious or critical violations (517ms)
+  ✓  18 [mobile] › tests/smoke.spec.ts:33:1 › complete HTML without JavaScript (266ms)
+  ✓  14 [mobile] › tests/smoke.spec.ts:20:1 › pause stops frames and resumes (1.3s)
+  -  20 [mobile] › tests/smoke.spec.ts:37:1 › controls fit desktop and tablet viewports
+  ✓  19 [mobile] › tests/smoke.spec.ts:36:1 › instructions match input and motion preference (291ms)
+  ✓  22 [reduced-motion] › tests/smoke.spec.ts:10:1 › stage capability and no-webgl poster (484ms)
+  ✓  21 [reduced-motion] › tests/smoke.spec.ts:3:1 › content, console and responsive layout (551ms)
+  -  24 [reduced-motion] › tests/smoke.spec.ts:20:1 › pause stops frames and resumes
+  ✓  23 [reduced-motion] › tests/smoke.spec.ts:15:1 › keyboard focus and tension control (392ms)
+  -  25 [reduced-motion] › tests/smoke.spec.ts:24:1 › native scroll and pointer change the wave
+  ✓  27 [reduced-motion] › tests/smoke.spec.ts:30:1 › axe has no serious or critical violations (609ms)
+  ✓  28 [reduced-motion] › tests/smoke.spec.ts:33:1 › complete HTML without JavaScript (234ms)
+  ✓  26 [reduced-motion] › tests/smoke.spec.ts:27:1 › reduced motion stays still and content remains complete (1.1s)
+  ✓  29 [reduced-motion] › tests/smoke.spec.ts:36:1 › instructions match input and motion preference (240ms)
+  -  30 [reduced-motion] › tests/smoke.spec.ts:37:1 › controls fit desktop and tablet viewports
+  ✓  31 [no-webgl] › tests/smoke.spec.ts:10:1 › stage capability and no-webgl poster (401ms)
+  ✓  32 [no-webgl] › tests/smoke.spec.ts:3:1 › content, console and responsive layout (551ms)
+  -  34 [no-webgl] › tests/smoke.spec.ts:20:1 › pause stops frames and resumes
+  ✓  33 [no-webgl] › tests/smoke.spec.ts:15:1 › keyboard focus and tension control (356ms)
+  -  35 [no-webgl] › tests/smoke.spec.ts:24:1 › native scroll and pointer change the wave
+  -  36 [no-webgl] › tests/smoke.spec.ts:27:1 › reduced motion stays still and content remains complete
+  ✓  38 [no-webgl] › tests/smoke.spec.ts:33:1 › complete HTML without JavaScript (322ms)
+  ✓  39 [no-webgl] › tests/smoke.spec.ts:36:1 › instructions match input and motion preference (237ms)
+  ✓  37 [no-webgl] › tests/smoke.spec.ts:30:1 › axe has no serious or critical violations (722ms)
+  -  40 [no-webgl] › tests/smoke.spec.ts:37:1 › controls fit desktop and tablet viewports
+
+  12 skipped
+  28 passed (13.3s)

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Folded light — Immersive 3D template</title>
+  <meta name="description" content="Template C of the Creative Engineering OS: an HTML-first page with a progressively enhanced realtime 3D hero.">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="bar">
+    <a class="wordmark" href="/">Folded light</a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#system">System</a></li>
+      </ul>
+    </nav>
+    <a class="action" href="#contact">Start a project</a>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="stage" data-stage>
+        <!-- Poster: shown first and kept when WebGL is unavailable. Reduced motion renders one GL frame. -->
+        <svg class="poster" viewBox="0 0 600 400" role="img" aria-label="A ribbon of polished metal folding over itself">
+          <path d="M40 300 C 160 120, 260 120, 300 210 S 460 330, 560 110" fill="none" stroke="currentColor" stroke-width="38" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="hero-copy">
+        <h1 id="hero-title" class="display">Light, folded into form.</h1>
+        <p class="lead">A realtime ribbon that bends with your pointer and folds as you scroll. Everything you read here is plain HTML underneath it.</p>
+        <a class="button" href="#approach">See how it works</a>
+      </div>
+    </section>
+
+    <section id="approach" class="approach" aria-labelledby="approach-title">
+      <h2 id="approach-title" class="head">HTML first, then light</h2>
+      <div class="columns">
+        <p>The page paints with real text and a drawn poster before any 3D code loads. The renderer arrives afterwards, in its own chunk, and only when the browser can run it.</p>
+        <p>One loop owns every frame. Pointer and scroll are read from small stores, so the scene never fights the reader for control of the page.</p>
+        <p>When motion is reduced, the scene renders a single still frame. Without WebGL, the poster stays and nothing is lost.</p>
+      </div>
+    </section>
+
+    <section id="system" class="system" aria-labelledby="system-title">
+      <h2 id="system-title" class="head">What this template proves</h2>
+      <ol class="proofs">
+        <li><strong>Progressive enhancement.</strong> Poster first, renderer on idle, no loader.</li>
+        <li><strong>Single render-loop owner.</strong> <code>gsap.ticker</code> drives motion and the GL frame.</li>
+        <li><strong>Lit materials without downloads.</strong> An environment built in code, filtered with PMREM.</li>
+        <li><strong>Cleanup.</strong> Rendering pauses offscreen; each module's <code>destroy()</code> releases its resources on teardown.</li>
+      </ol>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="head">Start a project</h2>
+      <p class="lead">Replace this with the real enquiry path for your client.</p>
+      <a class="button" href="mailto:hello@example.com?subject=New%20project">Email the studio</a>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Template C · Creative Engineering OS</p>
+  </footer>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

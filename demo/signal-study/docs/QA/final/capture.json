@@ -1,0 +1,321 @@
+{
+ "url": "http://localhost:4184",
+ "when": "2026-10-20T13:00:51.134Z",
+ "nogl": false,
+ "viewports": {
+  "390": {
+   "navigationMs": 46,
+   "captureElapsedMs": 5073,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Signal study — Creative Engineering OS",
+    "fontSizes": {
+     "16px": 4,
+     "14px": 7,
+     "64px": 1,
+     "15px": 2,
+     "32px": 1
+    },
+    "fontFamilies": {
+     "\"Helvetica Neue\"": 15
+    },
+    "textColours": {
+     "rgb(23, 45, 82)": 15
+    },
+    "h1s": [
+     {
+      "text": "Signal study.",
+      "fontSize": "64px",
+      "lines": 1,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Signal study.",
+      "lines": 1,
+      "fontSize": "64px"
+     },
+     {
+      "tag": "H2",
+      "text": "One surface.Several ways in.",
+      "lines": 2,
+      "fontSize": "32px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 20,
+     "right": 20
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": []
+  },
+  "768": {
+   "navigationMs": 35,
+   "captureElapsedMs": 5024,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Signal study — Creative Engineering OS",
+    "fontSizes": {
+     "16px": 5,
+     "14px": 7,
+     "76.8px": 1,
+     "15px": 2,
+     "32px": 1
+    },
+    "fontFamilies": {
+     "\"Helvetica Neue\"": 16
+    },
+    "textColours": {
+     "rgb(23, 45, 82)": 16
+    },
+    "h1s": [
+     {
+      "text": "Signal study.",
+      "fontSize": "76.8px",
+      "lines": 1,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Signal study.",
+      "lines": 1,
+      "fontSize": "76.8px"
+     },
+     {
+      "tag": "H2",
+      "text": "One surface.Several ways in.",
+      "lines": 12,
+      "fontSize": "32px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 38,
+     "right": 38
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": []
+  },
+  "1024": {
+   "navigationMs": 46,
+   "captureElapsedMs": 4906,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Signal study — Creative Engineering OS",
+    "fontSizes": {
+     "16px": 5,
+     "14px": 7,
+     "102.4px": 1,
+     "15px": 2,
+     "40.96px": 1
+    },
+    "fontFamilies": {
+     "\"Helvetica Neue\"": 16
+    },
+    "textColours": {
+     "rgb(23, 45, 82)": 16
+    },
+    "h1s": [
+     {
+      "text": "Signal study.",
+      "fontSize": "102.4px",
+      "lines": 1,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Signal study.",
+      "lines": 1,
+      "fontSize": "102.4px"
+     },
+     {
+      "tag": "H2",
+      "text": "One surface.Several ways in.",
+      "lines": 8,
+      "fontSize": "40.96px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 51,
+     "right": 51
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": []
+  },
+  "1440": {
+   "navigationMs": 70,
+   "captureElapsedMs": 5144,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Signal study — Creative Engineering OS",
+    "fontSizes": {
+     "16px": 2,
+     "14px": 7,
+     "144px": 1,
+     "19.2px": 3,
+     "15px": 2,
+     "57.6px": 1
+    },
+    "fontFamilies": {
+     "\"Helvetica Neue\"": 16
+    },
+    "textColours": {
+     "rgb(23, 45, 82)": 16
+    },
+    "h1s": [
+     {
+      "text": "Signal study.",
+      "fontSize": "144px",
+      "lines": 1,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Signal study.",
+      "lines": 1,
+      "fontSize": "144px"
+     },
+     {
+      "tag": "H2",
+      "text": "One surface.Several ways in.",
+      "lines": 5,
+      "fontSize": "57.6px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 72,
+     "right": 72
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": []
+  },
+  "1440-reduced": {
+   "navigationMs": 44,
+   "captureElapsedMs": 1710,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Signal study — Creative Engineering OS",
+    "fontSizes": {
+     "16px": 2,
+     "14px": 7,
+     "144px": 1,
+     "19.2px": 3,
+     "15px": 2,
+     "57.6px": 1
+    },
+    "fontFamilies": {
+     "\"Helvetica Neue\"": 16
+    },
+    "textColours": {
+     "rgb(23, 45, 82)": 16
+    },
+    "h1s": [
+     {
+      "text": "Signal study.",
+      "fontSize": "144px",
+      "lines": 1,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Signal study.",
+      "lines": 1,
+      "fontSize": "144px"
+     },
+     {
+      "tag": "H2",
+      "text": "One surface.Several ways in.",
+      "lines": 5,
+      "fontSize": "57.6px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 72,
+     "right": 72
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": null
+  },
+  "390-reduced": {
+   "navigationMs": 47,
+   "captureElapsedMs": 1833,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Signal study — Creative Engineering OS",
+    "fontSizes": {
+     "16px": 4,
+     "14px": 7,
+     "64px": 1,
+     "15px": 2,
+     "32px": 1
+    },
+    "fontFamilies": {
+     "\"Helvetica Neue\"": 15
+    },
+    "textColours": {
+     "rgb(23, 45, 82)": 15
+    },
+    "h1s": [
+     {
+      "text": "Signal study.",
+      "fontSize": "64px",
+      "lines": 1,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Signal study.",
+      "lines": 1,
+      "fontSize": "64px"
+     },
+     {
+      "tag": "H2",
+      "text": "One surface.Several ways in.",
+      "lines": 2,
+      "fontSize": "32px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 20,
+     "right": 20
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": null
+  }
+ }
+}

@@ -1,0 +1,277 @@
+{
+ "url": "http://localhost:4177/?exp=raymarch&still",
+ "when": "2026-10-20T12:52:28.633Z",
+ "nogl": false,
+ "viewports": {
+  "390": {
+   "loadMs": 5425,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Lab — Experimental graphics template",
+    "fontSizes": {
+     "20px": 1,
+     "15px": 2,
+     "16px": 2
+    },
+    "fontFamilies": {
+     "\"SF Mono\"": 5
+    },
+    "textColours": {
+     "rgb(236, 235, 230)": 3,
+     "rgb(163, 165, 171)": 1,
+     "rgb(14, 15, 18)": 1
+    },
+    "h1s": [
+     {
+      "text": "Graphics lab",
+      "fontSize": "20px",
+      "lines": 1,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Graphics lab",
+      "lines": 1,
+      "fontSize": "20px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 0,
+     "right": 0
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": []
+  },
+  "768": {
+   "loadMs": 3147,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Lab — Experimental graphics template",
+    "fontSizes": {
+     "20px": 1,
+     "15px": 2,
+     "16px": 2
+    },
+    "fontFamilies": {
+     "\"SF Mono\"": 5
+    },
+    "textColours": {
+     "rgb(236, 235, 230)": 3,
+     "rgb(163, 165, 171)": 1,
+     "rgb(14, 15, 18)": 1
+    },
+    "h1s": [
+     {
+      "text": "Graphics lab",
+      "fontSize": "20px",
+      "lines": 1,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Graphics lab",
+      "lines": 1,
+      "fontSize": "20px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 0,
+     "right": 0
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": []
+  },
+  "1024": {
+   "loadMs": 3408,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Lab — Experimental graphics template",
+    "fontSizes": {
+     "20px": 1,
+     "15px": 2,
+     "16px": 2
+    },
+    "fontFamilies": {
+     "\"SF Mono\"": 5
+    },
+    "textColours": {
+     "rgb(236, 235, 230)": 3,
+     "rgb(163, 165, 171)": 1,
+     "rgb(14, 15, 18)": 1
+    },
+    "h1s": [
+     {
+      "text": "Graphics lab",
+      "fontSize": "20px",
+      "lines": 1,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Graphics lab",
+      "lines": 1,
+      "fontSize": "20px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 0,
+     "right": 0
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": []
+  },
+  "1440": {
+   "loadMs": 2724,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Lab — Experimental graphics template",
+    "fontSizes": {
+     "20px": 1,
+     "15px": 2,
+     "16px": 2
+    },
+    "fontFamilies": {
+     "\"SF Mono\"": 5
+    },
+    "textColours": {
+     "rgb(236, 235, 230)": 3,
+     "rgb(163, 165, 171)": 1,
+     "rgb(14, 15, 18)": 1
+    },
+    "h1s": [
+     {
+      "text": "Graphics lab",
+      "fontSize": "20px",
+      "lines": 1,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Graphics lab",
+      "lines": 1,
+      "fontSize": "20px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 0,
+     "right": 0
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": []
+  },
+  "1440-reduced": {
+   "loadMs": 2397,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Lab — Experimental graphics template",
+    "fontSizes": {
+     "20px": 1,
+     "15px": 2,
+     "16px": 2
+    },
+    "fontFamilies": {
+     "\"SF Mono\"": 5
+    },
+    "textColours": {
+     "rgb(236, 235, 230)": 3,
+     "rgb(163, 165, 171)": 1,
+     "rgb(14, 15, 18)": 1
+    },
+    "h1s": [
+     {
+      "text": "Graphics lab",
+      "fontSize": "20px",
+      "lines": 1,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Graphics lab",
+      "lines": 1,
+      "fontSize": "20px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 0,
+     "right": 0
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": null
+  },
+  "390-reduced": {
+   "loadMs": 2599,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Lab — Experimental graphics template",
+    "fontSizes": {
+     "20px": 1,
+     "15px": 2,
+     "16px": 2
+    },
+    "fontFamilies": {
+     "\"SF Mono\"": 5
+    },
+    "textColours": {
+     "rgb(236, 235, 230)": 3,
+     "rgb(163, 165, 171)": 1,
+     "rgb(14, 15, 18)": 1
+    },
+    "h1s": [
+     {
+      "text": "Graphics lab",
+      "fontSize": "20px",
+      "lines": 1,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Graphics lab",
+      "lines": 1,
+      "fontSize": "20px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 0,
+     "right": 0
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": null
+  }
+ }
+}

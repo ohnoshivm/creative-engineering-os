@@ -1,0 +1,415 @@
+{
+ "url": "http://localhost:4175",
+ "when": "2026-10-20T12:51:33.949Z",
+ "nogl": false,
+ "viewports": {
+  "390": {
+   "loadMs": 5711,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Tempo — Motion template",
+    "fontSizes": {
+     "17.17px": 8,
+     "48.76px": 7,
+     "20.31px": 2,
+     "25.755px": 1,
+     "28px": 29,
+     "36.44px": 2,
+     "63.2px": 4,
+     "13.065px": 1
+    },
+    "fontFamilies": {
+     "\"Avenir Next\"": 54
+    },
+    "textColours": {
+     "rgb(16, 26, 43)": 3,
+     "rgb(242, 239, 230)": 44,
+     "rgb(170, 179, 194)": 7
+    },
+    "h1s": [
+     {
+      "text": "Every word arrives on the beat.Every word arrives on the beat.",
+      "fontSize": "48.76px",
+      "lines": 3,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Every word arrives on the beat.Every word arrives on the bea",
+      "lines": 3,
+      "fontSize": "48.76px"
+     },
+     {
+      "tag": "H2",
+      "text": "The idea",
+      "lines": 0,
+      "fontSize": "25.755px"
+     },
+     {
+      "tag": "H2",
+      "text": "Four tempos",
+      "lines": 2,
+      "fontSize": "36.44px"
+     },
+     {
+      "tag": "H2",
+      "text": "Set your own tempo",
+      "lines": 2,
+      "fontSize": "36.44px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": -823,
+     "right": 0
+    },
+    "unnamedControls": 0,
+    "canvases": 0
+   },
+   "axe": []
+  },
+  "768": {
+   "loadMs": 5704,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Tempo — Motion template",
+    "fontSizes": {
+     "18.304px": 8,
+     "80.512px": 7,
+     "23.712px": 2,
+     "27.456px": 1,
+     "39.04px": 29,
+     "50.048px": 2,
+     "93.44px": 4,
+     "13.632px": 1
+    },
+    "fontFamilies": {
+     "\"Avenir Next\"": 54
+    },
+    "textColours": {
+     "rgb(16, 26, 43)": 3,
+     "rgb(242, 239, 230)": 44,
+     "rgb(170, 179, 194)": 7
+    },
+    "h1s": [
+     {
+      "text": "Every word arrives on the beat.Every word arrives on the beat.",
+      "fontSize": "80.512px",
+      "lines": 3,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Every word arrives on the beat.Every word arrives on the bea",
+      "lines": 3,
+      "fontSize": "80.512px"
+     },
+     {
+      "tag": "H2",
+      "text": "The idea",
+      "lines": 0,
+      "fontSize": "27.456px"
+     },
+     {
+      "tag": "H2",
+      "text": "Four tempos",
+      "lines": 2,
+      "fontSize": "50.048px"
+     },
+     {
+      "tag": "H2",
+      "text": "Set your own tempo",
+      "lines": 1,
+      "fontSize": "50.048px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": -1381,
+     "right": -195
+    },
+    "unnamedControls": 0,
+    "canvases": 0
+   },
+   "axe": []
+  },
+  "1024": {
+   "loadMs": 6462,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Tempo — Motion template",
+    "fontSizes": {
+     "19.072px": 8,
+     "102.016px": 7,
+     "26.016px": 2,
+     "28.608px": 1,
+     "46.72px": 29,
+     "59.264px": 2,
+     "113.92px": 4,
+     "14.016px": 1
+    },
+    "fontFamilies": {
+     "\"Avenir Next\"": 54
+    },
+    "textColours": {
+     "rgb(16, 26, 43)": 3,
+     "rgb(242, 239, 230)": 44,
+     "rgb(170, 179, 194)": 7
+    },
+    "h1s": [
+     {
+      "text": "Every word arrives on the beat.Every word arrives on the beat.",
+      "fontSize": "102.016px",
+      "lines": 3,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Every word arrives on the beat.Every word arrives on the bea",
+      "lines": 3,
+      "fontSize": "102.016px"
+     },
+     {
+      "tag": "H2",
+      "text": "The idea",
+      "lines": 0,
+      "fontSize": "28.608px"
+     },
+     {
+      "tag": "H2",
+      "text": "Four tempos",
+      "lines": 2,
+      "fontSize": "59.264px"
+     },
+     {
+      "tag": "H2",
+      "text": "Set your own tempo",
+      "lines": 1,
+      "fontSize": "59.264px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": -1016,
+     "right": -1102
+    },
+    "unnamedControls": 0,
+    "canvases": 0
+   },
+   "axe": []
+  },
+  "1440": {
+   "loadMs": 5424,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Tempo — Motion template",
+    "fontSizes": {
+     "20px": 8,
+     "136.96px": 7,
+     "28px": 2,
+     "30px": 1,
+     "59.2px": 29,
+     "72px": 2,
+     "147.2px": 4,
+     "14.64px": 1
+    },
+    "fontFamilies": {
+     "\"Avenir Next\"": 54
+    },
+    "textColours": {
+     "rgb(16, 26, 43)": 3,
+     "rgb(242, 239, 230)": 44,
+     "rgb(170, 179, 194)": 7
+    },
+    "h1s": [
+     {
+      "text": "Every word arrives on the beat.Every word arrives on the beat.",
+      "fontSize": "136.96px",
+      "lines": 3,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Every word arrives on the beat.Every word arrives on the bea",
+      "lines": 3,
+      "fontSize": "136.96px"
+     },
+     {
+      "tag": "H2",
+      "text": "The idea",
+      "lines": 0,
+      "fontSize": "30px"
+     },
+     {
+      "tag": "H2",
+      "text": "Four tempos",
+      "lines": 2,
+      "fontSize": "72px"
+     },
+     {
+      "tag": "H2",
+      "text": "Set your own tempo",
+      "lines": 1,
+      "fontSize": "72px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": -1191,
+     "right": -1237
+    },
+    "unnamedControls": 0,
+    "canvases": 0
+   },
+   "axe": []
+  },
+  "1440-reduced": {
+   "loadMs": 1758,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Tempo — Motion template",
+    "fontSizes": {
+     "20px": 8,
+     "136.96px": 1,
+     "28px": 2,
+     "30px": 1,
+     "59.2px": 1,
+     "72px": 2,
+     "147.2px": 4,
+     "14.64px": 1
+    },
+    "fontFamilies": {
+     "\"Avenir Next\"": 20
+    },
+    "textColours": {
+     "rgb(16, 26, 43)": 3,
+     "rgb(242, 239, 230)": 10,
+     "rgb(170, 179, 194)": 7
+    },
+    "h1s": [
+     {
+      "text": "Every word arrives on the beat.",
+      "fontSize": "136.96px",
+      "lines": 3,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Every word arrives on the beat.",
+      "lines": 3,
+      "fontSize": "136.96px"
+     },
+     {
+      "tag": "H2",
+      "text": "The idea",
+      "lines": 0,
+      "fontSize": "30px"
+     },
+     {
+      "tag": "H2",
+      "text": "Four tempos",
+      "lines": 2,
+      "fontSize": "72px"
+     },
+     {
+      "tag": "H2",
+      "text": "Set your own tempo",
+      "lines": 1,
+      "fontSize": "72px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 0,
+     "right": 0
+    },
+    "unnamedControls": 0,
+    "canvases": 0
+   },
+   "axe": null
+  },
+  "390-reduced": {
+   "loadMs": 1811,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Tempo — Motion template",
+    "fontSizes": {
+     "17.17px": 8,
+     "48.76px": 1,
+     "20.31px": 2,
+     "25.755px": 1,
+     "28px": 1,
+     "36.44px": 2,
+     "63.2px": 4,
+     "13.065px": 1
+    },
+    "fontFamilies": {
+     "\"Avenir Next\"": 20
+    },
+    "textColours": {
+     "rgb(16, 26, 43)": 3,
+     "rgb(242, 239, 230)": 10,
+     "rgb(170, 179, 194)": 7
+    },
+    "h1s": [
+     {
+      "text": "Every word arrives on the beat.",
+      "fontSize": "48.76px",
+      "lines": 3,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Every word arrives on the beat.",
+      "lines": 3,
+      "fontSize": "48.76px"
+     },
+     {
+      "tag": "H2",
+      "text": "The idea",
+      "lines": 0,
+      "fontSize": "25.755px"
+     },
+     {
+      "tag": "H2",
+      "text": "Four tempos",
+      "lines": 2,
+      "fontSize": "36.44px"
+     },
+     {
+      "tag": "H2",
+      "text": "Set your own tempo",
+      "lines": 2,
+      "fontSize": "36.44px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 0,
+     "right": 0
+    },
+    "unnamedControls": 0,
+    "canvases": 0
+   },
+   "axe": null
+  }
+ }
+}

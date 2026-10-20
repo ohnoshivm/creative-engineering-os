@@ -1,0 +1,26 @@
+{
+  "name": "ceos-editorial",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "check": "astro sync && tsc --noEmit",
+    "build": "astro build",
+    "preview": "astro preview --port 4321",
+    "test": "playwright test --grep-invert @visual",
+    "test:visual": "playwright test --grep @visual",
+    "test:update-snapshots": "playwright test --grep @visual --update-snapshots",
+    "lhci": "npx --yes @lhci/cli@0.15.1 autorun",
+    "audit:visual": "node ../../tooling/visual-audit/capture.mjs --url http://localhost:4321 --out docs/QA/latest"
+  },
+  "dependencies": {
+    "astro": "7.4.1",
+    "gsap": "3.15.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.64.1",
+    "typescript": "5.9.3"
+  }
+}

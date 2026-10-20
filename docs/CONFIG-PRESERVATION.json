@@ -1,0 +1,34 @@
+{
+  ".claude.json": {
+    "existingServersPreserved": true,
+    "addedServers": [
+      "chrome-devtools"
+    ],
+    "otherSettingsUnchanged": true
+  },
+  ".codex/config.toml": {
+    "existingServersPreserved": true,
+    "addedServers": [
+      "chrome-devtools"
+    ],
+    "otherSettingsUnchanged": true
+  },
+  ".config/opencode/opencode.json": {
+    "existingServersPreserved": true,
+    "addedServers": [
+      "chrome-devtools"
+    ],
+    "otherSettingsUnchanged": true
+  },
+  ".gemini/config/mcp_config.json": {
+    "existingServersPreserved": true,
+    "addedServers": [
+      "chrome-devtools"
+    ],
+    "otherSettingsUnchanged": true
+  },
+  "authFilesUnchanged": {
+    ".codex/auth.json": true,
+    ".gemini/jetski-standalone-oauth-token": true
+  }
+}

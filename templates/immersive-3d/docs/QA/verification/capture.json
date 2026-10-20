@@ -1,0 +1,445 @@
+{
+ "url": "http://localhost:4176/?still",
+ "when": "2026-10-20T12:52:25.413Z",
+ "nogl": false,
+ "viewports": {
+  "390": {
+   "loadMs": 5794,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Folded light — Immersive 3D template",
+    "fontSizes": {
+     "17.17px": 12,
+     "48.84px": 1,
+     "20.31px": 2,
+     "36.44px": 3,
+     "13.065px": 1
+    },
+    "fontFamilies": {
+     "\"Helvetica Neue\"": 19
+    },
+    "textColours": {
+     "rgb(236, 231, 222)": 2,
+     "rgb(22, 20, 15)": 13,
+     "rgb(74, 70, 62)": 2,
+     "rgb(255, 255, 255)": 2
+    },
+    "h1s": [
+     {
+      "text": "Light, folded into form.",
+      "fontSize": "48.84px",
+      "lines": 2,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Light, folded into form.",
+      "lines": 2,
+      "fontSize": "48.84px"
+     },
+     {
+      "tag": "H2",
+      "text": "HTML first, then light",
+      "lines": 1,
+      "fontSize": "36.44px"
+     },
+     {
+      "tag": "H2",
+      "text": "What this template proves",
+      "lines": 2,
+      "fontSize": "36.44px"
+     },
+     {
+      "tag": "H2",
+      "text": "Start a project",
+      "lines": 1,
+      "fontSize": "36.44px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [
+     {
+      "tag": "A",
+      "text": "Folded light",
+      "w": 94,
+      "h": 26
+     }
+    ],
+    "outerMargins": {
+     "left": 16,
+     "right": 16
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": []
+  },
+  "768": {
+   "loadMs": 7552,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Folded light — Immersive 3D template",
+    "fontSizes": {
+     "18.304px": 14,
+     "77.568px": 1,
+     "23.712px": 2,
+     "50.048px": 3,
+     "13.632px": 1
+    },
+    "fontFamilies": {
+     "\"Helvetica Neue\"": 21
+    },
+    "textColours": {
+     "rgb(236, 231, 222)": 2,
+     "rgb(22, 20, 15)": 15,
+     "rgb(74, 70, 62)": 2,
+     "rgb(255, 255, 255)": 2
+    },
+    "h1s": [
+     {
+      "text": "Light, folded into form.",
+      "fontSize": "77.568px",
+      "lines": 2,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Light, folded into form.",
+      "lines": 2,
+      "fontSize": "77.568px"
+     },
+     {
+      "tag": "H2",
+      "text": "HTML first, then light",
+      "lines": 1,
+      "fontSize": "50.048px"
+     },
+     {
+      "tag": "H2",
+      "text": "What this template proves",
+      "lines": 1,
+      "fontSize": "50.048px"
+     },
+     {
+      "tag": "H2",
+      "text": "Start a project",
+      "lines": 1,
+      "fontSize": "50.048px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [
+     {
+      "tag": "A",
+      "text": "Folded light",
+      "w": 100,
+      "h": 27
+     }
+    ],
+    "outerMargins": {
+     "left": 20,
+     "right": 20
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": []
+  },
+  "1024": {
+   "loadMs": 6444,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Folded light — Immersive 3D template",
+    "fontSizes": {
+     "19.072px": 14,
+     "97.024px": 1,
+     "26.016px": 2,
+     "59.264px": 3,
+     "14.016px": 1
+    },
+    "fontFamilies": {
+     "\"Helvetica Neue\"": 21
+    },
+    "textColours": {
+     "rgb(236, 231, 222)": 2,
+     "rgb(22, 20, 15)": 15,
+     "rgb(74, 70, 62)": 2,
+     "rgb(255, 255, 255)": 2
+    },
+    "h1s": [
+     {
+      "text": "Light, folded into form.",
+      "fontSize": "97.024px",
+      "lines": 2,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Light, folded into form.",
+      "lines": 2,
+      "fontSize": "97.024px"
+     },
+     {
+      "tag": "H2",
+      "text": "HTML first, then light",
+      "lines": 1,
+      "fontSize": "59.264px"
+     },
+     {
+      "tag": "H2",
+      "text": "What this template proves",
+      "lines": 1,
+      "fontSize": "59.264px"
+     },
+     {
+      "tag": "H2",
+      "text": "Start a project",
+      "lines": 1,
+      "fontSize": "59.264px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [
+     {
+      "tag": "A",
+      "text": "Folded light",
+      "w": 105,
+      "h": 29
+     }
+    ],
+    "outerMargins": {
+     "left": 27,
+     "right": 27
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": []
+  },
+  "1440": {
+   "loadMs": 6237,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Folded light — Immersive 3D template",
+    "fontSizes": {
+     "20px": 14,
+     "128.64px": 1,
+     "28px": 2,
+     "72px": 3,
+     "14.64px": 1
+    },
+    "fontFamilies": {
+     "\"Helvetica Neue\"": 21
+    },
+    "textColours": {
+     "rgb(236, 231, 222)": 2,
+     "rgb(22, 20, 15)": 15,
+     "rgb(74, 70, 62)": 2,
+     "rgb(255, 255, 255)": 2
+    },
+    "h1s": [
+     {
+      "text": "Light, folded into form.",
+      "fontSize": "128.64px",
+      "lines": 2,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Light, folded into form.",
+      "lines": 2,
+      "fontSize": "128.64px"
+     },
+     {
+      "tag": "H2",
+      "text": "HTML first, then light",
+      "lines": 1,
+      "fontSize": "72px"
+     },
+     {
+      "tag": "H2",
+      "text": "What this template proves",
+      "lines": 1,
+      "fontSize": "72px"
+     },
+     {
+      "tag": "H2",
+      "text": "Start a project",
+      "lines": 1,
+      "fontSize": "72px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [
+     {
+      "tag": "A",
+      "text": "Folded light",
+      "w": 110,
+      "h": 30
+     }
+    ],
+    "outerMargins": {
+     "left": 37,
+     "right": 37
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": []
+  },
+  "1440-reduced": {
+   "loadMs": 1778,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Folded light — Immersive 3D template",
+    "fontSizes": {
+     "20px": 14,
+     "128.64px": 1,
+     "28px": 2,
+     "72px": 3,
+     "14.64px": 1
+    },
+    "fontFamilies": {
+     "\"Helvetica Neue\"": 21
+    },
+    "textColours": {
+     "rgb(236, 231, 222)": 2,
+     "rgb(22, 20, 15)": 15,
+     "rgb(74, 70, 62)": 2,
+     "rgb(255, 255, 255)": 2
+    },
+    "h1s": [
+     {
+      "text": "Light, folded into form.",
+      "fontSize": "128.64px",
+      "lines": 2,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Light, folded into form.",
+      "lines": 2,
+      "fontSize": "128.64px"
+     },
+     {
+      "tag": "H2",
+      "text": "HTML first, then light",
+      "lines": 1,
+      "fontSize": "72px"
+     },
+     {
+      "tag": "H2",
+      "text": "What this template proves",
+      "lines": 1,
+      "fontSize": "72px"
+     },
+     {
+      "tag": "H2",
+      "text": "Start a project",
+      "lines": 1,
+      "fontSize": "72px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [
+     {
+      "tag": "A",
+      "text": "Folded light",
+      "w": 110,
+      "h": 30
+     }
+    ],
+    "outerMargins": {
+     "left": 37,
+     "right": 37
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": null
+  },
+  "390-reduced": {
+   "loadMs": 1935,
+   "consoleErrors": [],
+   "measure": {
+    "title": "Folded light — Immersive 3D template",
+    "fontSizes": {
+     "17.17px": 12,
+     "48.84px": 1,
+     "20.31px": 2,
+     "36.44px": 3,
+     "13.065px": 1
+    },
+    "fontFamilies": {
+     "\"Helvetica Neue\"": 19
+    },
+    "textColours": {
+     "rgb(236, 231, 222)": 2,
+     "rgb(22, 20, 15)": 13,
+     "rgb(74, 70, 62)": 2,
+     "rgb(255, 255, 255)": 2
+    },
+    "h1s": [
+     {
+      "text": "Light, folded into form.",
+      "fontSize": "48.84px",
+      "lines": 2,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "Light, folded into form.",
+      "lines": 2,
+      "fontSize": "48.84px"
+     },
+     {
+      "tag": "H2",
+      "text": "HTML first, then light",
+      "lines": 1,
+      "fontSize": "36.44px"
+     },
+     {
+      "tag": "H2",
+      "text": "What this template proves",
+      "lines": 2,
+      "fontSize": "36.44px"
+     },
+     {
+      "tag": "H2",
+      "text": "Start a project",
+      "lines": 1,
+      "fontSize": "36.44px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [
+     {
+      "tag": "A",
+      "text": "Folded light",
+      "w": 94,
+      "h": 26
+     }
+    ],
+    "outerMargins": {
+     "left": 16,
+     "right": 16
+    },
+    "unnamedControls": 0,
+    "canvases": 1
+   },
+   "axe": null
+  }
+ }
+}

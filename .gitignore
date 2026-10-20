@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.astro/
+test-results/
+playwright-report/
+.lighthouseci/
+*.log
+.DS_Store
+backups/
+reports/raw/
+.env
+.env.*
+!.env.example
+.playwright-cli/
+**/docs/QA/**/video/
+__pycache__/

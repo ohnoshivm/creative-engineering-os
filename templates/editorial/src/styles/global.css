@@ -1,0 +1,76 @@
+@layer reset, tokens, base, layout, components;
+
+@layer reset {
+  *, *::before, *::after { box-sizing: border-box; }
+  body, h1, h2, h3, p, figure, blockquote, ol, ul { margin: 0; }
+  img, svg { display: block; max-width: 100%; }
+}
+
+@layer tokens {
+  :root {
+    /* Replace with the project's licensed faces. Charter ships with macOS/iOS; fallbacks keep metrics close. */
+    --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+    --sans: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    --paper: #f3f0e8;
+    --ink: #1b1a17;           /* 15.6:1 on paper */
+    --soft: #55524a;          /* 7.0:1 on paper  */
+    --mark: #b4321f;          /* vermilion, used for the one live mark and focus; 5.3:1 on paper */
+    --step-small: clamp(0.875rem, 0.84rem + 0.15vw, 0.95rem);
+    --step-body: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
+    --step-lead: clamp(1.375rem, 1.15rem + 1vw, 1.875rem);
+    --step-head: clamp(1.875rem, 1.3rem + 2.4vw, 3rem);
+    --step-display: clamp(3.25rem, 1.4rem + 8vw, 9.5rem);
+    --margin: clamp(18px, 3vw, 48px);
+    --gutter: clamp(14px, 2vw, 32px);
+    --ease-out: cubic-bezier(.16, 1, .3, 1);
+  }
+}
+
+@layer base {
+  html { color-scheme: light; }
+  body { background: var(--paper); color: var(--ink); font: 400 var(--step-body)/1.58 var(--serif); font-kerning: normal; font-variant-ligatures: common-ligatures; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+  a:hover { text-decoration-color: var(--mark); }
+  :focus-visible { outline: 3px solid var(--mark); outline-offset: 3px; }
+  h1, h2, h3 { text-wrap: balance; font-weight: 600; }
+  p { text-wrap: pretty; hanging-punctuation: first; }
+}
+
+@layer layout {
+  .page { display: grid; grid-template-columns: [full-start] var(--margin) [main-start] repeat(12, minmax(0, 1fr)) [main-end] var(--margin) [full-end]; column-gap: var(--gutter); }
+  .page > * { grid-column: main; }
+}
+
+@layer components {
+  .skip { position: absolute; left: var(--margin); top: -100px; background: var(--ink); color: var(--paper); padding: 10px 14px; }
+  .skip:focus { top: 10px; }
+  .masthead { display: flex; justify-content: space-between; align-items: baseline; padding-block: 20px; font: 500 var(--step-small)/1.2 var(--sans); }
+  .masthead a { text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+  .masthead nav { display: flex; gap: 24px; }
+
+  .title { grid-column: main; margin-top: clamp(40px, 8vw, 120px); font-family: var(--serif); font-size: var(--step-display); line-height: 0.94; letter-spacing: -0.035em; font-weight: 500; }
+  .title .line { display: block; }
+  .standfirst { grid-column: main-start / span 8; margin-top: clamp(24px, 3vw, 40px); font-size: var(--step-lead); line-height: 1.32; color: var(--soft); }
+
+  .article { grid-column: main; display: grid; grid-template-columns: subgrid; margin-top: clamp(64px, 10vw, 160px); row-gap: 1.2em; }
+  .article > p, .article > h2, .article > blockquote, .article > figure { grid-column: 4 / span 7; }
+  .article > h2 { font-size: var(--step-head); line-height: 1.05; letter-spacing: -0.02em; margin-top: 1.4em; }
+  .article p { max-width: 64ch; }
+  .article > p:first-of-type::first-line { font-variant-caps: all-small-caps; letter-spacing: 0.04em; }
+  .note { grid-column: 1 / span 3; grid-row: span 2; align-self: start; font: 400 var(--step-small)/1.45 var(--sans); color: var(--soft); border-top: 2px solid var(--ink); padding-top: 10px; }
+  .note b { color: var(--ink); }
+  .pull { grid-column: 3 / span 9 !important; font-size: var(--step-head); line-height: 1.12; letter-spacing: -0.02em; font-style: italic; margin-block: 0.6em; }
+  .figure svg { width: 100%; height: auto; color: var(--ink); }
+  .figure figcaption { margin-top: 10px; font: 400 var(--step-small)/1.45 var(--sans); color: var(--soft); }
+  .end { grid-column: main; margin-block: clamp(80px, 12vw, 180px) 40px; padding-top: 20px; border-top: 2px solid var(--ink); display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; font: 500 var(--step-small)/1.3 var(--sans); }
+  .end a { min-height: 44px; display: inline-flex; align-items: center; }
+
+  @media (max-width: 860px) {
+    .standfirst { grid-column: main; }
+    .article > p, .article > h2, .article > blockquote, .article > figure, .note, .pull { grid-column: main !important; }
+    .note { grid-row: auto; }
+  }
+
+  /* The one orchestrated moment. Lines are visible by default; JS opts in. */
+  .js-motion .title .line { clip-path: inset(0 0 100% 0); transform: translateY(0.25em); }
+}

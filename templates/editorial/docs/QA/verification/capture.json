@@ -1,0 +1,367 @@
+{
+ "url": "http://localhost:4321",
+ "when": "2026-10-20T12:49:40.222Z",
+ "nogl": false,
+ "viewports": {
+  "390": {
+   "loadMs": 2289,
+   "consoleErrors": [],
+   "measure": {
+    "title": "On margins — Editorial template",
+    "fontSizes": {
+     "18.165px": 6,
+     "14.025px": 6,
+     "53.6px": 2,
+     "22.3px": 1,
+     "30.16px": 3
+    },
+    "fontFamilies": {
+     "Charter": 12,
+     "\"Helvetica Neue\"": 6
+    },
+    "textColours": {
+     "rgb(243, 240, 232)": 1,
+     "rgb(27, 26, 23)": 15,
+     "rgb(85, 82, 74)": 2
+    },
+    "h1s": [
+     {
+      "text": "The margin iswhere a page breathes.",
+      "fontSize": "53.6px",
+      "lines": 3,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "The margin iswhere a page breathes.",
+      "lines": 3,
+      "fontSize": "53.6px"
+     },
+     {
+      "tag": "H2",
+      "text": "A few sizes, chosen on purpose",
+      "lines": 2,
+      "fontSize": "30.16px"
+     },
+     {
+      "tag": "H2",
+      "text": "Motion, once",
+      "lines": 1,
+      "fontSize": "30.16px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 32,
+     "right": 32
+    },
+    "unnamedControls": 0,
+    "canvases": 0
+   },
+   "axe": []
+  },
+  "768": {
+   "loadMs": 2203,
+   "consoleErrors": [],
+   "measure": {
+    "title": "On margins — Editorial template",
+    "fontSizes": {
+     "19.488px": 6,
+     "14.592px": 6,
+     "83.84px": 2,
+     "26.08px": 1,
+     "39.232px": 3
+    },
+    "fontFamilies": {
+     "Charter": 12,
+     "\"Helvetica Neue\"": 6
+    },
+    "textColours": {
+     "rgb(243, 240, 232)": 1,
+     "rgb(27, 26, 23)": 15,
+     "rgb(85, 82, 74)": 2
+    },
+    "h1s": [
+     {
+      "text": "The margin iswhere a page breathes.",
+      "fontSize": "83.84px",
+      "lines": 3,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "The margin iswhere a page breathes.",
+      "lines": 3,
+      "fontSize": "83.84px"
+     },
+     {
+      "tag": "H2",
+      "text": "A few sizes, chosen on purpose",
+      "lines": 1,
+      "fontSize": "39.232px"
+     },
+     {
+      "tag": "H2",
+      "text": "Motion, once",
+      "lines": 1,
+      "fontSize": "39.232px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 38,
+     "right": 38
+    },
+    "unnamedControls": 0,
+    "canvases": 0
+   },
+   "axe": []
+  },
+  "1024": {
+   "loadMs": 2192,
+   "consoleErrors": [],
+   "measure": {
+    "title": "On margins — Editorial template",
+    "fontSizes": {
+     "20.384px": 6,
+     "14.976px": 6,
+     "104.32px": 2,
+     "28.64px": 1,
+     "45.376px": 3
+    },
+    "fontFamilies": {
+     "Charter": 12,
+     "\"Helvetica Neue\"": 6
+    },
+    "textColours": {
+     "rgb(243, 240, 232)": 1,
+     "rgb(27, 26, 23)": 15,
+     "rgb(85, 82, 74)": 2
+    },
+    "h1s": [
+     {
+      "text": "The margin iswhere a page breathes.",
+      "fontSize": "104.32px",
+      "lines": 3,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "The margin iswhere a page breathes.",
+      "lines": 3,
+      "fontSize": "104.32px"
+     },
+     {
+      "tag": "H2",
+      "text": "A few sizes, chosen on purpose",
+      "lines": 2,
+      "fontSize": "45.376px"
+     },
+     {
+      "tag": "H2",
+      "text": "Motion, once",
+      "lines": 1,
+      "fontSize": "45.376px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 51,
+     "right": 51
+    },
+    "unnamedControls": 0,
+    "canvases": 0
+   },
+   "axe": []
+  },
+  "1440": {
+   "loadMs": 2068,
+   "consoleErrors": [],
+   "measure": {
+    "title": "On margins — Editorial template",
+    "fontSizes": {
+     "21px": 6,
+     "15.2px": 6,
+     "137.6px": 2,
+     "30px": 1,
+     "48px": 3
+    },
+    "fontFamilies": {
+     "Charter": 12,
+     "\"Helvetica Neue\"": 6
+    },
+    "textColours": {
+     "rgb(243, 240, 232)": 1,
+     "rgb(27, 26, 23)": 15,
+     "rgb(85, 82, 74)": 2
+    },
+    "h1s": [
+     {
+      "text": "The margin iswhere a page breathes.",
+      "fontSize": "137.6px",
+      "lines": 2,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "The margin iswhere a page breathes.",
+      "lines": 2,
+      "fontSize": "137.6px"
+     },
+     {
+      "tag": "H2",
+      "text": "A few sizes, chosen on purpose",
+      "lines": 1,
+      "fontSize": "48px"
+     },
+     {
+      "tag": "H2",
+      "text": "Motion, once",
+      "lines": 1,
+      "fontSize": "48px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 72,
+     "right": 72
+    },
+    "unnamedControls": 0,
+    "canvases": 0
+   },
+   "axe": []
+  },
+  "1440-reduced": {
+   "loadMs": 1791,
+   "consoleErrors": [],
+   "measure": {
+    "title": "On margins — Editorial template",
+    "fontSizes": {
+     "21px": 6,
+     "15.2px": 6,
+     "137.6px": 2,
+     "30px": 1,
+     "48px": 3
+    },
+    "fontFamilies": {
+     "Charter": 12,
+     "\"Helvetica Neue\"": 6
+    },
+    "textColours": {
+     "rgb(243, 240, 232)": 1,
+     "rgb(27, 26, 23)": 15,
+     "rgb(85, 82, 74)": 2
+    },
+    "h1s": [
+     {
+      "text": "The margin iswhere a page breathes.",
+      "fontSize": "137.6px",
+      "lines": 2,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "The margin iswhere a page breathes.",
+      "lines": 2,
+      "fontSize": "137.6px"
+     },
+     {
+      "tag": "H2",
+      "text": "A few sizes, chosen on purpose",
+      "lines": 1,
+      "fontSize": "48px"
+     },
+     {
+      "tag": "H2",
+      "text": "Motion, once",
+      "lines": 1,
+      "fontSize": "48px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 72,
+     "right": 72
+    },
+    "unnamedControls": 0,
+    "canvases": 0
+   },
+   "axe": null
+  },
+  "390-reduced": {
+   "loadMs": 1892,
+   "consoleErrors": [],
+   "measure": {
+    "title": "On margins — Editorial template",
+    "fontSizes": {
+     "18.165px": 6,
+     "14.025px": 6,
+     "53.6px": 2,
+     "22.3px": 1,
+     "30.16px": 3
+    },
+    "fontFamilies": {
+     "Charter": 12,
+     "\"Helvetica Neue\"": 6
+    },
+    "textColours": {
+     "rgb(243, 240, 232)": 1,
+     "rgb(27, 26, 23)": 15,
+     "rgb(85, 82, 74)": 2
+    },
+    "h1s": [
+     {
+      "text": "The margin iswhere a page breathes.",
+      "fontSize": "53.6px",
+      "lines": 3,
+      "visible": true
+     }
+    ],
+    "headings": [
+     {
+      "tag": "H1",
+      "text": "The margin iswhere a page breathes.",
+      "lines": 3,
+      "fontSize": "53.6px"
+     },
+     {
+      "tag": "H2",
+      "text": "A few sizes, chosen on purpose",
+      "lines": 2,
+      "fontSize": "30.16px"
+     },
+     {
+      "tag": "H2",
+      "text": "Motion, once",
+      "lines": 1,
+      "fontSize": "30.16px"
+     }
+    ],
+    "overflowX": false,
+    "smallTapTargets": [],
+    "outerMargins": {
+     "left": 32,
+     "right": 32
+    },
+    "unnamedControls": 0,
+    "canvases": 0
+   },
+   "axe": null
+  }
+ }
+}

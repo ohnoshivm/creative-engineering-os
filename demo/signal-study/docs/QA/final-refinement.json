@@ -1,0 +1,16 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "controlsBottom": 890.796875,
+    "pauseBottom": 853.296875,
+    "instructions": "Move across the surface.\nScroll to shift its phase."
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "controlsBottom": 749.4375,
+    "pauseBottom": 711.9375,
+    "instructions": "Move across the surface.\nScroll to shift its phase."
+  }
+]

@@ -1,0 +1,342 @@
+{
+  "schemaVersion": 1,
+  "upstreams": {
+    "impeccable": {
+      "repository": "https://github.com/pbakaus/impeccable",
+      "revision": "dad8dbb3aac21ad1fa236c110315ef4abece23e8",
+      "localPath": "~/creative-engineering-os-upstreams/impeccable",
+      "observedRevision": "dad8dbb3aac21ad1fa236c110315ef4abece23e8",
+      "revisionStatus": "match",
+      "untrackedPaths": [],
+      "registeredSkillTrees": [
+        {
+          "name": "impeccable",
+          "sourcePath": "~/.agents/skills/impeccable",
+          "registeredPaths": [
+            "~/.agents/skills/impeccable",
+            "~/.claude/skills/impeccable"
+          ],
+          "skillMdSha256": "88e9a46a91b6ddd1059f03f578bd0f9bbe6d212d6a395124379b9bb5c97c5cf2",
+          "treeSha256": "742b84f3014a1ff54ea4490c73cec5b1504fa65ab0e9dff0be7d5f3af8f6ac3c"
+        },
+        {
+          "name": "impeccable",
+          "sourcePath": "~/.config/opencode/skills/impeccable",
+          "registeredPaths": [
+            "~/.config/opencode/skills/impeccable"
+          ],
+          "skillMdSha256": "f6f412bd840dd6e96ed94cc4294c9216305b50a0a66fbaeab5f8ddf148d3e85a",
+          "treeSha256": "a01d7e3d83a05f33e5c86ac9066a93d5cd8e1af60bb1e474419b21b287ed4ff6"
+        }
+      ],
+      "trackedWorktree": "clean"
+    },
+    "ui-ux-pro-max": {
+      "repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "revision": "56ea9cf174ed86786187daa9de0e6247cb0747e4",
+      "localPath": "~/creative-engineering-os-upstreams/ui-ux-pro-max",
+      "observedRevision": "56ea9cf174ed86786187daa9de0e6247cb0747e4",
+      "revisionStatus": "match",
+      "untrackedPaths": [],
+      "registeredSkillTrees": [
+        {
+          "name": "ui-ux-pro-max",
+          "sourcePath": "~/.config/opencode/skills/ui-ux-pro-max",
+          "registeredPaths": [
+            "~/.config/opencode/skills/ui-ux-pro-max",
+            "~/.agents/skills/ui-ux-pro-max"
+          ],
+          "skillMdSha256": "f2c8ec156fa8d6850be0146ffa4dd49fbde3b03adb6dfdb5094b8f0172b369a8",
+          "treeSha256": "b7d11ec4a5db83052c31b8c45528d7b146cef375a601dedcc5c85ce386e2b823"
+        },
+        {
+          "name": "ui-ux-pro-max",
+          "sourcePath": "~/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.13.0/.claude/skills/ui-ux-pro-max",
+          "registeredPaths": [
+            "~/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.13.0/.claude/skills/ui-ux-pro-max"
+          ],
+          "skillMdSha256": "ea087c341bfb5b23195c7302027268ede86da802554c18a5c4896a6017b439f9",
+          "treeSha256": "a46468cf0016fcd536a39b046c47a2db0f9101f9bead63ea8b3aee83b53da8b5"
+        }
+      ],
+      "trackedWorktree": "clean"
+    },
+    "react-bits": {
+      "repository": "https://github.com/DavidHDev/react-bits",
+      "revision": "e12c22192ac7b4b452c5e2feb9b586d74765d696",
+      "localPath": "~/creative-engineering-os-upstreams/react-bits",
+      "observedRevision": "e12c22192ac7b4b452c5e2feb9b586d74765d696",
+      "revisionStatus": "match",
+      "untrackedPaths": [
+        "INTEGRATION-COMPONENT-INDEX.json"
+      ],
+      "registeredSkillTrees": [
+        {
+          "name": "react-bits",
+          "sourcePath": "integrations/skills/react-bits",
+          "registeredPaths": [
+            "~/.agents/skills/react-bits",
+            "~/.config/opencode/skills/react-bits",
+            "~/.claude/skills/react-bits",
+            "~/.gemini/antigravity/skills/react-bits"
+          ],
+          "skillMdSha256": "d9c950d584fe7e1f747919077cab23e6de19ee4d9b214955ef817a562dd024b6",
+          "treeSha256": "4082534a646789e4d05f6f94a6cf390177dbacbc7f3141ff9499e420aaca99f3"
+        }
+      ],
+      "trackedWorktree": "clean"
+    },
+    "pmndrs-examples": {
+      "repository": "https://github.com/pmndrs/examples",
+      "revision": "9905cd7b3d030a0ba5c6d327e15fe30ab648abb6",
+      "localPath": "~/creative-engineering-os-upstreams/pmndrs-examples",
+      "observedRevision": "9905cd7b3d030a0ba5c6d327e15fe30ab648abb6",
+      "revisionStatus": "match",
+      "untrackedPaths": [],
+      "registeredSkillTrees": [
+        {
+          "name": "pmndrs-examples",
+          "sourcePath": "integrations/skills/pmndrs-examples",
+          "registeredPaths": [
+            "~/.agents/skills/pmndrs-examples",
+            "~/.config/opencode/skills/pmndrs-examples",
+            "~/.claude/skills/pmndrs-examples",
+            "~/.gemini/antigravity/skills/pmndrs-examples"
+          ],
+          "skillMdSha256": "18e09acda01da69a382d804da939eb1f55ef70dd4f47638bed0638c79db489a6",
+          "treeSha256": "7cf6bd1dc83cf350201024d33ea6a13019be6f39d552d1bb9ff82b94532b4f94"
+        }
+      ],
+      "trackedWorktree": "clean"
+    },
+    "gsap-skills": {
+      "repository": "https://github.com/greensock/gsap-skills",
+      "revision": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+      "localPath": "~/creative-engineering-os-upstreams/gsap-skills",
+      "observedRevision": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+      "revisionStatus": "match",
+      "untrackedPaths": [],
+      "registeredSkillTrees": [
+        {
+          "name": "gsap-core",
+          "sourcePath": "~/.config/opencode/skills/gsap-core",
+          "registeredPaths": [
+            "~/.agents/skills/gsap-core",
+            "~/.config/opencode/skills/gsap-core"
+          ],
+          "skillMdSha256": "3887b47e050ab5afbe2a9a820f23d39fa02ab785e06a343be44c6f91d84d12b3",
+          "treeSha256": "fd7b67873f160a9e73896201f0b6aa5a2e1e56ceedacb393f7c7fd15ecb1bc4d"
+        },
+        {
+          "name": "gsap-timeline",
+          "sourcePath": "~/.config/opencode/skills/gsap-timeline",
+          "registeredPaths": [
+            "~/.agents/skills/gsap-timeline",
+            "~/.config/opencode/skills/gsap-timeline"
+          ],
+          "skillMdSha256": "1a8b0f39cc4be3ed3d834b89672e4ae2f151b901dc3450bebf10bbc45379fe02",
+          "treeSha256": "6270a02b696e42932ba48b10703932e110e0573ddf67777033ae5e36bbccbe11"
+        },
+        {
+          "name": "gsap-scrolltrigger",
+          "sourcePath": "~/.config/opencode/skills/gsap-scrolltrigger",
+          "registeredPaths": [
+            "~/.agents/skills/gsap-scrolltrigger",
+            "~/.config/opencode/skills/gsap-scrolltrigger"
+          ],
+          "skillMdSha256": "9351b6666a4749c0740406ea363aaccb99a087ff45cc5e8b99a0f367facf3ef4",
+          "treeSha256": "271dc19a80b8376ac74c2eaded12c0c99bf64d18f6c81ef53b4bfef52d9dfa3e"
+        },
+        {
+          "name": "gsap-plugins",
+          "sourcePath": "~/.config/opencode/skills/gsap-plugins",
+          "registeredPaths": [
+            "~/.agents/skills/gsap-plugins",
+            "~/.config/opencode/skills/gsap-plugins"
+          ],
+          "skillMdSha256": "5838b856c74c07fbc9fa99b6dfd1eee34ea554c3e530c30e0d58014b707d70a4",
+          "treeSha256": "4d86d4d401e8635c506eef3211091c589022e86cffe8fd99727df4a42a5a4904"
+        },
+        {
+          "name": "gsap-utils",
+          "sourcePath": "~/.config/opencode/skills/gsap-utils",
+          "registeredPaths": [
+            "~/.agents/skills/gsap-utils",
+            "~/.config/opencode/skills/gsap-utils"
+          ],
+          "skillMdSha256": "1927bcc4ea95b38203404ad5ea1d060b15c4a886c65ae53e885ff1793aabe0ba",
+          "treeSha256": "fe41907d95f2a54e02581aace408b7f8c1d1dd3856b1906ff7d2bb3b562e13f8"
+        },
+        {
+          "name": "gsap-react",
+          "sourcePath": "~/.config/opencode/skills/gsap-react",
+          "registeredPaths": [
+            "~/.agents/skills/gsap-react",
+            "~/.config/opencode/skills/gsap-react"
+          ],
+          "skillMdSha256": "88e2a5312b45e8cc7b3c496637ff5bc9af2ae9c925b555c8b235b34cbc989d74",
+          "treeSha256": "d46aacee27c5e50f6bd64dc9942ac6ee365f7381b814aeb554cef78046eb5dbf"
+        },
+        {
+          "name": "gsap-frameworks",
+          "sourcePath": "~/.config/opencode/skills/gsap-frameworks",
+          "registeredPaths": [
+            "~/.agents/skills/gsap-frameworks",
+            "~/.config/opencode/skills/gsap-frameworks"
+          ],
+          "skillMdSha256": "842d9d3659ec3ddc8abbdc524708f8facf81f468ac25d0577f48c759c4fa31e6",
+          "treeSha256": "b51bcadc5590a489b420c5ddf1485c3fc0cd370352b37955ff74600b0c46c44e"
+        },
+        {
+          "name": "gsap-performance",
+          "sourcePath": "~/.config/opencode/skills/gsap-performance",
+          "registeredPaths": [
+            "~/.agents/skills/gsap-performance",
+            "~/.config/opencode/skills/gsap-performance"
+          ],
+          "skillMdSha256": "cb5408d6fba707aabcbfe3320317a14c1f8fca6070074e5261047930f50d441e",
+          "treeSha256": "792578af9215657b2073d83dc075b9a070a03891704179d63c44621168c4cc79"
+        }
+      ],
+      "trackedWorktree": "clean"
+    },
+    "superpowers": {
+      "repository": "https://github.com/obra/superpowers",
+      "revision": "b739a8af570e10a95898f2bdf6cec97467fa6c12",
+      "localPath": "~/creative-engineering-os-upstreams/superpowers",
+      "observedRevision": "b739a8af570e10a95898f2bdf6cec97467fa6c12",
+      "revisionStatus": "match",
+      "untrackedPaths": [],
+      "registeredSkillTrees": [
+        {
+          "name": "test-driven-development",
+          "sourcePath": "~/creative-engineering-os-upstreams/superpowers/skills/test-driven-development",
+          "registeredPaths": [
+            "~/.agents/skills/test-driven-development",
+            "~/.config/opencode/skills/test-driven-development"
+          ],
+          "skillMdSha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d",
+          "treeSha256": "c039732863fda6f029cec147f2eb931b9351128d95bc0faba1266c3d0588501a"
+        },
+        {
+          "name": "verification-before-completion",
+          "sourcePath": "~/creative-engineering-os-upstreams/superpowers/skills/verification-before-completion",
+          "registeredPaths": [
+            "~/.agents/skills/verification-before-completion",
+            "~/.config/opencode/skills/verification-before-completion"
+          ],
+          "skillMdSha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+          "treeSha256": "6fb179c255bcbe9e8f2080a4ba80259c335621cbf835d8d71c93cd0df5c3b3a5"
+        }
+      ],
+      "trackedWorktree": "clean"
+    },
+    "shadcn-ui": {
+      "repository": "https://github.com/shadcn-ui/ui",
+      "revision": "ba1503c64472b82256d9de95e2e62c5901a38e8b",
+      "localPath": "~/creative-engineering-os-upstreams/shadcn-ui",
+      "observedRevision": "ba1503c64472b82256d9de95e2e62c5901a38e8b",
+      "revisionStatus": "match",
+      "untrackedPaths": [],
+      "registeredSkillTrees": [
+        {
+          "name": "shadcn",
+          "sourcePath": "~/creative-engineering-os-upstreams/shadcn-ui/skills/shadcn",
+          "registeredPaths": [
+            "~/.agents/skills/shadcn",
+            "~/.claude/skills/shadcn",
+            "~/.config/opencode/skills/shadcn"
+          ],
+          "skillMdSha256": "93951e5e83f616a3e046491c00d770bd54c0a64164706cd1191822a233d27592",
+          "treeSha256": "06ed4ca1fd0f857db337561191691b9bde1d6fae39cc3a10b874f9fc58ee577e"
+        },
+        {
+          "name": "migrate-radix-to-base",
+          "sourcePath": "~/creative-engineering-os-upstreams/shadcn-ui/skills/migrate-radix-to-base",
+          "registeredPaths": [
+            "~/.agents/skills/migrate-radix-to-base",
+            "~/.claude/skills/migrate-radix-to-base",
+            "~/.config/opencode/skills/migrate-radix-to-base"
+          ],
+          "skillMdSha256": "64c879f6f1eab0decc306ca52ad32d41327c05c4d2fb7e708335e956c61dadf8",
+          "treeSha256": "1bf1234be343bc2a22f4c6f0a1dbde024c8450017a29849e09760ea7973c9ab6"
+        }
+      ],
+      "trackedWorktree": "clean"
+    },
+    "router": {
+      "repository": "https://github.com/ohnoshivm/creative-engineering-os",
+      "revision": "f43aa700883e032bfd5fc0241a7bfea2c49c327b",
+      "localPath": ".",
+      "observedRevision": "f43aa700883e032bfd5fc0241a7bfea2c49c327b",
+      "revisionStatus": "match",
+      "untrackedPaths": [
+        "docs/integrations/GLOBAL-INSTALL.md",
+        "docs/integrations/PRE-INSTALL-AUDIT.md",
+        "docs/integrations/gsap-skills.md",
+        "docs/integrations/impeccable.md",
+        "docs/integrations/pmndrs-examples.md",
+        "docs/integrations/pre-install-state.json",
+        "docs/integrations/react-bits.md",
+        "docs/integrations/shadcn-ui.md",
+        "docs/integrations/superpowers.md",
+        "integrations/COMPATIBILITY.md",
+        "integrations/ROUTING.md",
+        "integrations/evidence/global-install.json",
+        "integrations/evidence/gsap-skills.json",
+        "integrations/evidence/impeccable.json",
+        "integrations/evidence/pmndrs-examples.json",
+        "integrations/evidence/react-bits.json",
+        "integrations/evidence/router.json",
+        "integrations/evidence/shadcn-ui.json",
+        "integrations/evidence/superpowers.json",
+        "integrations/evidence/ui-ux-pro-max.json",
+        "integrations/indexes/pmndrs-examples.json",
+        "integrations/manifest.json",
+        "integrations/routes.json",
+        "integrations/skills/pmndrs-examples/SKILL.md",
+        "integrations/skills/react-bits/SKILL.md",
+        "scripts/ceos-route.py",
+        "scripts/integrations.py",
+        "scripts/integrations/generate_manifest.py",
+        "scripts/integrations/pmndrs_examples_index.py",
+        "tests/integrations-manifest.test.py",
+        "tests/integrations-routing.test.py",
+        "tests/integrations.test.py",
+        "tests/integrations/pmndrs_examples_index_test.py"
+      ],
+      "registeredSkillTrees": [
+        {
+          "name": "ceos-start-here",
+          "sourcePath": "skills/ceos-start-here/SKILL.md",
+          "registeredPaths": [
+            "skills/ceos-start-here/SKILL.md"
+          ],
+          "skillMdSha256": "b657554cdffe019f9360217d33ddab07d17a1546ac67bc5a2d625235057cd3f6",
+          "treeSha256": "b657554cdffe019f9360217d33ddab07d17a1546ac67bc5a2d625235057cd3f6"
+        },
+        {
+          "name": "ceos-studio-workflow",
+          "sourcePath": "skills/ceos-studio-workflow/SKILL.md",
+          "registeredPaths": [
+            "skills/ceos-studio-workflow/SKILL.md"
+          ],
+          "skillMdSha256": "09d39e094a6319eda008146b94dd48280d98e4a97bec9e40920cbbb8133004ca",
+          "treeSha256": "09d39e094a6319eda008146b94dd48280d98e4a97bec9e40920cbbb8133004ca"
+        }
+      ],
+      "integrityFiles": [
+        {
+          "path": "scripts/ceos-route.py",
+          "sha256": "a9cbf3de77e3589f190a0357b35b499d928cef4a1f61e897a96de270decddfc2"
+        },
+        {
+          "path": "integrations/routes.json",
+          "sha256": "91526aad674dff0f2a35e9bd2c582871e04a30993689130c84b08b1d15c0695b"
+        }
+      ],
+      "revisionScope": "Base checkout commit recorded by pre-install-state.json; router changes are uncommitted and are not represented by this SHA.",
+      "trackedWorktree": "modified"
+    }
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 1,
+  "slug": "impeccable",
+  "status": "verified_with_limitations",
+  "auditedAt": "2026-10-21T13:04:00Z",
+  "auditGate": {
+    "path": "~/.local/state/creative-engineering-os/integration-v2-20261021/AUDIT-COMPLETE",
+    "presentAtCompletion": true
+  },
+  "source": {
+    "repository": "https://github.com/pbakaus/impeccable",
+    "commit": "dad8dbb3aac21ad1fa236c110315ef4abece23e8",
+    "commitUrl": "https://github.com/pbakaus/impeccable/commit/dad8dbb3aac21ad1fa236c110315ef4abece23e8",
+    "commitDate": "2026-10-20T14:34:28Z",
+    "skillVersion": "4.7.0",
+    "checkoutPath": "~/creative-engineering-os-upstreams/impeccable",
+    "checkoutHeadMatchesPin": true,
+    "checkoutWorktree": "clean",
+    "license": "Apache-2.0",
+    "providerFormats": [
+      {
+        "provider": "Codex / agents",
+        "path": ".agents/skills/impeccable",
+        "format": "native skill"
+      },
+      {
+        "provider": "OpenCode",
+        "path": ".opencode/skills/impeccable",
+        "format": "native skill"
+      },
+      {
+        "provider": "Claude Code",
+        "path": ".claude-plugin/plugin.json",
+        "format": "official plugin",
+        "version": "4.7.0",
+        "installed": false
+      }
+    ],
+    "reviewedBuildFiles": [
+      "package.json",
+      "scripts/fetch-engine.mjs",
+      "scripts/check-engine-release.mjs"
+    ],
+    "buildNotRun": true,
+    "buildRequirements": {
+      "node": ">=18.19.0",
+      "bun": "1.3.13",
+      "rustCargo": "workspace engine build"
+    }
+  },
+  "reference": {
+    "path": "library/skills/impeccable",
+    "version": "4.7.0",
+    "upstreamCommit": "dad8dbb3aac21ad1fa236c110315ef4abece23e8",
+    "classification": "reference_only",
+    "unchanged": true,
+    "sha256Skill": "25d1409b8a17b329b33533cd66c2d25981991e28ebe9ef4c29b01d4325c3cae6",
+    "sha256License": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812"
+  },
+  "versions": {
+    "activeBefore": [
+      {
+        "provider": "Codex",
+        "path": "~/.agents/skills/impeccable",
+        "skill": "4.6.0",
+        "engine": "0.1.15"
+      },
+      {
+        "provider": "Claude Code",
+        "path": "~/.claude/skills/impeccable",
+        "skill": "4.6.0",
+        "sharedSymlinkTo": "~/.agents/skills/impeccable"
+      },
+      {
+        "provider": "OpenCode",
+        "path": "~/.config/opencode/skills/impeccable",
+        "skill": "4.6.0",
+        "engine": "0.1.15"
+      }
+    ],
+    "activeAfter": [
+      {
+        "provider": "Codex",
+        "path": "~/.agents/skills/impeccable",
+        "skill": "4.7.0",
+        "engine": "0.1.16",
+        "files": 62
+      },
+      {
+        "provider": "Claude Code",
+        "path": "~/.claude/skills/impeccable",
+        "skill": "4.7.0 via shared symlink",
+        "resolvesTo": "~/.agents/skills/impeccable"
+      },
+      {
+        "provider": "OpenCode",
+        "path": "~/.config/opencode/skills/impeccable",
+        "skill": "4.7.0",
+        "engine": "0.1.16",
+        "files": 57
+      }
+    ],
+    "officialClaudePluginVersion": "4.7.0",
+    "installedImpeccablePluginFound": false,
+    "duplicateResolution": "Claude uses the shared .agents skill symlink; the separate Claude plugin was not installed, so no same-provider plugin-plus-manual duplicate was introduced.",
+    "providerTreesMatchPinnedUpstream": true,
+    "providerSkillMetadataPreserved": true
+  },
+  "supportedAgents": [
+    "Cursor",
+    "Claude Code",
+    "GitHub Copilot",
+    "DeepSeek Harness",
+    "Gemini CLI",
+    "Codex CLI",
+    "Grok Build",
+    "Hermes Agent",
+    "OpenCode",
+    "Pi",
+    "Kiro",
+    "Trae",
+    "Rovo Dev",
+    "Qoder",
+    "Mistral Vibe",
+    "Veto",
+    "Google Antigravity"
+  ],
+  "triggers": [
+    "Design, redesign, shape, critique, audit, polish, simplify, harden, animate, or improve a frontend interface.",
+    "Websites, landing pages, dashboards, product UI, components, forms, settings, onboarding, empty states, and native iOS or Android screens.",
+    "Not intended for backend-only requests."
+  ],
+  "supportedTech": {
+    "interfaceScope": [
+      "web frontend",
+      "native iOS",
+      "native Android",
+      "adaptive native UI"
+    ],
+    "detectorSourceExtensions": [
+      ".html",
+      ".htm",
+      ".astro",
+      ".vue",
+      ".svelte",
+      ".css",
+      ".scss",
+      ".sass",
+      ".less",
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx",
+      ".mjs",
+      ".cjs"
+    ],
+    "templateEngineNote": "Astro, Vue, and Svelte source files are supported; opting into the static HTML engine for these templates trades regex rules and source line numbers for element-level checks.",
+    "urlScan": "Supported by the engine; requires a compatible installed browser. This run tested local static files only."
+  },
+  "commands": {
+    "agentSkillCommands": [
+      "shape",
+      "init",
+      "document",
+      "extract",
+      "critique",
+      "audit",
+      "polish",
+      "bolder",
+      "quieter",
+      "distill",
+      "harden",
+      "onboard",
+      "animate",
+      "colorize",
+      "typeset",
+      "layout",
+      "delight",
+      "overdrive",
+      "clarify",
+      "adapt",
+      "optimize",
+      "live",
+      "generate",
+      "doctor",
+      "hooks",
+      "pin",
+      "unpin"
+    ],
+    "deprecatedAlias": "craft",
+    "directLauncher": [
+      {
+        "command": "<skill-base-dir>/scripts/impeccable context",
+        "purpose": "load project context once per session"
+      },
+      {
+        "command": "<skill-base-dir>/scripts/impeccable detect <path> --json",
+        "purpose": "deterministic local source analysis"
+      },
+      {
+        "command": "<skill-base-dir>/scripts/impeccable detect <url> --json",
+        "purpose": "deterministic rendered URL analysis when a browser is available"
+      },
+      {
+        "command": "<skill-base-dir>/scripts/impeccable detect --cdp <port> --target <page-match> --json",
+        "purpose": "analyze an attached desktop browser page"
+      }
+    ],
+    "determinism": "detect is a deterministic engine command. Skill workflows such as critique, audit, polish, and shape are prompt instructions interpreted by a provider model; they are not standalone deterministic programs."
+  },
+  "dependencies": {
+    "nativeSkillRuntime": "No Node runtime required for the skill launcher.",
+    "engine": "Self-contained platform binary; launcher version-pins it and requires a matching SHA-256 sidecar for a fresh download.",
+    "firstUseNetwork": "Official GitHub release access is needed when no compatible binary is available in the skill tree or user cache.",
+    "sourceBuild": "Build tooling is separate from use: Node >=18.19.0, Bun 1.3.13, Rust/Cargo.",
+    "installersRun": [],
+    "globalRuntimeInstall": false
+  },
+  "engineRelease": {
+    "versionAtPinnedSource": "0.1.16",
+    "officialTag": "engine-v0.1.16",
+    "publishedAt": "2026-10-19T17:30:38Z",
+    "publishedBeforePinnedFixCommit": true,
+    "releaseAsset": "impeccable-darwin-arm64",
+    "assetSizeBytes": 17192672,
+    "sha256": "5c00c3130b961f3aa1066f04ed0e1f58e87808ad153efa00f1c44184800084f2",
+    "officialSidecarVerified": true,
+    "updatedLauncherChecksumGate": "passed using the official checksum-verified asset staged under a temporary file:// release base; the binary was cached only under a /tmp IMPECCABLE_HOME",
+    "runtimeConclusion": "The binary runs, but the published 0.1.16 binary predates the pinned source commit that adds the linked-stylesheet ignore fix."
+  },
+  "verification": {
+    "sourcePinAndCleanCheckout": "passed",
+    "officialLicenseAndProviderFormats": "verified from pinned LICENSE, package.json, README, and provider trees",
+    "providerTreeComparison": "passed: .agents tree 62/62 files and OpenCode tree 57/57 files match the pinned provider trees",
+    "launcherProbe": {
+      "command": "~/.agents/skills/impeccable/scripts/impeccable engine-probe",
+      "exitCode": 0,
+      "stdout": "impeccable-engine 0.1.16"
+    },
+    "detectorOperationalCheck": {
+      "fixture": "Temporary local HTML page with a linked vendor stylesheet; detector.ignoreFiles was set to src/vendor/**.",
+      "noConfig": {
+        "command": "impeccable detect --no-config --json src/page.html",
+        "exitCode": 2,
+        "findings": [
+          "low-contrast",
+          "gradient-text"
+        ]
+      },
+      "configuredIgnore": {
+        "command": "impeccable detect --json src/page.html",
+        "exitCode": 2,
+        "findings": [
+          "low-contrast",
+          "gradient-text"
+        ]
+      },
+      "ignoredCssAsDirectTarget": {
+        "command": "impeccable detect --json src/vendor/lib.css",
+        "exitCode": 0,
+        "findings": []
+      },
+      "regressionExpected": "The linked stylesheet's gradient-text page-level finding is waived while low-contrast remains because the stylesheet still styles the page.",
+      "regressionObserved": "Both page-level findings remain with detector.ignoreFiles configured; the direct scan of the ignored CSS file is suppressed.",
+      "regressionStatus": "FAIL_ON_PUBLISHED_0.1.16_BINARY",
+      "sourceRegressionTest": {
+        "path": "crates/html/tests/ignored_linked_stylesheet.rs",
+        "existsAtPinnedCommit": true,
+        "executed": false,
+        "reason": "Cargo is not installed; no toolchain was installed."
+      }
+    },
+    "rawLogs": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/impeccable/run.GFQh7S",
+    "fullUpstreamTestSuite": "not run",
+    "providerRuntimeDiscovery": {
+      "codex": "impeccable appeared in the current injected skill catalog before the update; a fresh runtime reload after the file update was not performed.",
+      "claudeCode": "The native .claude/skills path resolves to the updated shared .agents tree; no fresh Claude model invocation was performed.",
+      "openCode": "The native user skill directory and front matter are present on disk; no OpenCode runtime discovery command or model invocation was performed.",
+      "claudePlugin": "No matching installation was found in the inspected Claude plugin directory; the official plugin was not installed."
+    },
+    "currentGatePresent": true,
+    "providerSettingsChanged": false,
+    "authSubscriptionsOrT3Changed": false,
+    "vendoredReferenceChanged": false
+  },
+  "update": {
+    "method": "Copy only the six changed non-SKILL provider files from the matching official 4.7 provider tree; update each provider's version field while preserving its native metadata; no installer or plugin command was run.",
+    "semanticChanges": [
+      "Skill metadata raised from 4.6.0 to 4.7.0.",
+      "Engine pin raised from 0.1.15 to 0.1.16.",
+      "Updated line-break guidance in typeset reference.",
+      "Updated launcher cleans staged files on termination.",
+      "Updated live mode improves touch behavior and plain-HTTP session/clipboard fallback."
+    ],
+    "changedProviderFiles": 14,
+    "rollback": {
+      "backupPath": "~/.local/state/creative-engineering-os/integration-v2-20261021/backups/impeccable-v4.7-cze_q06l",
+      "backupManifestPath": "~/.local/state/creative-engineering-os/integration-v2-20261021/backups/impeccable-v4.7-cze_q06l/manifest.json",
+      "backupManifestSha256": "9db07518c58985b26105e7b4798dcfc285ff6ffec09be3843de4763375b1e036",
+      "filesBackedUp": 14,
+      "restoreInstructions": "Restore 7 backed-up files from agents/ to ~/.agents/skills/impeccable/ and 7 from opencode/ to ~/.config/opencode/skills/impeccable/. The Claude symlink follows the restored .agents tree.",
+      "providerSettingsOrAuthChanged": false
+    }
+  },
+  "limitations": [
+    "The published engine-v0.1.16 binary predates the pinned source commit; its runtime detector does not implement the linked stylesheet ignore behavior present in pinned source.",
+    "The pinned source regression test was not run because Cargo is unavailable.",
+    "Fresh Claude and OpenCode runtime discovery after the update is unverified; filesystem discovery is not proof of runtime reload.",
+    "The detector was exercised only on a temporary static fixture, not a production URL or rendered browser session.",
+    "Prompt-based critique and audit workflows were not invoked; their output is provider-model behavior, not a deterministic analysis result."
+  ]
+}

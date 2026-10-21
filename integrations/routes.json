@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "capabilities": {
+    "ceos-direction": {"label": "CEOS creative direction", "skills": ["ceos-creative-direction"]},
+    "impeccable": {"label": "Impeccable", "skills": ["impeccable"]},
+    "ceos-art-direction": {"label": "CEOS art direction", "skills": ["ceos-art-direction"]},
+    "ui-ux-pro-max": {"label": "UI/UX Pro Max", "skills": ["ui-ux-pro-max"]},
+    "ceos-reference-library": {"label": "CEOS reference library", "skills": [], "paths": ["library/CATALOG.md"]},
+    "ceos-interaction": {"label": "CEOS interaction architecture", "skills": ["ceos-interaction-architecture"]},
+    "ceos-motion": {"label": "CEOS motion direction and animation engineering", "skills": ["ceos-motion-direction"]},
+    "gsap": {"label": "GSAP skills", "skills": ["gsap-core", "gsap-timeline", "gsap-scrolltrigger", "gsap-plugins", "gsap-utils", "gsap-react", "gsap-frameworks", "gsap-performance"]},
+    "react-bits": {"label": "React Bits", "skills": ["react-bits"], "paths": ["integrations/skills/react-bits/SKILL.md"], "requiresReact": true},
+    "shadcn": {"label": "shadcn/ui", "skills": ["shadcn"], "requiresReact": true},
+    "ceos-creative-coding": {"label": "CEOS creative coding", "skills": ["ceos-creative-coding"]},
+    "pmndrs-examples": {"label": "pmndrs/examples (Three.js / R3F)", "skills": ["pmndrs-examples"], "paths": ["integrations/skills/pmndrs-examples/SKILL.md"], "requiresReact": true, "requiresWebgl": true},
+    "ceos-realtime-3d": {"label": "CEOS realtime 3D", "skills": ["ceos-realtime-3d"]},
+    "ceos-shader": {"label": "CEOS shader engineering", "skills": ["ceos-shader-engineering"]},
+    "superpowers-tdd": {"label": "Superpowers test-driven development", "skills": ["test-driven-development"]},
+    "superpowers-verification": {"label": "Superpowers verification", "skills": ["verification-before-completion"]},
+    "ceos-frontend": {"label": "CEOS frontend architecture", "skills": ["ceos-frontend-architecture"]},
+    "ceos-production-quality": {"label": "CEOS production quality", "skills": ["ceos-production-quality"]},
+    "existing-qa": {"label": "Existing project QA tools", "skills": ["ceos-production-quality"], "paths": ["tooling/visual-audit/capture.mjs"]},
+    "ceos-visual-audit": {"label": "CEOS visual audit", "skills": ["ceos-visual-audit"]},
+    "existing-browser-tools": {"label": "Existing Playwright tools", "paths": ["tooling/visual-audit/capture.mjs"]},
+    "ceos-performance": {"label": "CEOS performance engineering", "skills": ["ceos-performance-engineering"]},
+    "existing-performance-tools": {"label": "Existing performance measurement tools", "paths": ["tooling/perf/frame-probe.mjs"]}
+  },
+  "routes": [
+    {"id": "creative-concept", "label": "Creative concept", "triggers": ["creative concept", "concept directions", "brand concept", "concept options", "concept"], "capabilities": ["ceos-direction", "impeccable"], "secondaryContribution": "Use Impeccable for a second-pass interface critique after CEOS establishes the concept direction."},
+    {"id": "art-direction", "label": "Art direction", "triggers": ["art direction", "visual direction", "visual identity", "colour palette", "color palette", "design tokens", "art-direction"], "capabilities": ["ceos-art-direction", "ui-ux-pro-max"], "secondaryContribution": "Use UI/UX Pro Max for palette and design-system references that support the approved art direction."},
+    {"id": "research", "label": "Design research", "triggers": ["research references", "reference research", "visual research", "inspiration research", "benchmark references", "research"], "capabilities": ["ui-ux-pro-max", "ceos-reference-library"], "secondaryContribution": "Use the CEOS reference catalog to find one relevant technique or skill after framing the research question."},
+    {"id": "typography", "label": "Typography and layout", "triggers": ["responsive editorial layout", "editorial layout", "responsive layout", "font pairing", "choose fonts", "type scale", "type hierarchy", "typography system", "typography", "layout"], "capabilities": ["impeccable", "ui-ux-pro-max"], "secondaryContribution": "Use UI/UX Pro Max for stack-aware responsive typography and layout references after the type direction is set."},
+    {"id": "wireframes", "label": "Wireframes and user flows", "triggers": ["wireframes", "wireframe", "user journey", "user flow", "information architecture", "site map", "sitemap"], "capabilities": ["ceos-interaction", "ui-ux-pro-max"], "secondaryContribution": "Use UI/UX Pro Max for targeted accessibility and interaction-pattern references after CEOS maps journeys and states."},
+    {"id": "motion-direction", "label": "Motion direction", "triggers": ["motion direction", "motion spec", "animation direction", "motion choreography", "scroll story", "reduced motion spec"], "capabilities": ["ceos-motion", "gsap"], "secondaryContribution": "Open GSAP guidance only if the approved motion spec needs its APIs; prefer CSS or WAAPI for simpler motion."},
+    {"id": "gsap-implementation", "label": "GSAP implementation", "triggers": ["gsap scroll sequence", "gsap scrolltrigger", "gsap timeline", "gsap implementation", "scrolltrigger", "gsap"], "capabilities": ["gsap", "ceos-motion"], "secondaryContribution": "Use CEOS motion engineering to check intent, reduced-motion behavior, interruption, and cleanup around the GSAP code."},
+    {"id": "react-animations", "label": "React animations", "triggers": ["animated headline", "headline animation", "kinetic type", "react bits", "react animations", "react animation", "animated react", "react reveal"], "capabilities": ["react-bits", "gsap"], "secondaryContribution": "Use GSAP when its timeline or choreography adds value; simple UI state should use CSS or WAAPI.", "nonReactFallback": "Use CSS or WAAPI for a simple headline; choose GSAP only if the motion needs a timeline."},
+    {"id": "components-forms", "label": "UI components and forms", "triggers": ["accessible dialog", "dialog component", "dialog", "shadcn ui", "shadcn", "form components", "form component", "components and forms", "forms"], "capabilities": ["shadcn", "ui-ux-pro-max"], "secondaryContribution": "Use UI/UX Pro Max to check accessible behavior and interaction guidance for the selected component.", "nonReactFallback": "Use semantic HTML forms and the native dialog element; follow existing project patterns if a custom dialog is needed."},
+    {"id": "interactive-elements", "label": "Creative interactive elements", "triggers": ["interactive elements", "interactive component", "interactive controls", "microinteraction", "tabs and accordions", "accordion interaction"], "capabilities": ["react-bits", "ceos-creative-coding"], "secondaryContribution": "Use CEOS creative coding when an original Canvas, SVG, or WebGL visual is needed beyond a reusable interaction.", "nonReactFallback": "Use semantic HTML and CSS or WAAPI for controls; use CEOS Creative Coding for an original Canvas or SVG interaction."},
+    {"id": "three-r3f", "label": "Three.js and R3F", "triggers": ["interactive 3d object", "3d object prototype", "react three fiber", "three.js", "threejs", "r3f", "webgl scene", "3d scene"], "capabilities": ["pmndrs-examples", "ceos-realtime-3d"], "secondaryContribution": "Use CEOS realtime 3D to check scene lifecycle, rendering budgets, and fallbacks around the selected example.", "nonReactFallback": "Use vanilla Three.js for an existing WebGL scene; use CSS or native interaction when a full 3D scene is unnecessary."},
+    {"id": "glsl-shaders", "label": "GLSL and shaders", "triggers": ["fragment shader", "raymarching", "ray marching", "glsl", "shader"], "capabilities": ["ceos-shader", "pmndrs-examples"], "secondaryContribution": "Use pmndrs/examples only when the shader needs to integrate with an existing R3F scene or a tested example."},
+    {"id": "architecture", "label": "Frontend architecture", "triggers": ["frontend architecture", "technical architecture", "choose a stack", "stack decision", "architecture"], "capabilities": ["ceos-frontend", "superpowers-tdd"], "secondaryContribution": "Use Superpowers TDD for narrow test-first checks after the architecture decision; keep orchestration with CEOS and the project policy."},
+    {"id": "complex-implementation", "label": "Complex implementation", "triggers": ["complex implementation", "multi-file feature", "feature implementation", "implement a feature", "implement a page"], "capabilities": ["superpowers-tdd", "ceos-frontend"], "secondaryContribution": "Use CEOS frontend architecture to check boundaries and state ownership while Superpowers stays within TDD."},
+    {"id": "debugging-verification", "label": "Debugging and verification", "triggers": ["debug broken production component", "broken production component", "systematic debugging", "debugging", "debug a bug", "bug investigation", "failing tests", "test failures", "verification", "verify implementation"], "capabilities": ["superpowers-verification", "existing-qa"], "secondaryContribution": "Use existing project QA tools to reproduce and capture the failure; keep fault isolation under the project engineering workflow."},
+    {"id": "visual-critique", "label": "Visual critique", "triggers": ["audit inconsistent landing page", "inconsistent landing page", "visual hierarchy", "visual critique", "visual audit", "critique the page", "critique my page", "review the visual", "design critique", "screenshot critique"], "capabilities": ["impeccable", "ceos-visual-audit"], "secondaryContribution": "Use CEOS visual audit to record responsive evidence and prioritize concrete defects after the critique."},
+    {"id": "browser-qa", "label": "Browser QA", "triggers": ["browser qa", "browser test", "test in browser", "playwright", "screenshot capture", "responsive check", "browser inspection"], "capabilities": ["existing-browser-tools", "superpowers-verification"], "secondaryContribution": "Use Superpowers verification to confirm requested browser evidence and clearly report checks that were not run."},
+    {"id": "performance", "label": "Performance", "triggers": ["core web vitals", "frame rate", "bundle size", "memory usage", "optimize performance", "performance", "jank"], "capabilities": ["ceos-performance", "existing-performance-tools"], "secondaryContribution": "Use existing measurement tools when they can collect the metric named by CEOS performance engineering."},
+    {"id": "release", "label": "Release verification", "triggers": ["release verification", "release checklist", "production readiness", "ready to ship", "ship it", "release"], "capabilities": ["ceos-production-quality", "superpowers-verification"], "secondaryContribution": "Use Superpowers verification to confirm release claims have recorded evidence without changing release authorization."}
+  ],
+  "modeRules": {
+    "flagshipSignals": ["flagship", "launch campaign", "brand world", "immersive site", "immersive webgl experience", "full site", "full-site", "from scratch", "multi-page", "multiple pages", "signature moment"],
+    "fastSignals": ["minor css fix", "small css fix", "spacing fix", "one-line css", "one line css", "quick css tweak", "tiny css change", "fix a typo"],
+    "fastActions": ["fix", "adjust", "tweak", "change", "correct"],
+    "fastScope": ["css", "spacing", "padding", "margin", "gap", "font size", "line height", "color", "colour", "border", "alignment"],
+    "fastExclusions": ["from scratch", "full site", "full-site", "flagship", "launch campaign", "brand concept", "brand direction", "palette", "art direction", "design system", "design tokens", "multiple pages", "multiple routes", "multiple states", "immersive site", "signature moment", "shared styles", "global", "behavior", "behaviour", "new dependency", "dependency decision"]
+  },
+  "modes": {
+    "FAST": {
+      "guidance": "Make the named local change, inspect only the affected state or viewport, and run relevant checks. Skip concept options, owner approvals, signature-moment prototypes, and broad QA unless scope expands. Keep input validation, error handling, accessibility, keyboard/focus, reduced-motion, and security checks whenever the change touches them.",
+      "escalateWhen": ["The change affects behavior or multiple states", "The scope expands beyond one local visual change", "A new dependency or stack decision is needed", "The work makes a brand-level direction choice"]
+    },
+    "STANDARD": {
+      "guidance": "Use only the CEOS stages the task needs: frame it, research or set direction when useful, specify UX/motion/architecture when relevant, implement, inspect changed paths in a real browser, and verify relevant accessibility, performance, and security.",
+      "escalateWhen": ["The work is a launch or rebrand", "Several routes need a shared visual system", "An immersive signature moment needs a prototype", "Several teams or stakeholders need approved handoffs"]
+    },
+    "FLAGSHIP": {
+      "guidance": "Run the full CEOS path: reference research; distinct concepts and owner decision; art direction, UX, motion, and architecture as relevant; a desktop-and-phone signature prototype before bulk sections; build; responsive browser QA; independent visual, accessibility, performance, and security review; refinement; production-artifact and rollback verification.",
+      "escalateWhen": []
+    }
+  },
+  "constraintSignals": {
+    "noReact": ["no react", "without react", "vanilla javascript", "vanilla js", "non-react", "nonreact"],
+    "noNewDependencies": ["no new dependencies", "no dependency changes", "use installed dependencies only", "no new packages", "stdlib only"],
+    "cssOnly": ["css only", "css-only", "styles only", "no markup changes"],
+    "noWebgl": ["no webgl", "without webgl", "no canvas", "no three.js"],
+    "accessibility": ["accessibility", "accessible", "keyboard support", "screen reader"],
+    "reducedMotion": ["reduced motion", "prefers-reduced-motion", "motion sensitivity"]
+  }
+}

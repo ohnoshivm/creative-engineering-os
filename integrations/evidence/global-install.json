@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "id": "global-install",
+  "date": "2026-10-21",
+  "status": "complete",
+  "objective": "Install shadcn/ui, React Bits, and pmndrs/examples globally for agent discovery on this Mac.",
+  "scope": {
+    "globalSkillRoots": [
+      "~/.agents/skills",
+      "~/.config/opencode/skills",
+      "~/.claude/skills"
+    ],
+    "antigravityRoot": "~/.gemini/antigravity/skills",
+    "providerSettingsChanged": false,
+    "mcpServersAdded": false,
+    "otherAgentFilesChanged": false,
+    "creativeAuditorEditTouched": false
+  },
+  "sources": [
+    {
+      "name": "shadcn/ui",
+      "repository": "https://github.com/shadcn-ui/ui",
+      "localPath": "~/creative-engineering-os-upstreams/shadcn-ui",
+      "revision": "ba1503c64472b82256d9de95e2e62c5901a38e8b",
+      "revisionCheck": "git -C ~/creative-engineering-os-upstreams/shadcn-ui rev-parse HEAD",
+      "integration": "Official skills/shadcn and skills/migrate-radix-to-base symlinked; shadcn CLI installed globally."
+    },
+    {
+      "name": "React Bits",
+      "repository": "https://github.com/DavidHDev/react-bits",
+      "localPath": "~/creative-engineering-os-upstreams/react-bits",
+      "revision": "e12c22192ac7b4b452c5e2feb9b586d74765d696",
+      "revisionChecks": [
+        "git -C ~/creative-engineering-os-upstreams/react-bits rev-parse HEAD",
+        "gh api repos/DavidHDev/react-bits/commits/e12c22192ac7b4b452c5e2feb9b586d74765d696"
+      ],
+      "integration": "Thin CEOS shim. The pinned public tree contains no SKILL.md and no standalone React Bits MCP server or CLI. Official install docs use shadcn registry and jsrepo; official MCP docs integrate through the shadcn MCP server."
+    },
+    {
+      "name": "pmndrs/examples",
+      "repository": "https://github.com/pmndrs/examples",
+      "localPath": "~/creative-engineering-os-upstreams/pmndrs-examples",
+      "revision": "9905cd7b3d030a0ba5c6d327e15fe30ab648abb6",
+      "revisionCheck": "git -C ~/creative-engineering-os-upstreams/pmndrs-examples rev-parse HEAD",
+      "integration": "Thin CEOS shim that searches integrations/indexes/pmndrs-examples.json before opening an example."
+    }
+  ],
+  "globalNpmPackage": {
+    "package": "shadcn",
+    "version": "4.22.1",
+    "pinnedPackageJson": "~/creative-engineering-os-upstreams/shadcn-ui/packages/shadcn/package.json",
+    "bin": "./dist/index.js",
+    "nodeRequirement": ">=20.18.1",
+    "reviewedLifecycleScripts": [],
+    "installCommand": "npm i -g shadcn@4.22.1 --ignore-scripts",
+    "uninstallCommand": "npm uninstall -g shadcn",
+    "preInstallState": "npm ls -g shadcn --depth=0 returned an empty global package tree.",
+    "installedLocation": "/opt/homebrew/lib/node_modules/shadcn",
+    "versionCheck": {
+      "command": "shadcn --version",
+      "output": "4.22.1"
+    },
+    "npmCheck": {
+      "command": "npm ls -g shadcn --depth=0",
+      "output": "shadcn@4.22.1"
+    }
+  },
+  "skills": [
+    {
+      "name": "shadcn",
+      "kind": "official-upstream",
+      "sourcePath": "~/creative-engineering-os-upstreams/shadcn-ui/skills/shadcn",
+      "requires": "shadcn CLI; skill commands follow the project's package runner. MCP is optional.",
+      "links": [
+        "~/.agents/skills/shadcn",
+        "~/.config/opencode/skills/shadcn",
+        "~/.claude/skills/shadcn",
+        "~/.gemini/antigravity/skills/shadcn"
+      ]
+    },
+    {
+      "name": "migrate-radix-to-base",
+      "kind": "official-upstream",
+      "sourcePath": "~/creative-engineering-os-upstreams/shadcn-ui/skills/migrate-radix-to-base",
+      "links": [
+        "~/.agents/skills/migrate-radix-to-base",
+        "~/.config/opencode/skills/migrate-radix-to-base",
+        "~/.claude/skills/migrate-radix-to-base",
+        "~/.gemini/antigravity/skills/migrate-radix-to-base"
+      ]
+    },
+    {
+      "name": "react-bits",
+      "kind": "thin-shim",
+      "sourcePath": "integrations/skills/react-bits/SKILL.md",
+      "lineCount": 19,
+      "triggers": "Animated or interactive components in React, Next.js, or Vite React projects.",
+      "officialInstallCommands": [
+        "npx shadcn@latest add @react-bits/<Component>-TS-TW",
+        "npx jsrepo@latest add https://reactbits.dev/r/<Component>-TS-TW"
+      ],
+      "variantSuffixes": [
+        "JS-CSS",
+        "JS-TW",
+        "TS-CSS",
+        "TS-TW"
+      ],
+      "registryPattern": "https://reactbits.dev/r/{name}.json",
+      "globalJsrepoInstalled": false,
+      "links": [
+        "~/.agents/skills/react-bits",
+        "~/.config/opencode/skills/react-bits",
+        "~/.claude/skills/react-bits",
+        "~/.gemini/antigravity/skills/react-bits"
+      ]
+    },
+    {
+      "name": "pmndrs-examples",
+      "kind": "thin-shim",
+      "sourcePath": "integrations/skills/pmndrs-examples/SKILL.md",
+      "lineCount": 17,
+      "indexPath": "integrations/indexes/pmndrs-examples.json",
+      "indexRevision": "9905cd7b3d030a0ba5c6d327e15fe30ab648abb6",
+      "indexedExamples": 200,
+      "links": [
+        "~/.agents/skills/pmndrs-examples",
+        "~/.config/opencode/skills/pmndrs-examples",
+        "~/.claude/skills/pmndrs-examples",
+        "~/.gemini/antigravity/skills/pmndrs-examples"
+      ]
+    }
+  ],
+  "mcp": {
+    "added": false,
+    "shadcnOptIn": {
+      "setupCommand": "shadcn mcp init --client <client>",
+      "supportedClients": [
+        "claude",
+        "cursor",
+        "vscode",
+        "codex",
+        "opencode"
+      ],
+      "helpCheck": "shadcn mcp init --help",
+      "helpCheckResult": "Command confirmed; not executed to initialize an MCP server."
+    },
+    "reactBitsOptIn": {
+      "registryConfig": {
+        "@react-bits": "https://reactbits.dev/r/{name}.json"
+      },
+      "officialCommand": "npx shadcn@latest mcp init --client claude",
+      "localPinnedEquivalent": "shadcn mcp init --client claude",
+      "server": "The shadcn MCP server, used to browse and add the React Bits registry; not a standalone React Bits MCP server.",
+      "enabled": false
+    }
+  },
+  "claudePluginOverlap": {
+    "inventoryCommand": "claude plugin list",
+    "knownRelatedSkills": [
+      "vercel:shadcn",
+      "stitch-build:shadcn-ui",
+      "ui-ux-pro-max:ui-styling"
+    ],
+    "observed": [
+      {
+        "plugin": "vercel@claude-plugins-official",
+        "scope": "user",
+        "status": "enabled",
+        "inventoryNote": "The packages it lists are not installed."
+      },
+      {
+        "plugin": "stitch-build@google-labs-code-stitch-skills",
+        "scope": "project and user",
+        "status": "enabled"
+      },
+      {
+        "plugin": "ui-ux-pro-max@ui-ux-pro-max-skill",
+        "scope": "user",
+        "status": "enabled"
+      }
+    ],
+    "resolution": "These are functionally related but non-identical, namespaced plugin skills. Plain shadcn has no exact-name collision in ~/.claude/skills. No plugin was disabled, removed, or updated."
+  },
+  "antigravity": {
+    "linksAdded": true,
+    "existingConvention": "CEOS already has skill symlinks in ~/.gemini/antigravity/skills.",
+    "runtimeCheck": "command -v agy",
+    "runtimeResult": "agy: unavailable; skill discovery/invocation unverified."
+  },
+  "backups": {
+    "directory": "~/.local/state/creative-engineering-os/integration-v2-20261021/backups/global-install",
+    "created": [],
+    "reason": "No same-named skill entry existed in any target root and no global shadcn package was installed before this change."
+  },
+  "checks": [
+    {
+      "check": "Global skill links and names",
+      "result": "PASS: 16 directory symlinks resolve to their expected targets; every skill appears exactly once in each of the four roots; every SKILL.md has valid YAML frontmatter with matching name and non-empty description.",
+      "log": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/global-install/global-links-check.log"
+    },
+    {
+      "check": "shadcn CLI installation",
+      "result": "PASS: shadcn --version and npm ls -g both report 4.22.1.",
+      "logs": [
+        "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/global-install/npm-install.log",
+        "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/global-install/cli-version.log"
+      ]
+    },
+    {
+      "check": "Skill validation",
+      "result": "PASS: react-bits and pmndrs-examples both pass skill-creator quick_validate.py and are under 80 lines.",
+      "logs": [
+        "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/global-install/react-bits-skill-validation.log",
+        "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/global-install/pmndrs-skill-validation.log"
+      ]
+    },
+    {
+      "check": "shadcn skill references",
+      "result": "PASS: 21 relative Markdown links across shadcn and migrate-radix-to-base resolve.",
+      "log": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/global-install/shadcn-internal-links.log"
+    },
+    {
+      "check": "pmndrs index",
+      "result": "PASS: JSON parses, source revision matches, index contains 200 examples, and documented jq search returns matches.",
+      "logs": [
+        "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/global-install/pmndrs-index-search.log",
+        "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/global-install/upstream-readiness.log"
+      ]
+    },
+    {
+      "check": "React Bits source and registry",
+      "result": "PASS: pinned SHA verified; GitHub tree has no SKILL.md and confirms only an MCP docs page; README and installation/MCP docs confirm both official add command forms, the variant names, registry alias, and shadcn MCP opt-in command.",
+      "logs": [
+        "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/global-install/react-bits-commit-api.log",
+        "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/global-install/react-bits-tree-api.log",
+        "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/global-install/react-bits-README.md",
+        "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/global-install/react-bits-Installation.jsx",
+        "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/global-install/react-bits-McpServer.jsx"
+      ]
+    },
+    {
+      "check": "Claude plugin overlap",
+      "result": "PASS: claude plugin list recorded read-only; no plugin settings changed.",
+      "log": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/global-install/claude-plugin-list.log"
+    },
+    {
+      "check": "Rollback command coverage",
+      "result": "PASS: 16 unique rm commands cover every created symlink, followed by npm uninstall -g shadcn.",
+      "log": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/global-install/rollback-check.log"
+    },
+    {
+      "check": "Final consistency",
+      "result": "PASS: evidence JSON, all links/frontmatter, both shim validators, CLI version, referenced logs, and documentation evidence link verified.",
+      "log": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/global-install/final-verification.log"
+    }
+  ],
+  "rollback": {
+    "commands": [
+      "rm ~/.agents/skills/shadcn",
+      "rm ~/.agents/skills/migrate-radix-to-base",
+      "rm ~/.agents/skills/react-bits",
+      "rm ~/.agents/skills/pmndrs-examples",
+      "rm ~/.config/opencode/skills/shadcn",
+      "rm ~/.config/opencode/skills/migrate-radix-to-base",
+      "rm ~/.config/opencode/skills/react-bits",
+      "rm ~/.config/opencode/skills/pmndrs-examples",
+      "rm ~/.claude/skills/shadcn",
+      "rm ~/.claude/skills/migrate-radix-to-base",
+      "rm ~/.claude/skills/react-bits",
+      "rm ~/.claude/skills/pmndrs-examples",
+      "rm ~/.gemini/antigravity/skills/shadcn",
+      "rm ~/.gemini/antigravity/skills/migrate-radix-to-base",
+      "rm ~/.gemini/antigravity/skills/react-bits",
+      "rm ~/.gemini/antigravity/skills/pmndrs-examples",
+      "npm uninstall -g shadcn"
+    ],
+    "backupRestoration": "No backup was created; there is nothing to restore."
+  },
+  "limitations": [
+    "Native skill auto-discovery and invocation were not tested in Codex, OpenCode, or Claude Code.",
+    "Antigravity runtime is unverified because agy is unavailable.",
+    "React Bits reached the pinned commit but its sparse worktree had no materialized source files. A GitHub API fallback was used after a local lazy-fetch attempt failed with No route to host. The React Bits skill records the pinned checkout path and this source fallback.",
+    "The official shadcn skill recommends project package runners and @latest. The global pinned CLI is available as shadcn but that official guidance may invoke a different version when followed literally.",
+    "Skill registrations are symlinks; moving or removing their upstream or CEOS source directories breaks the corresponding global link until it is relinked."
+  ],
+  "rawLogsDirectory": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/global-install"
+}

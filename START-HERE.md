@@ -8,8 +8,9 @@ Creative Engineering OS is a **method plus a library** for building original, pr
 It is not a theme and not a template gallery. It gives you 14 stage-by-stage studio skills, a shelf of 386 reference
 skills you open only when needed, four tested starter projects, browser QA tools, and written quality standards.
 
-Core rule: concept and signature moment are approved and seen in a real browser before bulk sections are built.
-References are calibration, never templates to copy.
+For substantial and flagship builds, the concept and signature moment are approved and seen in a real browser before
+bulk sections are built. Small scoped changes use only the stages and checks they need. References are calibration,
+never templates to copy.
 
 ## Folder map
 
@@ -24,20 +25,35 @@ References are calibration, never templates to copy.
 
 Paths are relative to the toolkit root, the folder containing this file.
 
-## The route through a project
+## Route through a project
 
-1. **Frame** with `ceos-studio-workflow`. Always first.
-2. **Concept** with `ceos-creative-direction`. Three distinct concepts, one recommended, owner approval before building.
-3. **Look** with `ceos-art-direction` (type, grid, colour, imagery as tokens).
-4. **Behaviour** with `ceos-interaction-architecture` (IA, journeys, every input, accessibility).
-5. **Motion** with `ceos-motion-direction` (tokens, choreography, reduced motion).
-6. **Stack** with `ceos-frontend-architecture` (lightest stack, one render loop, ownership).
-7. **Signature moment** with `ceos-realtime-3d`, `ceos-shader-engineering`, `ceos-creative-coding` or `ceos-3d-asset-pipeline` as needed.
-8. **Build** from a template. Content in semantic HTML. Placeholders clearly marked.
-9. **Prove it** with `ceos-production-quality` (tests, axe, keyboard, no-JS and no-WebGL) and `ceos-performance-engineering` (measured budgets).
-10. **Critique** with `ceos-visual-audit` or the `creative-auditor` agent. Fix P0/P1 issues, re-capture, repeat.
+Run the local task router for a specialist recommendation, or open `ceos-studio-workflow` when you need to plan the
+stages:
 
-Do not skip steps 2 to 7.
+```sh
+python3 <toolkit>/scripts/ceos-route.py "Implement a GSAP ScrollTrigger timeline" --project .
+```
+
+It recommends one primary capability. Add `--need-secondary` only when the route's explicitly described second
+contribution is useful. It does not load skills, dispatch agents, install dependencies, or change provider settings.
+Use `integrations/ROUTING.md` for the full matrix, detection limits, and mode rules.
+
+Choose the lightest mode that fits the task:
+
+1. **FAST** — one local change, such as a CSS spacing or color fix. Inspect the affected state and run the relevant
+   check. Skip concept options, signature-moment prototypes, and broad QA gates unless scope expands. Preserve applicable
+   input validation, security, accessibility, keyboard/focus, reduced-motion, and error-handling checks.
+2. **STANDARD** — the default for a feature or page. Use the relevant CEOS stages for research, direction, UX, motion,
+   architecture, and prototype; then build and inspect changed behavior in a real browser with appropriate quality
+   checks.
+3. **FLAGSHIP** — for a launch, rebrand, immersive experience, or other high-impact scope. Run the full path: research;
+   distinct concepts and owner decision; art direction, UX, motion, and architecture as needed; a desktop-and-phone
+   signature prototype before bulk sections; build; responsive browser QA; independent critique; technical review;
+   refinement; and production-artifact/rollback verification.
+
+Escalate FAST when behavior, dependencies, or direction choices appear. Escalate STANDARD for launch/rebrand work,
+shared multi-route systems, immersive signature moments, or multi-team handoffs. A mode override can be supplied to the
+router.
 
 ## Use it with Claude Code
 
@@ -63,6 +79,7 @@ The installer can link skills into several clients: `python3 scripts/ceos.py ins
 
 ```sh
 python3 scripts/ceos.py doctor                           # what is installed and what is missing
+python3 scripts/ceos-route.py "Fix a small CSS spacing issue" --project .
 ./scripts/new-project.sh editorial ~/Projects/my-site    # copy a starter
 cd ~/Projects/my-site && npm ci && npm run dev
 node <toolkit>/tooling/visual-audit/capture.mjs --url http://localhost:4321 --out docs/QA/first-look
@@ -80,9 +97,14 @@ node --test tests/mirror.test.mjs
 
 - Original work only. Do not copy layouts, assets, copy or brand identity from references.
 - No invented proof: no fake clients, numbers, testimonials, awards or locations. Mark placeholders.
-- Evidence before claims. Real screenshots at 1440, 1024, 768 and 390 px, axe, keyboard, console and measured performance.
+- Evidence before claims. Use real rendered evidence, interactions, keyboard checks, console output, and measurements in
+  proportion to scope; substantial page work uses the project's documented responsive QA sizes.
 - Respect `prefers-reduced-motion` and make the page work without JavaScript or WebGL.
 - Library skills are references. If one conflicts with an approved direction or a core skill, the approved direction wins.
+- Prefer native platform features when they satisfy the approved direction; do not add a dependency just to satisfy a route.
+- CEOS owns creative orchestration and direction. The existing project engineering orchestration policy wins; in gstack-led work,
+  Superpowers is limited to narrow TDD and verification roles. Do not run two orchestrators.
+- Load only the primary specialist skill needed at the current stage. Load a second only when its role is explicitly needed.
 
 ## Where to go next
 

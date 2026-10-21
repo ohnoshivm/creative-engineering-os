@@ -37,5 +37,5 @@ class Installer(unittest.TestCase):
    self.assertIn('ohnoshivm/creative-engineering-os',(dest/'README.md').read_text())
    for p in dest.rglob('*'):
     self.assertFalse(p.is_symlink(),p)
-    if p.is_file() and p.suffix in {'.md','.json','.py','.toml','.ts','.mjs','.sh'}:self.assertNotRegex(p.read_text(),r'/Users/[A-Za-z0-9._-]+/',str(p))
+    if p.is_file() and p.suffix in {'.md','.json','.py','.toml','.ts','.mjs','.sh'}:self.assertNotRegex(p.read_text(),r'/' + r'Users/[A-Za-z0-9._-]+/',str(p))
 if __name__=='__main__':unittest.main()

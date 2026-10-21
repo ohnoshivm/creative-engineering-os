@@ -1,12 +1,12 @@
 ---
 name: ceos-start-here
-description: Entry point and router for the Creative Engineering OS. Explains in one page what the toolkit contains (14 core studio skills, a 386-skill reference library, four tested starters, browser QA tooling, an independent auditor) and maps any website task — concept, art direction, typography, UX, motion, 3D/shaders, frontend, performance, QA, SEO/content — to the exact skill to load next. Use first whenever you start or resume website work with this toolkit, or when unsure which skill applies.
+description: Progressive entry point for the Creative Engineering OS. Explains the toolkit, maps website tasks to a specialist through the deterministic local router, and scales the CEOS workflow to FAST, STANDARD, or FLAGSHIP work. Use first when starting or resuming website work with this toolkit, or when unsure which skill applies.
 ---
 
 # Start here — Creative Engineering OS
 
-You are working with a toolkit for building original, premium websites. It is **a method plus a library**, not a
-theme. Read this page once, then load only the skills the current step needs.
+You are working with a toolkit for building original, premium websites. It is **a method plus a library**, not a theme.
+Read this page once, then load only the skills needed for the current task and stage.
 
 ## 1. What is where
 
@@ -17,46 +17,70 @@ theme. Read this page once, then load only the skills the current step needs.
 | `library/CATALOG.md` | Every library skill by discipline with one-line "use it for" | Skim the section you need |
 | `templates/` | Four tested starters: `editorial`, `motion-heavy`, `immersive-3d`, `experimental-graphics` | `scripts/new-project.sh <template> <dest>` |
 | `tooling/` | `visual-audit/capture.mjs` (screens + axe + console), `perf/frame-probe.mjs` | During review |
-| `standards/STANDARD.md` | The non-negotiable quality floor | Once per project |
-| `agents/creative-auditor.md` | Read-only independent critic | Before anything is called done |
+| `standards/STANDARD.md` | The quality floor, scaled to the task | Read when the project starts |
+| `agents/creative-auditor.md` | Read-only independent critic | Use for a substantial independent critique |
 
 Paths are relative to the toolkit root (the folder that contains this `skills/` directory).
 
-## 2. The route through a project
+## 2. Route and scale the task
 
-1. **Frame** → `ceos-studio-workflow` (stages, gates, handoffs). Always first.
-2. **Concept** → `ceos-creative-direction`. Three distinct concepts, one recommended, owner approval before building.
-3. **Look** → `ceos-art-direction` (type, grid, colour, imagery as tokens).
-4. **Behaviour** → `ceos-interaction-architecture` (IA, journeys, every input, accessibility).
-5. **Motion** → `ceos-motion-direction` (tokens, choreography, reduced motion).
-6. **Stack** → `ceos-frontend-architecture` (lightest stack, one render loop, ownership).
-7. **Signature moment** → `ceos-realtime-3d` / `ceos-shader-engineering` / `ceos-creative-coding` / `ceos-3d-asset-pipeline` as needed.
-8. **Build** from a template; content in semantic HTML; placeholders clearly marked.
-9. **Prove it** → `ceos-production-quality` (tests, axe, keyboard, no-JS/no-WebGL), `ceos-performance-engineering` (measured budgets).
-10. **Critique** → `ceos-visual-audit` (or the `creative-auditor` agent). Fix P0/P1, re-capture, repeat.
+Run the local router for one primary recommendation:
 
-Never skip 2 → 7: the concept and the signature moment are approved and seen in a real browser before bulk sections.
+```sh
+python3 <toolkit>/scripts/ceos-route.py "Create a wireframe for the signup flow" --project .
+```
 
-## 3. Task → skill router
+The 19 routes and their preferred capabilities live in `integrations/routes.json`; the full matrix and detection rules
+are in `integrations/ROUTING.md`. Add `--need-secondary` only when the route's explicitly described second contribution
+is useful. Use repeated `--available <capability-id>` flags for host-provided skills that have no discoverable skill
+directory. Framework detection uses package metadata and config filenames. React Bits, shadcn/ui, and pmndrs/examples
+require an existing React runtime; a framework override cannot bypass the package-metadata check.
 
-| If the task is… | Core skill | Library skills worth opening |
+The router recommends; it does not load skills, dispatch agents, install packages, or alter provider settings. Load only
+the selected skill for the current stage. Prefer native platform features and existing project conventions when they
+satisfy the approved direction; do not add dependencies to satisfy a route. If guidance conflicts with approved project
+direction or a core CEOS skill, the approved direction wins, then the core skill.
+
+| Mode | Use it for | Workflow |
 |---|---|---|
-| "Make it look less generic / more premium" | ceos-art-direction, ceos-visual-audit | `frontend-design`, `design-taste-frontend`, `impeccable`-family entries in CATALOG "Visual design" |
-| Choose fonts, type scale, editorial layout | ceos-art-direction | CATALOG → Visual design & typography |
-| Colour palette / design tokens / design system | ceos-art-direction | `ui-ux-pro-max`, `ui-styling`, design-system entries |
-| Sitemap, journeys, forms, navigation, a11y | ceos-interaction-architecture | CATALOG → UX & interaction (accessibility, forms) |
-| Scroll animation, page transitions, kinetic type | ceos-motion-direction | GSAP entries (`gsap-*`), `motion`, CATALOG → Motion |
-| 3D hero, WebGL scene, materials, lighting | ceos-realtime-3d | CATALOG → 3D, WebGL & shaders |
-| Custom shader, raymarching, particles, fluid | ceos-shader-engineering, ceos-creative-coding | template `experimental-graphics` |
-| Models/textures too big, Blender → web | ceos-3d-asset-pipeline | — |
-| React/Next/Vite/Astro structure, components | ceos-frontend-architecture | `react-best-practices`, CATALOG → Frontend engineering |
-| Slow, janky, CWV, memory | ceos-performance-engineering | CATALOG → Quality, performance & testing |
-| Tests, visual regression, release | ceos-production-quality | `playwright`/QA entries in CATALOG |
-| Critique a page | ceos-visual-audit | — |
-| SEO, copy, social/content | — | CATALOG → Content, SEO & growth |
+| **FAST** | One local change, such as a CSS spacing fix | Check the affected state and run relevant checks. Skip concept options, signature prototypes, and broad QA unless the scope grows. Keep applicable safety, accessibility, keyboard/focus, reduced-motion, and security checks. |
+| **STANDARD** | Normal features and page work; default when scope is unclear | Use relevant CEOS stages, build, inspect changed behavior in a real browser, and run relevant quality checks. |
+| **FLAGSHIP** | Launch, rebrand, immersive site, or other high-impact work | Run the full research, direction, prototype, build, browser review, independent critique, technical review, refinement, and release verification path. |
 
-If a library skill conflicts with a core skill, **the approved project direction wins, then the core skill**; say which
-trade-off you made.
+Escalate FAST when behavior, dependencies, or direction choices appear. Escalate STANDARD for launch/rebrand work, shared
+multi-route systems, immersive signature moments, or multi-team handoffs. A `--mode` override is available.
+
+## 3. CEOS workflow and engineering ownership
+
+`ceos-studio-workflow` owns creative stage selection and handoffs. For FLAGSHIP work, establish the concept and owner
+decision before bulk sections, and render the signature moment at desktop and phone widths. For STANDARD work, use those
+gates when the task makes a direction choice or includes a signature interaction. FAST work does not inherit those gates
+automatically.
+
+CEOS owns creative orchestration and direction. Existing project engineering orchestration policy wins; in gstack-led
+work, gstack owns engineering orchestration and Superpowers is limited to narrow TDD and verification roles. Do not run
+two orchestrators.
+
+## Use it with Claude Code
+
+Install as a plugin, then start from the router:
+
+```text
+/plugin install creative-engineering-os --marketplace ohnoshivm/creative-engineering-os
+/creative-engineering-os:ceos-start-here
+```
+
+Do not also install manual copies of the same skills, or they will load twice.
+
+## Use it with Codex, OpenCode, Antigravity, Cursor, or another LLM
+
+1. Clone or download the repository.
+2. Read `START-HERE.md` in full.
+3. Open this skill, then load only the skill needed when its stage starts.
+4. For a specialist technique, search `library/CATALOG.md` and open that reference skill.
+
+The installer can link skills into supported clients: `python3 scripts/ceos.py install --client all --mcp` (plan only,
+then add `--apply`).
 
 ## 4. Rules that make the output world-class (short form of `standards/STANDARD.md`)
 
@@ -64,13 +88,15 @@ trade-off you made.
 - Type is the main material: few sizes, big contrast, measured line length, deliberate line breaks.
 - One signature motion; everything else quiet; designed reduced-motion state.
 - HTML first: all content and actions work without JS and without WebGL.
-- Evidence or it didn't happen: screenshots at 1440/1024/768/390, axe, keyboard, console, measured performance.
+- Evidence or it didn't happen: use rendered screenshots, interaction checks, axe/keyboard, console, and measurements in
+  proportion to the work; substantial page reviews use the project's documented responsive sizes.
 - No invented proof: no fake clients, numbers, testimonials or awards.
 
 ## 5. First commands in a fresh checkout
 
 ```sh
 python3 scripts/ceos.py doctor                  # what's installed / missing
+python3 scripts/ceos-route.py "Fix a small CSS spacing issue" --project .
 ./scripts/new-project.sh editorial ~/Projects/my-site && cd ~/Projects/my-site && npm ci && npm run dev
 node <toolkit>/tooling/visual-audit/capture.mjs --url http://localhost:4321 --out docs/QA/first-look
 ```

@@ -15,6 +15,9 @@ jobs:
           node-version: '24'
       - run: python3 tests/verify-structure.py
       - run: python3 tests/installer.test.py
+      - run: python3 -I tests/integrations-routing.test.py
+      - run: python3 -I tests/integrations.test.py
+      - run: python3 -I tests/integrations-manifest.test.py
       - run: node --test tests/mirror.test.mjs
       - run: python3 tests/repository-hygiene.py
   build:

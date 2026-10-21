@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "slug": "router",
+  "status": "verified_with_limitations",
+  "audited_at": "2026-10-21T13:41:15Z",
+  "scope": {
+    "integration_type": "Local deterministic task-to-capability recommendation",
+    "routes": 19,
+    "auto_loads_skills": false,
+    "dispatches_agents": false,
+    "provider_or_auth_changes": false,
+    "new_orchestration_layer": false
+  },
+  "source": {
+    "repository": "Creative Engineering OS local checkout",
+    "catalog": "integrations/routes.json",
+    "implementation": "scripts/ceos-route.py",
+    "entry_skill": "skills/ceos-start-here/SKILL.md",
+    "runtime": "Python 3.9+ standard library",
+    "network_calls": false
+  },
+  "capability": {
+    "selection": "One primary by default; one secondary only with --need-secondary and a recorded contribution.",
+    "framework_detection": "package.json dependency groups plus framework config filenames; React runtime requires react or react-dom metadata, including hybrid frameworks.",
+    "react_only_capabilities": [
+      "react-bits",
+      "shadcn",
+      "pmndrs-examples"
+    ],
+    "non_react_routes_checked": [
+      "React animations to GSAP or CSS/WAAPI",
+      "UI components/forms to UI/UX Pro Max and native HTML dialog/forms",
+      "React interactive elements to CEOS Creative Coding",
+      "pmndrs/examples to CEOS 3D or vanilla Three.js"
+    ],
+    "modes": [
+      "FAST",
+      "STANDARD",
+      "FLAGSHIP"
+    ],
+    "orchestration": "CEOS owns creative orchestration; existing project engineering policy remains authoritative; Superpowers routes only to TDD or verification."
+  },
+  "verification": {
+    "status": "passed",
+    "commands": [
+      "python3 -I tests/integrations-routing.test.py",
+      "./scripts/verify.sh"
+    ],
+    "workflow": ".github/workflows/verify.yml runs the routing tests in its existing source job; no browser job was added.",
+    "repository_check_summary": "PASS: 14 skill schemas, 4 locked template contracts, standard/team docs, backup exclusion; node, npm, git, bun, playwright-cli, lighthouse, and blender found."
+  },
+  "testResults": {
+    "routing_suite": {
+      "command": "python3 -I tests/integrations-routing.test.py",
+      "status": "passed",
+      "unittest_methods": 7,
+      "user_scenarios": 8,
+      "route_pairs_asserted": 19,
+      "mode_selection": "FAST trivial CSS without concept gates; STANDARD default and expanded-scope escalation; FLAGSHIP; explicit override.",
+      "react_constraint": "React Bits, shadcn, and pmndrs are excluded without a declared React runtime; four React-first routes return tested vanilla/native/CEOS fallbacks; explicit override and without-React constraint cannot enable them.",
+      "hybrid_framework": "Astro remains the detected framework while declared React dependencies enable React routes.",
+      "secondary": "Opt-in only; contribution is included; incompatible React-only secondaries are omitted.",
+      "availability_fallback": "Available secondary is promoted when preferred is undetected; preferred is marked not detected if neither route capability is available.",
+      "determinism": "Repeated route output matches."
+    },
+    "repository_verify": {
+      "command": "./scripts/verify.sh",
+      "status": "passed"
+    }
+  },
+  "contextSizeProxy": {
+    "label": "Static proxy; no live telemetry",
+    "method": "UTF-8 byte counts; approximate tokens are ceil(bytes / 4), not provider tokenization.",
+    "sample_task": "Create a wireframe for the signup flow",
+    "router_command": "python3 scripts/ceos-route.py \"Create a wireframe for the signup flow\" --project .",
+    "route": "wireframes",
+    "primary_capability": "ceos-interaction",
+    "router_output": {
+      "bytes": 659,
+      "approx_tokens": 165
+    },
+    "selected_primary_skill": {
+      "path": "skills/ceos-interaction-architecture/SKILL.md",
+      "bytes": 4320,
+      "approx_tokens": 1080
+    },
+    "routed_context_proxy": {
+      "bytes": 4979,
+      "approx_tokens": 1245
+    },
+    "full_entry_skill_set": {
+      "definition": "All skills/ceos-*/SKILL.md files, including ceos-start-here; excludes library references, START-HERE.md, host prompts, and project instructions.",
+      "files": 14,
+      "bytes": 66719,
+      "approx_tokens": 16680
+    },
+    "static_proxy_reduction_percent": 92.5,
+    "limitations": [
+      "The routed proxy includes the CLI text and one repository-owned primary skill file; external skills may have different sizes.",
+      "The full-set comparator is the 14 CEOS core skill Markdown files, not the third-party library or runtime prompts.",
+      "No live model token telemetry was collected."
+    ]
+  },
+  "limitations": [
+    "Phrase matching is deterministic but cannot resolve every natural-language ambiguity; route IDs are available.",
+    "Filesystem discovery cannot prove that the host loaded or can invoke a selected capability.",
+    "No rendered site or browser interaction was changed or verified by this routing task.",
+    "The context-size comparison is a static proxy, not live telemetry."
+  ]
+}

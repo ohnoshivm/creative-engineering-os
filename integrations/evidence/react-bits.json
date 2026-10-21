@@ -1,0 +1,230 @@
+{
+  "id": "react-bits",
+  "repository": "https://github.com/DavidHDev/react-bits",
+  "revision": "e12c22192ac7b4b452c5e2feb9b586d74765d696",
+  "localPath": "~/creative-engineering-os-upstreams/react-bits",
+  "auditedAt": "2026-10-21",
+  "license": {
+    "name": "MIT + Commons Clause License Condition v1.0",
+    "spdx": null,
+    "githubApiSpdx": null,
+    "source": "LICENSE.md at pinned revision",
+    "componentNuance": "Root condition permits use as part of an application, website, or product (including commercial use), but forbids selling, sublicensing, or redistributing components themselves alone, in a bundle, or as a port. No component-level license overrides found in the pinned checkout."
+  },
+  "integrationType": "External pinned implementation reference with isolated React/Vite consumer fixture; no source copied into CEOS runtime or auto-discovery.",
+  "supportedAgents": [
+    "Claude Code",
+    "Cursor",
+    "Codex",
+    "VS Code",
+    "Antigravity"
+  ],
+  "supportedAgentsSource": "Upstream README shadcn MCP statement; no fresh runtime discovery/execution test was run for those agents.",
+  "technologies": [
+    "React",
+    "JavaScript",
+    "TypeScript",
+    "CSS",
+    "Tailwind CSS",
+    "shadcn registry",
+    "jsrepo"
+  ],
+  "triggers": [
+    "React UI",
+    "animated React component",
+    "animated headline",
+    "React Bits",
+    "shadcn component registry",
+    "jsrepo"
+  ],
+  "dependencies": {
+    "integrationRuntime": [],
+    "consumerBase": "Existing React application; registry dependencies are component-specific and listed in the component index.",
+    "verifiedComponent": {
+      "name": "ShinyText-JS-CSS",
+      "npmDependencies": []
+    },
+    "fixture": {
+      "react": "19.3.1",
+      "react-dom": "19.3.1",
+      "vite": "8.3.5",
+      "axe-core": "4.14.0 (dev only)",
+      "motion": "12.43.0 retained only for the earlier CountUp probe; CountUp is not imported by the ShinyText page or final bundle."
+    },
+    "catalogUniqueNpmDependencies": 13
+  },
+  "componentIndex": {
+    "path": "~/creative-engineering-os-upstreams/react-bits/INTEGRATION-COMPONENT-INDEX.json",
+    "generator": "~/creative-engineering-os-upstreams/.tests/react-bits/index-components.py",
+    "components": 217,
+    "variantEntries": 868,
+    "categories": {
+      "Text Animations": 33,
+      "Animations": 38,
+      "Components": 48,
+      "Micro": 35,
+      "Backgrounds": 63
+    },
+    "readmeDiscrepancy": "README table totals 216 (Micro 34); pinned itemized public/llms.txt has 217 (Micro 35). Index follows the itemized list."
+  },
+  "installation": {
+    "officialMechanismsReviewed": [
+      "shadcn: npx shadcn@latest add @react-bits/<Component>-<JS|TS>-<CSS|TW>",
+      "jsrepo: npx jsrepo@latest add https://reactbits.dev/r/<Component>-<JS|TS>-<CSS|TW>"
+    ],
+    "executedCommand": "npx --yes shadcn@4.22.1 add @react-bits/ShinyText-JS-CSS",
+    "cliVersion": "4.22.1",
+    "result": "Created src/components/ShinyText.css and src/components/ShinyText.jsx; registry declared no npm dependencies.",
+    "finalSourceHashes": {
+      "ShinyText.css": "6030200a8885aba91536e2e367a0ed316989f10122f9d91a20f09caf1b5f46ab",
+      "ShinyText.jsx": "2f7fa6e4e929985b97bd3542383d748749c2ac32e0f498f37d87d7d9b35bb159"
+    },
+    "cliOutputHashBeforePinnedRestore": "9fea3968929529b008ad05dcf513cb2d74613a543de21ec929ad1795150d2e1c",
+    "pinReconciliation": "CLI-created JSX differed from the pinned registry payload in two expressions, including the transparent-color fallback; the isolated fixture was restored from the exact pinned checkout payload. CSS was byte-identical.",
+    "jsrepoExecuted": false,
+    "hookReview": {
+      "registryLifecycleHooks": [],
+      "shinyTextRegistryDependencies": [],
+      "upstreamPackageLifecycleScripts": [],
+      "upstreamBuildHooks": {
+        "predev": "npm run pro:summary",
+        "prebuild": "npm run pro:summary",
+        "executed": false
+      },
+      "fixtureLifecycleScripts": [],
+      "componentReactHooks": "useEffect-based lifecycle registers pointer listeners and an IntersectionObserver; cleanup cancels RAF, clears timeout, disconnects observer, removes listeners; browser-instrumented unmount check returned all tracked counts to zero."
+    }
+  },
+  "verification": {
+    "status": "pass_with_limitations",
+    "checks": [
+      {
+        "check": "Pinned identity",
+        "status": "pass",
+        "command": "git -C ~/creative-engineering-os-upstreams/react-bits rev-parse HEAD; gh api repos/DavidHDev/react-bits/commits/main --jq .sha",
+        "result": "Both returned e12c22192ac7b4b452c5e2feb9b586d74765d696."
+      },
+      {
+        "check": "License",
+        "status": "pass",
+        "command": "gh api repos/DavidHDev/react-bits/license; inspect pinned LICENSE.md",
+        "result": "GitHub SPDX metadata was null; pinned root license is MIT + Commons Clause License Condition v1.0."
+      },
+      {
+        "check": "Official shadcn registry installation",
+        "status": "pass_with_pin_reconciliation",
+        "command": "npx --yes shadcn@4.22.1 add @react-bits/ShinyText-JS-CSS",
+        "result": "Created src/components/ShinyText.css and src/components/ShinyText.jsx; registry declared no npm dependencies."
+      },
+      {
+        "check": "Pinned component payload",
+        "status": "pass",
+        "command": "python3 restore-pinned-component.py",
+        "result": "Both installed fixture files SHA-256 match the exact pinned registry payload."
+      },
+      {
+        "check": "Install dependencies and hooks review",
+        "status": "pass",
+        "result": "ShinyText registry dependencies and registryDependencies are empty; no install lifecycle hooks are defined. Upstream package predev/prebuild run pro:summary and were not executed. Fixture has no npm lifecycle hooks."
+      },
+      {
+        "check": "Component index",
+        "status": "pass_with_upstream_count_drift",
+        "command": "python3 index-components.py",
+        "result": "217 unique components, 868 variants, all components present in all four JS/TS × CSS/TW variants."
+      },
+      {
+        "check": "Production build",
+        "status": "pass_with_warning",
+        "command": "npm run build",
+        "result": "Vite 8.3.5 built successfully in 163 ms; 17 modules transformed. Rolldown warns that upstream module-level \"use client\" is not preserved in this Vite client build; the fixture is client-only and does not use React Server Components."
+      },
+      {
+        "check": "Production browser, responsiveness, reduced motion, keyboard, and cleanup",
+        "status": "pass",
+        "commands": [
+          "playwright-cli -s=react-bits open http://127.0.0.1:52702/",
+          "playwright-cli -s=react-bits run-code --filename verify-browser.js"
+        ],
+        "result": "Normal motion updated 15 style mutations in 250 ms; reduced mode stayed static; no overflow at tablet/mobile; no browser errors or warnings; unmount cleanup returned RAF/listener/observer counts to zero."
+      },
+      {
+        "check": "Rendered screenshot inspection",
+        "status": "pass",
+        "evidence": {
+          "desktop": "~/creative-engineering-os-upstreams/.tests/react-bits/shinytext-desktop.png",
+          "tablet": "~/creative-engineering-os-upstreams/.tests/react-bits/shinytext-tablet.png",
+          "mobile": "~/creative-engineering-os-upstreams/.tests/react-bits/shinytext-mobile.png",
+          "reducedMotion": "~/creative-engineering-os-upstreams/.tests/react-bits/shinytext-reduced.png"
+        },
+        "result": "Reviewed desktop, tablet, mobile, and reduced-motion PNGs; headline remained un-clipped and aligned, with no horizontal overflow or visible layout defect."
+      },
+      {
+        "check": "Axe and color contrast",
+        "status": "pass_with_incomplete_gradient_rule",
+        "result": "0 violations, 26 passes, color-contrast incomplete for gradient text; manual base/shine contrast was 7.97:1 / 15.81:1 against the fixture background."
+      },
+      {
+        "check": "Direct registry HTTP read",
+        "status": "limited",
+        "command": "Python urllib GET https://reactbits.dev/r/ShinyText-JS-CSS.json",
+        "result": "HTTP 403; official CLI installation succeeded and GitHub raw registry payload at main matched the pinned commit hashes."
+      },
+      {
+        "check": "Preview process cleanup",
+        "status": "pass",
+        "result": "Stopped the Vite preview with Ctrl-C; TCP 52702 had no listener afterward."
+      }
+    ],
+    "limitations": [
+      "The documented React Bits registry alias is floating; the shadcn CLI-created JSX differed from the selected pinned payload, so exact pinned files were restored and hashed. Direct registry HTTP GET was blocked with 403.",
+      "ShinyText reads prefers-reduced-motion once at mount; preference changes are not observed while mounted. Its followPointer code path does not consult the reduced-motion flag; that option was not enabled in the tested fixture.",
+      "Vite reports that the upstream use client directive is not preserved; the tested fixture is a client-only Vite application and does not use React Server Components.",
+      "Axe marks color contrast incomplete for background-clipped gradient text; color stops were manually measured against the fixture background. VoiceOver, forced colors, Firefox, Safari, physical hardware frame time, and field Core Web Vitals were not tested.",
+      "The fixture retains a prior CountUp install and motion dependency from the interrupted task; those files are not imported in the verified ShinyText page and are absent from the final bundle."
+    ]
+  },
+  "updateMethod": "Review a full upstream commit and the root Commons Clause license; regenerate the compact registry index from that checkout; pin the shadcn CLI; compare the CLI output against the selected registry payload hashes; install only selected component source into an existing React project; rebuild and repeat browser, reduced-motion, keyboard, cleanup, and accessibility checks.",
+  "rollbackMethod": "Remove docs/integrations/react-bits.md and integrations/evidence/react-bits.json; remove the untracked INTEGRATION-COMPONENT-INDEX.json and only the React Bits fixture/test artifacts if reverting this integration. No provider or shared config changed. Keep react-bits.broken-20261021T131508Z untouched.",
+  "audit": {
+    "initialClassification": "MISSING",
+    "initialEvidence": "docs/integrations/PRE-INSTALL-AUDIT.md",
+    "duplicates": [],
+    "conflicts": [],
+    "cleanupCandidates": [
+      {
+        "path": "~/creative-engineering-os-upstreams/react-bits.broken-20261021T131508Z",
+        "size": "30M",
+        "disposition": "Left untouched; record as cleanup candidate only; do not delete."
+      }
+    ],
+    "preExistingCountUpProbe": {
+      "fixtureFile": "~/creative-engineering-os-upstreams/react-bits-fixture/src/components/CountUp.jsx",
+      "reportsPath": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/react-bits",
+      "disposition": "Preserved and not re-run; not imported in final ShinyText page."
+    }
+  },
+  "registrations": {
+    "providerConfigsChanged": [],
+    "mcpOrPluginAdded": false,
+    "parentOwnedCentralRegistration": {
+      "changed": false,
+      "recommendedAction": "Optionally register React Bits as a source reference for existing React projects in the parent-owned CEOS route/manifest; do not recommend for non-React projects and do not add provider-global config."
+    }
+  },
+  "artifacts": {
+    "guide": "docs/integrations/react-bits.md",
+    "fixture": "~/creative-engineering-os-upstreams/react-bits-fixture",
+    "browserTest": "~/creative-engineering-os-upstreams/.tests/react-bits/verify-browser.js",
+    "indexGenerator": "~/creative-engineering-os-upstreams/.tests/react-bits/index-components.py",
+    "pinRestoreCheck": "~/creative-engineering-os-upstreams/.tests/react-bits/restore-pinned-component.py",
+    "verificationSummary": "~/creative-engineering-os-upstreams/.tests/react-bits/verification.json",
+    "buildLog": "~/creative-engineering-os-upstreams/.tests/react-bits/build.log",
+    "screenshots": {
+      "desktop": "~/creative-engineering-os-upstreams/.tests/react-bits/shinytext-desktop.png",
+      "tablet": "~/creative-engineering-os-upstreams/.tests/react-bits/shinytext-tablet.png",
+      "mobile": "~/creative-engineering-os-upstreams/.tests/react-bits/shinytext-mobile.png",
+      "reducedMotion": "~/creative-engineering-os-upstreams/.tests/react-bits/shinytext-reduced.png"
+    }
+  }
+}

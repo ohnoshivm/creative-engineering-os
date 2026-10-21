@@ -1,0 +1,389 @@
+{
+  "schemaVersion": 2,
+  "integrations": [
+    {
+      "id": "impeccable",
+      "repository": "https://github.com/pbakaus/impeccable",
+      "revision": "dad8dbb3aac21ad1fa236c110315ef4abece23e8",
+      "localPath": "~/creative-engineering-os-upstreams/impeccable",
+      "license": "Apache-2.0",
+      "integrationType": "native-skill",
+      "supportedAgents": [
+        "claude",
+        "codex",
+        "opencode",
+        "antigravity"
+      ],
+      "technologies": [
+        "web frontend",
+        "native iOS",
+        "native Android",
+        "adaptive native UI",
+        "Source formats: .html, .htm, .astro, .vue, .svelte, .css, .scss, .sass, .less, .js, .jsx, .ts, .tsx, .mjs, .cjs"
+      ],
+      "triggers": [
+        "Design, redesign, shape, critique, audit, polish, simplify, harden, animate, or improve a frontend interface.",
+        "Websites, landing pages, dashboards, product UI, components, forms, settings, onboarding, empty states, and native iOS or Android screens.",
+        "Not intended for backend-only requests."
+      ],
+      "dependencies": {
+        "nativeSkillRuntime": "No Node runtime required for the skill launcher.",
+        "engine": "Self-contained platform binary; launcher version-pins it and requires a matching SHA-256 sidecar for a fresh download.",
+        "firstUseNetwork": "Official GitHub release access is needed when no compatible binary is available in the skill tree or user cache.",
+        "sourceBuild": "Build tooling is separate from use: Node >=18.19.0, Bun 1.3.13, Rust/Cargo.",
+        "installersRun": [],
+        "globalRuntimeInstall": false
+      },
+      "verificationStatus": "partial",
+      "evidenceStatus": "verified_with_limitations",
+      "evidencePath": "integrations/evidence/impeccable.json",
+      "updateMethod": "Copy only the six changed non-SKILL provider files from the matching official 4.7 provider tree; update each provider's version field while preserving its native metadata; no installer or plugin command was run.",
+      "rollbackMethod": "Restore 7 backed-up files from agents/ to ~/.agents/skills/impeccable/ and 7 from opencode/ to ~/.config/opencode/skills/impeccable/. The Claude symlink follows the restored .agents tree."
+    },
+    {
+      "id": "ui-ux-pro-max",
+      "repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "revision": "56ea9cf174ed86786187daa9de0e6247cb0747e4",
+      "localPath": "~/creative-engineering-os-upstreams/ui-ux-pro-max",
+      "license": "MIT",
+      "integrationType": "native-skill",
+      "supportedAgents": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
+      "technologies": [
+        "Python 3.x standard library search and design-system retrieval",
+        "CSV and JSON local design data",
+        "Optional ui-ux-pro-max-cli 2.5.0 (Node.js/npm; not installed or used)"
+      ],
+      "triggers": [
+        "Designing, building, reviewing, or fixing UI structure and visual direction",
+        "Product-wide design systems, color, typography, layout, responsive behavior, and interaction",
+        "Accessibility, UX quality, forms, navigation, charts, and animation guidance",
+        "Stack-specific UI implementation guidance when the project stack is known"
+      ],
+      "dependencies": {
+        "required": [
+          "Python 3.x; standard library only"
+        ],
+        "optionalCli": {
+          "package": "ui-ux-pro-max-cli@2.5.0",
+          "runtimeDependencies": [
+            "chalk",
+            "commander",
+            "ora",
+            "prompts"
+          ],
+          "installed": false,
+          "note": "The CLI is not required for local search. Its current docs recommend a global npm install and uipro init/update; those commands were not run."
+        },
+        "network": "Upstream README documents the Python search scripts as local and network-free. The optional CLI init/update flow can contact GitHub and npm."
+      },
+      "verificationStatus": "passed_with_limitations",
+      "evidenceStatus": "passed",
+      "evidencePath": "integrations/evidence/ui-ux-pro-max.json",
+      "updateMethod": "Review a pinned official commit and license, back up the full OpenCode skill tree privately outside discovery before any replacement, then compare and copy only changed owned files. The .agents symlink follows the OpenCode tree. The official CLI docs recommend updating ui-ux-pro-max-cli and running uipro init for a client; avoid that global flow when preserving this scoped, standard-library runtime. Refresh the existing Claude plugin through its own manager if its metadata version must be advanced; do not add a manual Claude skill copy.",
+      "rollbackMethod": "No active skill tree was changed, so no backup or rollback was needed. For a future OpenCode tree replacement, restore the private full-tree backup to ~/.config/opencode/skills/ui-ux-pro-max; the .agents symlink will continue to resolve to it. Roll back Claude through its plugin manager, not by creating a second ~/.claude/skills installation."
+    },
+    {
+      "id": "react-bits",
+      "repository": "https://github.com/DavidHDev/react-bits",
+      "revision": "e12c22192ac7b4b452c5e2feb9b586d74765d696",
+      "localPath": "~/creative-engineering-os-upstreams/react-bits",
+      "license": "MIT + Commons Clause License Condition v1.0",
+      "integrationType": "reference-only",
+      "supportedAgents": [
+        "claude",
+        "codex",
+        "opencode",
+        "antigravity"
+      ],
+      "technologies": [
+        "React",
+        "JavaScript",
+        "TypeScript",
+        "CSS",
+        "Tailwind CSS",
+        "shadcn registry",
+        "jsrepo"
+      ],
+      "triggers": [
+        "React UI",
+        "animated React component",
+        "animated headline",
+        "React Bits",
+        "shadcn component registry",
+        "jsrepo"
+      ],
+      "dependencies": {
+        "integrationRuntime": [],
+        "consumerBase": "Existing React application; registry dependencies are component-specific and listed in the component index.",
+        "verifiedComponent": {
+          "name": "ShinyText-JS-CSS",
+          "npmDependencies": []
+        },
+        "fixture": {
+          "react": "19.3.1",
+          "react-dom": "19.3.1",
+          "vite": "8.3.5",
+          "axe-core": "4.14.0 (dev only)",
+          "motion": "12.43.0 retained only for the earlier CountUp probe; CountUp is not imported by the ShinyText page or final bundle."
+        },
+        "catalogUniqueNpmDependencies": 13
+      },
+      "verificationStatus": "passed_with_limitations",
+      "evidenceStatus": "pass_with_limitations",
+      "evidencePath": "integrations/evidence/react-bits.json",
+      "updateMethod": "Review a full upstream commit and the root Commons Clause license; regenerate the compact registry index from that checkout; pin the shadcn CLI; compare the CLI output against the selected registry payload hashes; install only selected component source into an existing React project; rebuild and repeat browser, reduced-motion, keyboard, cleanup, and accessibility checks.",
+      "rollbackMethod": "Remove docs/integrations/react-bits.md and integrations/evidence/react-bits.json; remove the untracked INTEGRATION-COMPONENT-INDEX.json and only the React Bits fixture/test artifacts if reverting this integration. No provider or shared config changed. Keep react-bits.broken-20261021T131508Z untouched."
+    },
+    {
+      "id": "pmndrs-examples",
+      "repository": "https://github.com/pmndrs/examples",
+      "revision": "9905cd7b3d030a0ba5c6d327e15fe30ab648abb6",
+      "localPath": "~/creative-engineering-os-upstreams/pmndrs-examples",
+      "license": "MIT",
+      "integrationType": "reference-only",
+      "supportedAgents": [
+        "claude",
+        "codex",
+        "opencode",
+        "antigravity"
+      ],
+      "technologies": [
+        "React",
+        "React Three Fiber",
+        "Three.js",
+        "pmndrs ecosystem libraries",
+        "Vite",
+        "TypeScript"
+      ],
+      "triggers": [
+        "Find an R3F implementation example by technique tag, related library, author, dependency, title, or asset attribution",
+        "Review a concrete pmndrs example before adapting a scene or interaction"
+      ],
+      "dependencies": {
+        "index_generator": [
+          "Python 3 standard library",
+          "Git CLI"
+        ],
+        "runtime": "No runtime dependency is installed for the index or the CEOS repository",
+        "example_dependencies": "Each selected example declares its own dependencies in package.json; they are not installed as a set",
+        "isolated_validation_copy": {
+          "path": "~/creative-engineering-os-upstreams/pmndrs-examples-validation/basic-example",
+          "installation_command": "npm install --ignore-scripts --no-audit --no-fund --registry=https://registry.npmjs.org",
+          "result": "87 packages installed locally; lifecycle scripts disabled",
+          "tested_versions": {
+            "node": "v26.11.1",
+            "npm": "11.20.0",
+            "basic_example_package": "@example/basic-example@1.0.0",
+            "react": "19.2.9",
+            "react_three_fiber": "9.8.2",
+            "drei": "10.7.9",
+            "three": "0.186.1",
+            "typescript": "7.0.2",
+            "vite_resolved": "8.3.5"
+          }
+        }
+      },
+      "verificationStatus": "passed_with_limitations",
+      "evidenceStatus": "Pinned searchable reference index generated; one production example verified",
+      "evidencePath": "integrations/evidence/pmndrs-examples.json",
+      "updateMethod": "Select and review an exact upstream commit and its license, update the pinned revision and expected inventory in the namespaced generator, regenerate the index, rerun the namespaced test, and refresh this evidence and guide. No floating main updates.",
+      "rollbackMethod": "Remove only docs/integrations/pmndrs-examples.md, integrations/evidence/pmndrs-examples.json, integrations/indexes/pmndrs-examples.json, scripts/integrations/pmndrs_examples_index.py, and tests/integrations/pmndrs_examples_index_test.py. External review and validation checkouts are separate from the CEOS repo."
+    },
+    {
+      "id": "gsap-skills",
+      "repository": "https://github.com/greensock/gsap-skills",
+      "revision": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+      "localPath": "~/creative-engineering-os-upstreams/gsap-skills",
+      "license": "MIT",
+      "integrationType": "native-skill",
+      "supportedAgents": [
+        "claude",
+        "codex",
+        "opencode",
+        "antigravity"
+      ],
+      "technologies": [
+        "GSAP",
+        "JavaScript",
+        "React",
+        "Vue",
+        "Svelte",
+        "ScrollTrigger"
+      ],
+      "triggers": [
+        "JavaScript/vanilla/React/Vue GSAP tweens, easing, stagger, responsive and reduced-motion animation.",
+        "Sequencing GSAP animations with timelines, labels, nesting, and position parameters.",
+        "Scroll-linked animation, pinning, scrubbing, ScrollTrigger refresh, and cleanup.",
+        "GSAP plugin registration and plugin APIs such as Flip, Observer, SplitText, and Draggable.",
+        "GSAP utility methods such as clamp, mapRange, normalize, random, snap, wrap, and pipe.",
+        "GSAP in React/Next.js, useGSAP, scoping, SSR, and component cleanup.",
+        "GSAP in Vue, Svelte, and similar frameworks; lifecycle and unmount cleanup.",
+        "Animation performance, transforms, batching, and reducing jank."
+      ],
+      "dependencies": {
+        "integration_dependencies": [],
+        "consumer_runtime_dependencies": "None added. A consuming project may import gsap; React projects may additionally use @gsap/react, as documented upstream.",
+        "mcp_servers_added": []
+      },
+      "verificationStatus": "passed_with_limitations",
+      "evidenceStatus": "integrated; official skills already installed and current; duplicate generic activation narrowed",
+      "evidencePath": "integrations/evidence/gsap-skills.json",
+      "updateMethod": "Review a pinned upstream commit and license, back up only files to change, then update skill links and rerun source, link, and discovery checks.",
+      "rollbackMethod": {
+        "private_before_backup": "~/.local/state/creative-engineering-os/integration-v2-20261021/backups/gsap-skills/agents-gsap-SKILL.md.before",
+        "restore_command": "cp <private backup path> ~/.agents/skills/gsap/SKILL.md",
+        "repository_artifacts": "Revert only docs/integrations/gsap-skills.md and integrations/evidence/gsap-skills.json if removing this integration record.",
+        "no_backup_needed_for_official_skills": "No official install files changed."
+      }
+    },
+    {
+      "id": "superpowers",
+      "repository": "https://github.com/obra/superpowers",
+      "revision": "b739a8af570e10a95898f2bdf6cec97467fa6c12",
+      "localPath": "~/creative-engineering-os-upstreams/superpowers",
+      "license": "MIT",
+      "integrationType": "native-skill",
+      "supportedAgents": [
+        "claude",
+        "codex",
+        "opencode",
+        "antigravity"
+      ],
+      "technologies": [
+        "Markdown SKILL.md",
+        "native personal-skill discovery",
+        "directory symlinks"
+      ],
+      "triggers": [
+        "test-driven-development: Before implementing any feature or bug fix.",
+        "verification-before-completion: Before claiming completion, a fix, or passing verification."
+      ],
+      "dependencies": {
+        "selectedCodexAndOpenCodeSkills": "None beyond provider native Markdown skill discovery; the five directories contain SKILL.md files and are symlinked to the pinned checkout.",
+        "claudePluginHook": "Bash for SessionStart context injection; the active plugin manager supplies the plugin.",
+        "codexPlugin": "Official Codex plugin marketplace; not installed.",
+        "openCodePlugin": "OpenCode V1 or V2.0.4+ plugin host; no plugin was added, and pre-change CLI inventory was inconsistent.",
+        "antigravity": "agy CLI and an eligible signed-in runtime; unavailable here."
+      },
+      "verificationStatus": "partial",
+      "evidenceStatus": "partial",
+      "evidencePath": "integrations/evidence/superpowers.json",
+      "updateMethod": [
+        "Fetch the official main branch, review license, dependencies, hooks, and selected skill changes, then pin a reviewed full commit.",
+        "Codex/OpenCode skill links follow the checkout; no provider configuration is required."
+      ],
+      "rollbackMethod": "Remove only the four new direct links. Keep the pre-existing Claude plugin, pinned checkout, and bundled references."
+    },
+    {
+      "id": "shadcn-ui",
+      "repository": "https://github.com/shadcn-ui/ui",
+      "revision": "ba1503c64472b82256d9de95e2e62c5901a38e8b",
+      "localPath": "~/creative-engineering-os-upstreams/shadcn-ui",
+      "license": "MIT",
+      "integrationType": "project-level CLI",
+      "supportedAgents": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
+      "technologies": [
+        "shadcn CLI 4.22.1",
+        "React 19",
+        "Vite 8",
+        "Tailwind CSS 4",
+        "TypeScript 7",
+        "Radix UI",
+        "npm"
+      ],
+      "triggers": [
+        "Add or adapt an editable React UI component inside an existing compatible project.",
+        "Use project-owned tokens, aliases, CSS, package manager, and component source ownership."
+      ],
+      "dependencies": {
+        "component_runtime": [
+          "react@19.3.1",
+          "react-dom@19.3.1",
+          "cn@0.5.0",
+          "radix-ui@1.8.1",
+          "class-variance-authority@0.7.1",
+          "lucide-react@1.61.0"
+        ],
+        "development_and_verification": [
+          "shadcn@4.22.1",
+          "vite@8.3.5",
+          "@vitejs/plugin-react@6.1.2",
+          "tailwindcss@4.3.3",
+          "@tailwindcss/vite@4.3.3",
+          "typescript@7.0.2",
+          "@types/react@19.3.0",
+          "@types/react-dom@19.3.0",
+          "axe-core@4.14.0"
+        ],
+        "licenses_from_lockfile": {
+          "MIT": [
+            "@tailwindcss/vite@4.3.3",
+            "@types/react@19.3.0",
+            "@types/react-dom@19.3.0",
+            "@vitejs/plugin-react@6.1.2",
+            "cn@0.5.0",
+            "radix-ui@1.8.1",
+            "react@19.3.1",
+            "react-dom@19.3.1",
+            "shadcn@4.22.1",
+            "tailwindcss@4.3.3",
+            "vite@8.3.5"
+          ],
+          "Apache-2.0": [
+            "class-variance-authority@0.7.1",
+            "typescript@7.0.2"
+          ],
+          "ISC": [
+            "lucide-react@1.61.0"
+          ],
+          "MPL-2.0": [
+            "axe-core@4.14.0"
+          ]
+        }
+      },
+      "verificationStatus": "passed_with_limitations",
+      "evidenceStatus": "project-level-capability-verified-with-limitations",
+      "evidencePath": "integrations/evidence/shadcn-ui.json",
+      "updateMethod": "Pin a reviewed upstream commit and project-local shadcn CLI version with its lockfile. Inspect each intended component using the local CLI with --dry-run and --view or --diff, review generated imports/dependencies, then apply and repeat build, production browser, keyboard, responsive, and axe checks.",
+      "rollbackMethod": "Restore the consuming project's package manifest, lockfile, components.json, CSS/config, and generated components from its prior commit or private backup. Remove the external fixture and this integration's docs/evidence if reverting this record. Keep the upstream checkout while observed skill symlinks point into it."
+    },
+    {
+      "id": "router",
+      "repository": "https://github.com/ohnoshivm/creative-engineering-os",
+      "revision": "f43aa700883e032bfd5fc0241a7bfea2c49c327b",
+      "localPath": ".",
+      "license": "MIT",
+      "integrationType": "project-level CLI",
+      "supportedAgents": [
+        "claude",
+        "codex",
+        "opencode",
+        "antigravity"
+      ],
+      "technologies": [
+        "Python 3.9+ standard library",
+        "JSON"
+      ],
+      "triggers": [
+        "Choose one primary capability for a website task; request a secondary only when its recorded contribution is useful."
+      ],
+      "dependencies": {
+        "runtime": "Python 3.9+ standard library; no network or installed packages."
+      },
+      "verificationStatus": "passed_with_limitations",
+      "evidenceStatus": "verified_with_limitations",
+      "evidencePath": "integrations/evidence/router.json",
+      "updateMethod": "Review changes to scripts/ceos-route.py and integrations/routes.json together, then run the routing and integration suites.",
+      "rollbackMethod": "Revert only the intended router files and integration records; preserve unrelated working-tree changes.",
+      "revisionScope": "Base checkout commit recorded by pre-install-state.json; router changes are uncommitted and are not represented by this SHA."
+    }
+  ]
+}

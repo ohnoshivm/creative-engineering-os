@@ -1,0 +1,195 @@
+{
+  "slug": "pmndrs-examples",
+  "status": "Pinned searchable reference index generated; one production example verified",
+  "audited_at": "2026-10-21",
+  "repository_baseline": {
+    "path": "~/creative-engineering-os",
+    "commit": "f43aa700883e032bfd5fc0241a7bfea2c49c327b"
+  },
+  "upstream": {
+    "repository": "https://github.com/pmndrs/examples",
+    "pinned_revision": "9905cd7b3d030a0ba5c6d327e15fe30ab648abb6",
+    "revision_url": "https://github.com/pmndrs/examples/tree/9905cd7b3d030a0ba5c6d327e15fe30ab648abb6",
+    "commit_subject": "feat(r3f-alpha-6): camera fly-in, overlapping strike, and kinetic copy (#253)",
+    "commit_date": "2026-10-19T13:47:07-04:00",
+    "checkout_path": "~/creative-engineering-os-upstreams/pmndrs-examples",
+    "checkout_clean": true,
+    "checkout_type": "shallow blobless sparse checkout",
+    "sparse_paths": [
+      "/LICENSE",
+      "/schemas/pmndrs.schema.json",
+      "/examples/*/pmndrs.json",
+      "/examples/*/package.json"
+    ],
+    "authoritative_metadata": [
+      "examples/<slug>/pmndrs.json",
+      "examples/<slug>/package.json"
+    ],
+    "main_observed_on_verification": {
+      "revision": "541599ac5ad913de85796403c1c6927ada3b303c",
+      "meaning": "main had advanced after the pin; the index remains on the reviewed revision"
+    }
+  },
+  "integration_type": "Local searchable JSON reference consumed by the repository-local PMNDRS capability skill; no provider-level skill installation, plugin, client configuration, or runtime package installation",
+  "local_paths": {
+    "index": "integrations/indexes/pmndrs-examples.json",
+    "generator": "scripts/integrations/pmndrs_examples_index.py",
+    "test": "tests/integrations/pmndrs_examples_index_test.py",
+    "documentation": "docs/integrations/pmndrs-examples.md",
+    "repository_skill": "integrations/skills/pmndrs-examples/SKILL.md"
+  },
+  "supported_agents": {
+    "clients": [
+      "Claude Code",
+      "Codex",
+      "OpenCode",
+      "Gemini Antigravity",
+      "Cursor",
+      "any agent able to read local UTF-8 JSON"
+    ],
+    "delivery": "Repository-local file access; no provider-specific registration was added",
+    "per_client_runtime_invocation": "not tested"
+  },
+  "technologies": [
+    "React",
+    "React Three Fiber",
+    "Three.js",
+    "pmndrs ecosystem libraries",
+    "Vite",
+    "TypeScript"
+  ],
+  "triggers": [
+    "Find an R3F implementation example by technique tag, related library, author, dependency, title, or asset attribution",
+    "Review a concrete pmndrs example before adapting a scene or interaction"
+  ],
+  "dependencies": {
+    "index_generator": [
+      "Python 3 standard library",
+      "Git CLI"
+    ],
+    "runtime": "No runtime dependency is installed for the index or the CEOS repository",
+    "example_dependencies": "Each selected example declares its own dependencies in package.json; they are not installed as a set",
+    "isolated_validation_copy": {
+      "path": "~/creative-engineering-os-upstreams/pmndrs-examples-validation/basic-example",
+      "installation_command": "npm install --ignore-scripts --no-audit --no-fund --registry=https://registry.npmjs.org",
+      "result": "87 packages installed locally; lifecycle scripts disabled",
+      "tested_versions": {
+        "node": "v26.11.1",
+        "npm": "11.20.0",
+        "basic_example_package": "@example/basic-example@1.0.0",
+        "react": "19.2.9",
+        "react_three_fiber": "9.8.2",
+        "drei": "10.7.9",
+        "three": "0.186.1",
+        "typescript": "7.0.2",
+        "vite_resolved": "8.3.5"
+      }
+    }
+  },
+  "license": {
+    "repository_spdx": "MIT",
+    "verified_by": [
+      "Official GitHub repository API recorded in the audit JSON",
+      "Pinned upstream LICENSE file"
+    ],
+    "asset_handling": "Upstream pmndrs.json asset attribution objects are copied intact; an empty/incomplete record is not independent asset-rights clearance"
+  },
+  "installation": "No provider or global installation. Read the JSON index directly. To regenerate, check out the exact source revision and run the Python generator; inspect an individual example's scripts and workspace requirements before installing that example locally.",
+  "update_method": "Select and review an exact upstream commit and its license, update the pinned revision and expected inventory in the namespaced generator, regenerate the index, rerun the namespaced test, and refresh this evidence and guide. No floating main updates.",
+  "rollback_method": "Remove only docs/integrations/pmndrs-examples.md, integrations/evidence/pmndrs-examples.json, integrations/indexes/pmndrs-examples.json, scripts/integrations/pmndrs_examples_index.py, and tests/integrations/pmndrs_examples_index_test.py. External review and validation checkouts are separate from the CEOS repo.",
+  "verification": {
+    "audit_gate": {
+      "path": "~/.local/state/creative-engineering-os/integration-v2-20261021/AUDIT-COMPLETE",
+      "present": true
+    },
+    "review_checkout": {
+      "head": "9905cd7b3d030a0ba5c6d327e15fe30ab648abb6",
+      "origin": "https://github.com/pmndrs/examples.git",
+      "tracked_status": "clean",
+      "metadata_pairs": 200,
+      "dev_scripts": 200
+    },
+    "index": {
+      "entry_count": 200,
+      "unique_slugs": 200,
+      "renderer_counts": {
+        "r3f": 200
+      },
+      "complexity_counts": {
+        "low": 76,
+        "medium": 34,
+        "high": 90
+      },
+      "examples_with_upstream_asset_records": 8,
+      "sha256": "2c83cb00777f591356232f489bfa7c11c31b4f01d54e78942053935cac85aea7",
+      "determinism_check": "Two separate generator outputs compared byte-for-byte with each other and the checked-in index"
+    },
+    "generator_test": {
+      "command": "python3 tests/integrations/pmndrs_examples_index_test.py",
+      "result": "passed; 1 test"
+    },
+    "example_source_match": {
+      "example": "examples/basic-example",
+      "source_revision": "9905cd7b3d030a0ba5c6d327e15fe30ab648abb6",
+      "files_matching_pinned_source": [
+        "pmndrs.json",
+        "package.json",
+        "index.html",
+        "src/App.tsx",
+        "src/index.tsx",
+        "src/styles.css",
+        "tsconfig.json",
+        "tsconfig.node.json",
+        "vite.config.ts"
+      ],
+      "asset_metadata": "assets array is empty; scene uses generated box geometry and no model or texture downloads"
+    },
+    "production_build": {
+      "command": "npm run build",
+      "result": "passed; tsc and Vite production build transformed 571 modules",
+      "warning": "1,122.92 kB minified JavaScript chunk exceeds Vite's 500 kB advisory threshold",
+      "log": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/pmndrs-examples/production-build-recheck.log"
+    },
+    "browser": {
+      "tool": "playwright-cli headless Chromium 155",
+      "url": "http://localhost:4391/",
+      "viewport_css_px": [
+        1280,
+        800
+      ],
+      "canvas_css_px": [
+        1280,
+        800
+      ],
+      "context": "WebGL2RenderingContext",
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "context_lost": false,
+      "gpu_vendor": "Google Inc. (Apple)",
+      "gpu_renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+      "interaction": "Click at (500, 400) enlarged the first cube and changed its color from orange to pink",
+      "network": {
+        "page": 200,
+        "javascript": 200,
+        "stylesheet": 200,
+        "vite_favicon": 200
+      },
+      "javascript_errors": 0,
+      "console_warnings": [
+        "THREE.Clock is deprecated; use THREE.Timer"
+      ],
+      "screenshots": {
+        "initial": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/pmndrs-examples/webgl-playwright-initial.png",
+        "clicked": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/pmndrs-examples/webgl-playwright-clicked.png"
+      },
+      "raw_log": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/pmndrs-examples/playwright-cli-recheck.log"
+    }
+  },
+  "limitations": [
+    "The dev script is declared for every index entry, but only basic-example received a production build and browser run; the other 199 were not individually executed.",
+    "Input and complexity are deterministic metadata heuristics, not source event analysis, code-size estimates, or runtime measurements.",
+    "Browser evidence covers one 1280x800 desktop viewport and one pointer interaction; mobile, reduced motion, no-WebGL fallback, performance, and other hardware were not tested.",
+    "The basic-example production bundle emits a Vite advisory warning because its minified JavaScript chunk is larger than 500 kB.",
+    "Asset attribution is copied from upstream metadata and is not an independent rights audit; upstream may omit or incompletely describe assets.",
+    "Upstream main advanced past this pinned revision during verification; regeneration requires an explicit reviewed pin update."
+  ]
+}

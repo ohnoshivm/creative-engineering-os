@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "slug": "superpowers",
+  "upstream": {
+    "repository": "https://github.com/obra/superpowers",
+    "localPath": "~/creative-engineering-os-upstreams/superpowers",
+    "version": "7.0.0",
+    "revision": "b739a8af570e10a95898f2bdf6cec97467fa6c12",
+    "revisionVerifiedBy": "gh api repos/obra/superpowers/commits/HEAD",
+    "license": "MIT",
+    "licensePath": "LICENSE",
+    "skillsCount": 15,
+    "supportedAgents": [
+      "Claude Code",
+      "Antigravity",
+      "Codex App",
+      "Codex CLI",
+      "Cursor",
+      "Devin CLI",
+      "Factory Droid",
+      "Gemini CLI",
+      "GitHub Copilot CLI",
+      "Grok Build CLI",
+      "Kimi Code",
+      "OpenCode",
+      "Pi",
+      "Qwen Code",
+      "Hermes Agent",
+      "Muse"
+    ]
+  },
+  "technology": [
+    "15 Markdown skill directories with SKILL.md and YAML frontmatter",
+    "Claude plugin manifest plus Bash SessionStart hook and Windows wrapper",
+    "Codex plugin manifest exposes skills/ and declares hooks empty",
+    "OpenCode JavaScript plugin supports V1 config hooks and V2 setup/session hooks",
+    "Antigravity plugin/extension provides GEMINI.md context"
+  ],
+  "skills": [
+    {
+      "name": "test-driven-development",
+      "trigger": "Before implementing any feature or bug fix",
+      "ceosPolicy": "Use red, green, refactor for implementation work."
+    },
+    {
+      "name": "verification-before-completion",
+      "trigger": "Before claiming completion, a fix, or passing verification",
+      "ceosPolicy": "Use evidence from actual checks before success claims."
+    }
+  ],
+  "dependencies": {
+    "selectedCodexAndOpenCodeSkills": "None beyond provider native Markdown skill discovery; the five directories contain SKILL.md files and are symlinked to the pinned checkout.",
+    "claudePluginHook": "Bash for SessionStart context injection; the active plugin manager supplies the plugin.",
+    "codexPlugin": "Official Codex plugin marketplace; not installed.",
+    "openCodePlugin": "OpenCode V1 or V2.0.4+ plugin host; no plugin was added, and pre-change CLI inventory was inconsistent.",
+    "antigravity": "agy CLI and an eligible signed-in runtime; unavailable here."
+  },
+  "existingState": [
+    {
+      "path": "~/.claude/plugins/synced/88e7af4e-a2cf-4b40-8488-91a856697e04_aa2d1473-adba-46ff-9558-93fbf2ea6240/6ba53849-2ee0-4cf0-957e-31c122ea1dd1",
+      "version": "6.4.2",
+      "release": "v6.4.2",
+      "revision": "8ca22dba9a94f28898bbce59f2537ff4d87c747d",
+      "classification": "OUTDATED",
+      "active": true,
+      "verification": "claude plugin list reports loaded; plugin metadata, all 15 SKILL.md files, and hook files match official v6.4.2 tag. Upstream HEAD is 7.0.0.",
+      "limitation": "Existing SessionStart hook injects using-superpowers on startup, clear, and compact. It was not modified."
+    },
+    {
+      "path": "~/.agents/skills/{test-driven-development,verification-before-completion}",
+      "classification": "ACTIVE",
+      "provider": "Codex native .agents discovery",
+      "version": "7.0.0",
+      "revision": "b739a8af570e10a95898f2bdf6cec97467fa6c12",
+      "registration": "Two directory symlinks to the pinned checkout; no Superpowers plugin was added.",
+      "preChangePluginInventory": "Codex plugin list showed the OpenAI curated marketplace entry at 6.4.2 as not installed; selected native skill paths were missing."
+    },
+    {
+      "path": "~/.config/opencode/skills/{test-driven-development,verification-before-completion}",
+      "classification": "ACTIVE",
+      "provider": "OpenCode 2.1.2 native personal skill discovery",
+      "version": "7.0.0",
+      "revision": "b739a8af570e10a95898f2bdf6cec97467fa6c12",
+      "registration": "Two directory symlinks to the pinned checkout; no Superpowers plugin was added.",
+      "preChangePluginInventory": "The standard user plugin directory was absent. One CLI call said no plugins found; a later call failed with a database schema error, so treat plugin inventory as unverified."
+    },
+    {
+      "path": "~/.gemini/antigravity/{skills,plugins}/superpowers",
+      "classification": "MISSING",
+      "evidence": "No Superpowers path; agy command unavailable. Existing SYSTEM.md records Google account verification blocking Antigravity execution."
+    },
+    {
+      "path": "library/skills/<15 Superpowers-origin skills>",
+      "classification": "REFERENCE_ONLY",
+      "revision": "Not recorded in library catalog",
+      "evidence": "14 of 15 vendored SKILL.md files match pinned upstream HEAD by SHA-256; diagnosing-superpowers differs. No library content changed."
+    },
+    {
+      "path": "~/gstack",
+      "version": "1.91.121.0",
+      "revision": "d258bcffb0cb7bda5f133f3e957f932d816d282f",
+      "classification": "ACTIVE",
+      "providers": [
+        "Claude Code",
+        "OpenCode"
+      ],
+      "evidence": "gstack setup --status. Existing tracked and untracked changes preserved.",
+      "limitation": "OpenCode links 25/25 resolve; Claude has one pre-existing broken section link in gstack-review to ../qa/sections/exploratory.md."
+    },
+    {
+      "path": "~/.claude/plugins/synced/e8f7d314-c5d3-4449-9eb1-2db6c2deb1ee_70db48fd-6f33-488b-aa9b-363b884f48b5/6ba53849-2ee0-4cf0-957e-31c122ea1dd1",
+      "version": "6.4.2",
+      "repository": "https://github.com/obra/superpowers",
+      "releaseRef": "v6.4.2",
+      "revision": "8ca22dba9a94f28898bbce59f2537ff4d87c747d",
+      "classification": "DUPLICATE",
+      "active": false,
+      "provider": "Claude Code synchronized plugin cache",
+      "evidence": "Final read-only enumeration found this second on-disk copy. claude plugin list reports only the 88e7\u2026 path as the loaded superpowers@synced registration. This copy has identical v6.4.2 contents: all 15 SKILL.md files and hooks/hooks.json, hooks/hooks-cursor.json, hooks/run-hook.cmd, and hooks/session-start match the official tag.",
+      "note": "Retained as an app-managed cache copy. It is not an active duplicate registration and was not removed."
+    }
+  ],
+  "officialProviderProcesses": [
+    {
+      "provider": "Claude Code",
+      "install": "/plugin install superpowers@claude-plugins-official",
+      "note": "The active synced plugin was preserved; no duplicate manual skills or update were applied."
+    },
+    {
+      "provider": "Codex App or CLI",
+      "install": "Use the official Codex plugin marketplace from the app Plugins sidebar or CLI /plugins search; native .agents/skills is used here instead of installing the all-skills plugin."
+    },
+    {
+      "provider": "OpenCode",
+      "install": "Upstream all-in-one plugin supports V1 plugin config and V2 plugins config (OpenCode 2.0.4+). It was not added because it registers all skills and injects using-superpowers context; selected skills use the documented native personal skill directory.",
+      "inventoryLimitation": "The CLI initially returned no plugins, then failed with Database is not empty and has no session table; the standard user plugin directory was absent."
+    },
+    {
+      "provider": "Antigravity",
+      "install": "agy plugin install https://github.com/obra/superpowers",
+      "update": "Upstream says to reinstall with the same command.",
+      "status": "Not installed or runtime-tested; agy is unavailable and account verification is blocked."
+    }
+  ],
+  "installUpdateRollback": {
+    "install": "Added only test-driven-development and verification-before-completion links to Codex and OpenCode. The pre-existing Claude plugin is preserved without duplicate direct links. No using-superpowers skill or new hook, plugin, config, or startup instruction was added.",
+    "update": "Review and pin a new official commit first. Update links only to a clean reviewed checkout; never reset a dirty source. Existing Claude marketplace plugin updates remain provider-managed and were not changed.",
+    "rollback": "Remove only the four Codex/OpenCode direct symlinks; leave the pre-existing Claude plugin and all bundled reference files in place.",
+    "backupPaths": []
+  },
+  "duplicateFindings": [
+    "Claude has only its existing Superpowers plugin registration; no ~/.claude/skills manual Superpowers copies exist.",
+    "Codex marketplace Superpowers 6.4.2 was available but not installed before native links were added.",
+    "No Superpowers plugin was found in the standard OpenCode user plugin directory; CLI plugin inventory was inconsistent due the database error.",
+    "Vendored library skills are on-demand references, not active provider registrations.",
+    "gstack stage skills have distinct names; conceptual overlaps are handled by CEOS routing.",
+    "A second on-disk Claude synchronized cache copy exists at ~/.claude/plugins/synced/e8f7d314-c5d3-4449-9eb1-2db6c2deb1ee_70db48fd-6f33-488b-aa9b-363b884f48b5/6ba53849-2ee0-4cf0-957e-31c122ea1dd1. Claude lists only ~/.claude/plugins/synced/88e7af4e-a2cf-4b40-8488-91a856697e04_aa2d1473-adba-46ff-9558-93fbf2ea6240/6ba53849-2ee0-4cf0-957e-31c122ea1dd1 as loaded; the second copy matches the same v6.4.2 revision and is retained as an inactive app-managed cache, not an active duplicate registration."
+  ],
+  "hookAndScriptReview": {
+    "claude": "hooks/hooks.json runs hooks/session-start for startup|clear|compact. The Bash hook injects the full using-superpowers skill text as additional context. run-hook.cmd is a cross-platform wrapper.",
+    "openCode": "The JavaScript plugin registers all 15 skills and injects using-superpowers context through V1/V2 hooks; it was not installed.",
+    "codex": "The upstream Codex plugin manifest declares hooks empty.",
+    "maintenanceScripts": "No end-user install script exists. bump-version.sh writes declared version fields; lint-shell.sh can format files only with --format; render-antigravity-logo.sh writes a PNG. sync-to-codex-plugin.sh can clone, rsync, commit, push, and open a PR; package-codex-plugin.sh stages files and writes an archive. None was executed.",
+    "remoteInstallersExecuted": false,
+    "pi": "The Pi extension discovers native skills and injects using-superpowers context on session start and compaction; it was not installed.",
+    "upstreamIntegrationGuidance": "AGENTS.md says manual skill copies without using-superpowers bootstrap are incomplete and requires a new-harness acceptance test that auto-triggers brainstorming. CEOS intentionally does not add that bootstrap, so this work verifies skill discovery only."
+  },
+  "verification": {
+    "status": "partial",
+    "checks": [
+      {
+        "check": "official HEAD",
+        "status": "passed",
+        "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/superpowers/upstream-and-providers.log"
+      },
+      {
+        "check": "provider plugin inventory",
+        "status": "partial",
+        "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/superpowers/upstream-and-providers.log"
+      },
+      {
+        "check": "four native TDD/verification links and source hashes",
+        "status": "passed",
+        "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/superpowers/native-skills-check.log"
+      },
+      {
+        "check": "deterministic RED/GREEN microcheck",
+        "status": "passed",
+        "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/superpowers/tdd-red-green.log"
+      },
+      {
+        "check": "assert-based RED/GREEN example",
+        "status": "passed",
+        "command": "python3 -m unittest -v (from ~/creative-engineering-os-upstreams/.tests/superpowers)",
+        "result": "RED exited 1 at assert accepts(0) is True against the deliberately incomplete baseline; after return value >= 0, GREEN exited 0 with 1 test passed."
+      },
+      {
+        "check": "final native link validation",
+        "status": "passed",
+        "result": "Four Codex/OpenCode links resolve to the pinned source; Claude direct links absent; using-superpowers absent from Codex/OpenCode native skill roots."
+      },
+      {
+        "check": "evidence schema",
+        "status": "passed",
+        "result": "Required top-level fields are present; full revision is pinned."
+      }
+    ],
+    "limitations": [
+      "Codex .agents links were verified on disk, but the current T3/Codex session was not reloaded, so model-driven skill selection was not tested.",
+      "OpenCode 2.1.2 CLI plugin inventory is inconsistent: one call returned no plugins, a later call failed with Database is not empty and has no session table. Its CLI exposes no skill-list diagnostic; no model-driven skill invocation was attempted.",
+      "Claude plugin load is confirmed, but no individual skill invocation was run.",
+      "Antigravity runtime invocation is unavailable because agy is missing and Google account verification blocks the previously recorded runtime."
+    ]
+  },
+  "runtimeLimitations": [
+    "Codex .agents links were verified on disk, but the current T3/Codex session was not reloaded, so model-driven skill selection was not tested.",
+    "OpenCode 2.1.2 CLI plugin inventory is inconsistent: one call returned no plugins, a later call failed with Database is not empty and has no session table. Its CLI exposes no skill-list diagnostic; no model-driven skill invocation was attempted.",
+    "Claude plugin load is confirmed, but no individual skill invocation was run.",
+    "Antigravity runtime invocation is unavailable because agy is missing and Google account verification blocks the previously recorded runtime."
+  ],
+  "privacyAndScope": {
+    "providerConfigContentsInspected": false,
+    "providerConfigsModified": false,
+    "credentialsOrSecretsRecorded": false,
+    "sharedCEOSFilesChanged": false,
+    "vendoredLibraryChanged": false,
+    "gstackChanged": false,
+    "existingCreativeAuditorEditPreserved": true
+  },
+  "upstreamIntegrationLimit": {
+    "source": "AGENTS.md contributor guidance at the pinned upstream revision",
+    "finding": "Upstream describes a real integration as loading using-superpowers at session start and says manual skill copies without bootstrap are incomplete.",
+    "ceosDecision": "The bootstrap is intentionally omitted because CEOS is the orchestrator and gstack owns its stages. The Codex and OpenCode additions prove native skill discovery only, not automatic trigger behavior."
+  },
+  "id": "superpowers",
+  "repository": "https://github.com/obra/superpowers",
+  "revision": "b739a8af570e10a95898f2bdf6cec97467fa6c12",
+  "localPath": "~/creative-engineering-os-upstreams/superpowers",
+  "license": "MIT",
+  "integrationType": "Curated native TDD and verification skills for Codex/OpenCode; pre-existing Claude plugin preserved without duplicate links.",
+  "supportedAgents": [
+    "Codex App",
+    "Codex CLI",
+    "OpenCode",
+    "Claude Code (pre-existing plugin)"
+  ],
+  "technologies": [
+    "Markdown SKILL.md",
+    "native personal-skill discovery",
+    "directory symlinks"
+  ],
+  "triggers": [
+    {
+      "skill": "test-driven-development",
+      "description": "Before implementing any feature or bug fix."
+    },
+    {
+      "skill": "verification-before-completion",
+      "description": "Before claiming completion, a fix, or passing verification."
+    }
+  ],
+  "updateMethod": {
+    "steps": [
+      "Fetch the official main branch, review license, dependencies, hooks, and selected skill changes, then pin a reviewed full commit.",
+      "Codex/OpenCode skill links follow the checkout; no provider configuration is required."
+    ],
+    "commands": [
+      "git -C ~/creative-engineering-os-upstreams/superpowers fetch origin main",
+      "git -C ~/creative-engineering-os-upstreams/superpowers rev-parse origin/main",
+      "git -C ~/creative-engineering-os-upstreams/superpowers checkout --detach <reviewed-full-commit>"
+    ]
+  },
+  "rollbackMethod": {
+    "commands": [
+      "unlink ~/.agents/skills/test-driven-development",
+      "unlink ~/.agents/skills/verification-before-completion",
+      "unlink ~/.config/opencode/skills/test-driven-development",
+      "unlink ~/.config/opencode/skills/verification-before-completion"
+    ],
+    "details": "Remove only the four new direct links. Keep the pre-existing Claude plugin, pinned checkout, and bundled references."
+  },
+  "audit": {
+    "initialClassification": "The saved pre-install audit classified Superpowers as REFERENCE_ONLY. The capability-specific follow-up found a pre-existing active Claude Code plugin v6.4.2 that the skill-root scan missed; the baseline classification was incomplete for plugin-managed skills.",
+    "duplicates": {
+      "baselineNativeSkillPaths": [
+        "Codex .agents/skills: requested names absent",
+        "OpenCode ~/.config/opencode/skills: requested names absent",
+        "Claude ~/.claude/skills: requested names absent"
+      ],
+      "baselinePlugin": "Claude Code already had an active Superpowers plugin exposing both requested skills.",
+      "finalState": "Two links per Codex/OpenCode root; no direct Claude links remain, avoiding duplicates with its active plugin. Unrequested systematic-debugging, writing-plans, and executing-plans links were removed from Codex/OpenCode roots.",
+      "bundledReferences": "The selected TDD and verification files are byte-identical to the pinned upstream sources; library copies remain unchanged."
+    },
+    "conflicts": [
+      "The existing Claude plugin v6.4.2 has a SessionStart hook for startup|clear|compact that injects using-superpowers. It was not installed or changed by this task and remains an existing conflict; disabling it would require changing provider plugin state, outside scope.",
+      "The Codex full plugin exposes the entire skill directory, including the using-superpowers startup skill; it was not installed.",
+      "The OpenCode full plugin registers all skills and injects using-superpowers context through lifecycle hooks; it was not installed."
+    ],
+    "ownershipResolution": {
+      "gstack": "Owns project engineering stages and orchestration.",
+      "Superpowers": "Only the TDD and verification methods are newly exposed by this task.",
+      "CEOS": "Owns creative direction, design, motion, and creative QA.",
+      "automaticBootstrap": "No new startup hook or using-superpowers skill link was added."
+    },
+    "reviewedFiles": {
+      "claude": "hooks/hooks.json runs hooks/session-start for startup|clear|compact. The Bash hook injects the full using-superpowers skill text as additional context. run-hook.cmd is a cross-platform wrapper.",
+      "openCode": "The JavaScript plugin registers all 15 skills and injects using-superpowers context through V1/V2 hooks; it was not installed.",
+      "codex": "The upstream Codex plugin manifest declares hooks empty.",
+      "maintenanceScripts": "No end-user install script exists. bump-version.sh writes declared version fields; lint-shell.sh can format files only with --format; render-antigravity-logo.sh writes a PNG. sync-to-codex-plugin.sh can clone, rsync, commit, push, and open a PR; package-codex-plugin.sh stages files and writes an archive. None was executed.",
+      "remoteInstallersExecuted": false,
+      "pi": "The Pi extension discovers native skills and injects using-superpowers context on session start and compaction; it was not installed.",
+      "upstreamIntegrationGuidance": "AGENTS.md says manual skill copies without using-superpowers bootstrap are incomplete and requires a new-harness acceptance test that auto-triggers brainstorming. CEOS intentionally does not add that bootstrap, so this work verifies skill discovery only."
+    }
+  },
+  "registrations": [
+    {
+      "agent": "Codex",
+      "skill": "test-driven-development",
+      "path": "~/.agents/skills/test-driven-development",
+      "target": "~/creative-engineering-os-upstreams/superpowers/skills/test-driven-development",
+      "state": "added direct symlink"
+    },
+    {
+      "agent": "Codex",
+      "skill": "verification-before-completion",
+      "path": "~/.agents/skills/verification-before-completion",
+      "target": "~/creative-engineering-os-upstreams/superpowers/skills/verification-before-completion",
+      "state": "added direct symlink"
+    },
+    {
+      "agent": "OpenCode",
+      "skill": "test-driven-development",
+      "path": "~/.config/opencode/skills/test-driven-development",
+      "target": "~/creative-engineering-os-upstreams/superpowers/skills/test-driven-development",
+      "state": "added direct symlink"
+    },
+    {
+      "agent": "OpenCode",
+      "skill": "verification-before-completion",
+      "path": "~/.config/opencode/skills/verification-before-completion",
+      "target": "~/creative-engineering-os-upstreams/superpowers/skills/verification-before-completion",
+      "state": "added direct symlink"
+    },
+    {
+      "agent": "Claude Code",
+      "skill": "Superpowers plugin (pre-existing; all skills)",
+      "path": "~/.claude/plugins/synced/88e7af4e-a2cf-4b40-8488-91a856697e04_aa2d1473-adba-46ff-9558-93fbf2ea6240/6ba53849-2ee0-4cf0-957e-31c122ea1dd1",
+      "target": "existing native plugin cache, v6.4.2",
+      "state": "preserved; not installed or modified by this task"
+    }
+  ]
+}

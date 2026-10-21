@@ -1,0 +1,472 @@
+{
+  "slug": "shadcn-ui",
+  "status": "project-level-capability-verified-with-limitations",
+  "audited_at": "2026-10-21",
+  "summary": "Pinned shadcn CLI added official Button and Dialog source to an isolated Vite/React fixture. Production build and browser keyboard behavior passed; axe reported no violations, with one open-dialog incomplete rule. Existing upstream skill symlinks were found at resume, left untouched, and have unknown provenance. No provider settings, MCP registrations, CEOS templates, or global runtime dependencies were changed during this continuation.",
+  "upstream": {
+    "repository": "https://github.com/shadcn-ui/ui",
+    "pinned_revision": "ba1503c64472b82256d9de95e2e62c5901a38e8b",
+    "revision_url": "https://github.com/shadcn-ui/ui/tree/ba1503c64472b82256d9de95e2e62c5901a38e8b",
+    "commit_date": "2026-10-19",
+    "checkout_path": "~/creative-engineering-os-upstreams/shadcn-ui",
+    "checkout_state": "clean, detached HEAD",
+    "cli": {
+      "package": "shadcn",
+      "version": "4.22.1",
+      "license": "MIT",
+      "node_engine": ">=20.18.1",
+      "npm_integrity": "sha512-LbB4Lro+b0qSVki/tgL5edtKylEnXe1ppxMJC12d7NHPgaT+eSgJGMQULwP72V7X9tbiUq7xfx3VDAfB7jdGoA=="
+    },
+    "reviewed_cli_sources": [
+      "packages/shadcn/src/commands/add.ts",
+      "packages/registry/src/add-components.ts",
+      "packages/registry/src/updaters/update-files.ts",
+      "packages/registry/src/updaters/update-dependencies.ts",
+      "packages/registry/src/registry/fetcher.ts",
+      "packages/registry/src/is-safe-target.ts"
+    ],
+    "license_review": {
+      "spdx": "MIT",
+      "verified_by": [
+        "GitHub repository API",
+        "LICENSE.md at the pinned checkout",
+        "root and packages/shadcn package.json license fields"
+      ],
+      "root_license_file": "LICENSE.md"
+    }
+  },
+  "capability": {
+    "kind": "project-local source component generator",
+    "triggers": [
+      "A user asks to add or adapt an editable React UI component in an existing project.",
+      "The project has a compatible React, styling, alias, and package-manager setup and the generated source has been reviewed."
+    ],
+    "supported_agents": {
+      "project_cli": "Provider-agnostic for shell-capable coding agents operating inside a compatible project with the local CLI installed; npm execution was verified here.",
+      "upstream_skill": "The pinned upstream skills/shadcn/SKILL.md exists and is symlinked to ~/.claude/skills/shadcn, ~/.agents/skills/shadcn, and ~/.config/opencode/skills/shadcn. The single source hash matches the pinned checkout. No direct ~/.codex/skills/shadcn entry was found; runtime discovery was not independently tested."
+    },
+    "technologies_verified": [
+      "React 19",
+      "Vite 8",
+      "Tailwind CSS 4",
+      "TypeScript 7",
+      "Radix UI Dialog primitive"
+    ],
+    "not_a_runtime_library": "The CLI writes component source into a consuming project; the project owns the resulting files, tokens, upgrades, and review."
+  },
+  "fixture": {
+    "path": "~/creative-engineering-os-upstreams/shadcn-ui-fixture",
+    "inside_ceos_repository": false,
+    "git_repository": false,
+    "node": "v26.11.1",
+    "npm": "11.20.0",
+    "package_manager": "npm",
+    "package_versions": {
+      "react": "19.3.1",
+      "react-dom": "19.3.1",
+      "vite": "8.3.5",
+      "@vitejs/plugin-react": "6.1.2",
+      "tailwindcss": "4.3.3",
+      "@tailwindcss/vite": "4.3.3",
+      "typescript": "7.0.2",
+      "shadcn": "4.22.1",
+      "radix-ui": "1.8.1",
+      "cn": "0.5.0",
+      "class-variance-authority": "0.7.1",
+      "lucide-react": "1.61.0",
+      "axe-core": "4.14.0"
+    },
+    "lockfile": {
+      "path": "~/creative-engineering-os-upstreams/shadcn-ui-fixture/package-lock.json",
+      "lockfile_version": 3,
+      "sha256": "501fa6c80f57399a682092b8494076892f27b745507779c4a280fb09f4b06a08"
+    },
+    "npmrc": {
+      "save_exact": true,
+      "ignore_scripts": true
+    },
+    "style_ownership": "Fixture-owned neutral CSS variables, Tailwind v4 CSS entry, components.json style=new-york and project aliases; official source path is the new-york-v4 registry. No CEOS template initialization."
+  },
+  "installation": {
+    "scope": "fixture/project local only",
+    "cli_command": "./node_modules/.bin/shadcn",
+    "inspection_command": "./node_modules/.bin/shadcn add button dialog --dry-run --view",
+    "apply_command": "./node_modules/.bin/shadcn add button dialog --yes",
+    "dry_run_result": "Passed. Preview showed src/components/ui/button.tsx and src/components/ui/dialog.tsx; the dry run wrote no component files or package changes.",
+    "apply_result": "Passed. CLI created button.tsx and dialog.tsx because the Dialog footer's optional Close composition imports Button; it added cn@0.5.0 and radix-ui@1.8.1.",
+    "registry_declared_npm_dependencies": [
+      "cn@0.5.0",
+      "radix-ui@1.8.1"
+    ],
+    "fixture_predeclared_import_dependencies": [
+      "class-variance-authority@0.7.1",
+      "lucide-react@1.61.0"
+    ],
+    "dependency_metadata_limit": "At this pinned registry revision, generated Button/Dialog imports include class-variance-authority and lucide-react, but registry npm dependency metadata declares only cn and radix-ui. The fixture pinned cva and lucide-react before invoking add so the result builds.",
+    "registry": {
+      "base_url": "https://ui.shadcn.com/r/styles/new-york-v4/",
+      "style": "new-york (Tailwind v4 registry path: new-york-v4)",
+      "button_sha256": "79dd6f75f8136394442202d6b8b922fb269eaad0a5dba579397c9d5b41f893bb",
+      "dialog_sha256": "2ade6074e5fad0a4eb171ead44c43d3301a3c83d186d7236fb1fdbea80ee556b",
+      "provenance": "At verification time, both official registry file contents matched the pinned source at the recorded revision. Button output was byte-identical. Dialog output matched the CLI's configured Vite transformation: remove the use-client directive for rsc=false and rewrite the internal Button import to @/components/ui/button.",
+      "dialog_generated_sha256": "dcd488cc5d713da215ce2037efd644f35904df755c70f31534706643db488514",
+      "urls": [
+        "https://ui.shadcn.com/r/styles/new-york-v4/button.json",
+        "https://ui.shadcn.com/r/styles/new-york-v4/dialog.json"
+      ]
+    },
+    "hooks_review": {
+      "upstream_package_lifecycle_hooks": "No preinstall, install, postinstall, or prepare hook in the root or CLI package scripts.",
+      "tracked_git_hooks": "No tracked .husky hook definitions.",
+      "fixture_npmrc": {
+        "ignore_scripts": true,
+        "save_exact": true
+      },
+      "package_manager_behavior": "The CLI add operation can update files and invoke the detected package manager; the fixture disabled package lifecycle scripts."
+    }
+  },
+  "dependencies": {
+    "component_runtime": [
+      "react@19.3.1",
+      "react-dom@19.3.1",
+      "cn@0.5.0",
+      "radix-ui@1.8.1",
+      "class-variance-authority@0.7.1",
+      "lucide-react@1.61.0"
+    ],
+    "development_and_verification": [
+      "shadcn@4.22.1",
+      "vite@8.3.5",
+      "@vitejs/plugin-react@6.1.2",
+      "tailwindcss@4.3.3",
+      "@tailwindcss/vite@4.3.3",
+      "typescript@7.0.2",
+      "@types/react@19.3.0",
+      "@types/react-dom@19.3.0",
+      "axe-core@4.14.0"
+    ],
+    "licenses_from_lockfile": {
+      "MIT": [
+        "@tailwindcss/vite@4.3.3",
+        "@types/react@19.3.0",
+        "@types/react-dom@19.3.0",
+        "@vitejs/plugin-react@6.1.2",
+        "cn@0.5.0",
+        "radix-ui@1.8.1",
+        "react@19.3.1",
+        "react-dom@19.3.1",
+        "shadcn@4.22.1",
+        "tailwindcss@4.3.3",
+        "vite@8.3.5"
+      ],
+      "Apache-2.0": [
+        "class-variance-authority@0.7.1",
+        "typescript@7.0.2"
+      ],
+      "ISC": [
+        "lucide-react@1.61.0"
+      ],
+      "MPL-2.0": [
+        "axe-core@4.14.0"
+      ]
+    }
+  },
+  "verification": {
+    "npm_ci": {
+      "result": "passed",
+      "details": "Added 413 packages in 4 seconds using the committed lockfile and ignore-scripts=true.",
+      "log": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/npm-ci.log"
+    },
+    "production_build": {
+      "command": "npm run build",
+      "result": "passed",
+      "details": "tsc --noEmit and Vite 8.3.5 build succeeded; 2,041 modules transformed. Output: 23.88 kB CSS (5.28 kB gzip), 294.88 kB JS (95.77 kB gzip).",
+      "log": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/build.log"
+    },
+    "browser": {
+      "tool": "playwright-cli 0.1.22",
+      "target": "production preview at http://127.0.0.1:4174/",
+      "result": "passed",
+      "checks": {
+        "opened": true,
+        "initial_focus": "Done button inside the dialog",
+        "tab_focus_trapped": true,
+        "escape_closed": true,
+        "focus_restored_to_trigger": true
+      },
+      "responsive_viewports": [
+        "desktop 1440x900",
+        "tablet 768x1024",
+        "mobile 390x844"
+      ],
+      "screenshots": [
+        "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/production-desktop.png",
+        "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/production-tablet.png",
+        "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/production-mobile.png",
+        "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/dialog-desktop.png",
+        "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/dialog-mobile.png"
+      ],
+      "visual_inspection": "Production screenshots were inspected at desktop, tablet, and mobile sizes; no overflow or layout defect was observed. The 390 px dialog measurement was x=16 px, width=358 px.",
+      "interaction_log": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/dialog-browser-check-production.log",
+      "console": {
+        "result": "clean",
+        "errors": 0,
+        "warnings": 0,
+        "log": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/production-console-check.log"
+      }
+    },
+    "axe": {
+      "tool": "axe-core 4.14.0",
+      "wcag_tags": [
+        "wcag2a",
+        "wcag2aa",
+        "wcag21a",
+        "wcag21aa",
+        "wcag22aa"
+      ],
+      "closed_dialog": {
+        "passes": 16,
+        "violations": 0,
+        "incomplete": 0
+      },
+      "open_dialog": {
+        "passes": 20,
+        "violations": 0,
+        "incomplete_rules": [
+          "aria-hidden-focus"
+        ]
+      },
+      "incomplete_note": "axe marked aria-hidden-focus incomplete for #root and Radix focus-guard spans while the modal was open; manual Tab, Escape, and focus-restoration checks passed.",
+      "log": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/dialog-axe-check-production.log"
+    },
+    "npm_audit": {
+      "production_dependencies": "npm audit --omit=dev --audit-level=high found 0 vulnerabilities.",
+      "all_dependencies": "npm audit reported 7 high-severity findings in the development CLI dependency graph, including braces stack-exhaustion through micromatch/fast-glob and ts-morph paths. npm proposed --force, which would replace shadcn@4.22.1 with breaking shadcn@1.0.0; no fix was applied.",
+      "production_log": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/npm-audit-production.log",
+      "full_log": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/npm-audit-full.log"
+    },
+    "automated_test_suite": "No unit-test script exists in this minimal fixture; production build, Playwright interaction checks, and axe checks were run.",
+    "status": "passed_with_limitations",
+    "checks": [
+      {
+        "name": "Pinned CLI version",
+        "command": "./node_modules/.bin/shadcn --version",
+        "result": "passed: 4.22.1"
+      },
+      {
+        "name": "Install from lockfile",
+        "command": "npm ci",
+        "result": "passed: added 413 packages",
+        "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/npm-ci.log"
+      },
+      {
+        "name": "Registry preview before apply",
+        "command": "./node_modules/.bin/shadcn add button dialog --dry-run --view",
+        "result": "passed: preview showed button.tsx and dialog.tsx; no component/package writes",
+        "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/shadcn-add-dry-run-view.log"
+      },
+      {
+        "name": "Apply Dialog",
+        "command": "./node_modules/.bin/shadcn add button dialog --yes",
+        "result": "passed: created button.tsx and dialog.tsx; added cn and radix-ui",
+        "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/shadcn-add.log"
+      },
+      {
+        "name": "Production build",
+        "command": "npm run build",
+        "result": "passed: TypeScript and Vite production build",
+        "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/build.log"
+      },
+      {
+        "name": "Production browser keyboard behavior",
+        "command": "Playwright CLI session shadcn-ui against http://127.0.0.1:4174/",
+        "result": "passed: open, focus in dialog, Tab focus stays inside, Escape closes, focus returns to trigger",
+        "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/dialog-browser-check-production.log"
+      },
+      {
+        "name": "Responsive screenshots and console",
+        "command": "Playwright CLI production preview at 1440x900, 768x1024, and 390x844",
+        "result": "passed: screenshots inspected; zero console errors and warnings",
+        "evidence": [
+          "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/production-desktop.png",
+          "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/production-tablet.png",
+          "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/production-mobile.png",
+          "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/production-console-check.log"
+        ]
+      },
+      {
+        "name": "axe-core",
+        "command": "Playwright CLI with local axe-core 4.14.0 injection",
+        "result": "passed: zero violations closed and open; aria-hidden-focus incomplete while open",
+        "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/dialog-axe-check-production.log"
+      },
+      {
+        "name": "Dependency audit",
+        "command": "npm audit --omit=dev --audit-level=high; npm audit",
+        "result": "production dependencies: zero vulnerabilities; full graph: seven high-severity dev dependency findings",
+        "evidence": [
+          "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/npm-audit-production.log",
+          "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/npm-audit-full.log"
+        ]
+      },
+      {
+        "name": "Preview cleanup",
+        "command": "lsof -nP -iTCP:4174 -sTCP:LISTEN",
+        "result": "passed: no fixture preview listener remained; named Playwright session was closed"
+      }
+    ],
+    "limitations": [
+      "No fixture unit-test script exists; production build, browser interaction checks, and axe scans were used.",
+      "Screen-reader testing was not performed.",
+      "axe-core marked aria-hidden-focus incomplete while the Dialog was open; there were no reported violations, and manual keyboard/focus checks passed.",
+      "The full development dependency graph reports seven high-severity findings through the CLI dependency tree. npm's forced fix would replace shadcn@4.22.1 with breaking shadcn@1.0.0; no forced fix was applied.",
+      "Only npm was exercised; other package managers were not tested.",
+      "A global /opt/homebrew/bin/shadcn@4.22.1 was observed with unknown attribution. This task did not install, invoke, or alter it.",
+      "The current runtime discovery of the existing linked Agent Skill and provider MCP settings was not tested; provider configurations were not read or changed."
+    ]
+  },
+  "security_and_permissions": {
+    "cli_effects": "The CLI writes generated component source and may update CSS/configuration or invoke the detected package manager for registry dependencies. Review its output before applying; package installation can run lifecycle scripts unless the package manager is configured otherwise.",
+    "source_review": "Pinned CLI source validates registry target paths against traversal and passes dependency names as arguments with option separators. Custom registries remain executable third-party source and require review.",
+    "fixture_lifecycle_scripts": "Disabled through .npmrc ignore-scripts=true.",
+    "global_runtime_cli_or_mcp_added": false,
+    "provider_settings_changed": false
+  },
+  "machine_observations": {
+    "prior_audit": "The pre-install audit at 2026-10-21T10:01:01.581975Z recorded global shadcn path=null.",
+    "current_global_cli": {
+      "path": "/opt/homebrew/bin/shadcn",
+      "version": "4.22.1",
+      "observed_binary_mtime": "2026-10-21 18:34:17 local time",
+      "task_installed_or_invoked": false,
+      "attribution": "Unknown. The observed mtime is after the prior audit and does not establish who installed it. It was left untouched; all fixture CLI invocations used the local project binary."
+    },
+    "log": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/shadcn-ui/global-cli-observation.log"
+  },
+  "install_update_rollback": {
+    "install": [
+      "Use an existing React project with Node >=20.18.1 and its own styling tokens/configuration.",
+      "Install the exact CLI as a local development dependency: npm install --save-dev --save-exact shadcn@4.22.1.",
+      "Configure components.json aliases and the CSS file for that project; review its own config before invoking init or add.",
+      "Inspect first with ./node_modules/.bin/shadcn add <component> --dry-run --diff --view, then apply with the project-local CLI after reviewing generated source and dependencies."
+    ],
+    "update": "Pin a reviewed CLI release and lockfile version. Fetch and inspect the proposed component diff before applying. Back up or commit local component edits before overwrite; components are copied into the project and require deliberate updates.",
+    "rollback": "For this new fixture, remove ~/creative-engineering-os-upstreams/shadcn-ui-fixture to undo it. In a consuming project, restore package.json, package-lock.json, components.json/CSS if changed, and generated component files from the pre-change commit or backup. Remove only docs/integrations/shadcn-ui.md and integrations/evidence/shadcn-ui.json to undo this CEOS record.",
+    "backups": "No private backup was needed: both assigned CEOS output paths and the external fixture were new, and no pre-existing project file or configuration was edited.",
+    "cleanup": "Playwright session and Vite servers were stopped; browser CLI artifacts were moved to the reports directory. The external fixture retains its node_modules and dist build output alongside its source and lockfile; remove those generated directories if a lean fixture checkout is preferred."
+  },
+  "limitations": [
+    "This adds project-local CLI guidance and a reproducible external fixture, not an installed provider skill or CEOS-wide runtime capability.",
+    "CLI add depends on the current official registry; future registry responses can change and should be reviewed even when the CLI version is pinned.",
+    "The pinned Button/Dialog files import class-variance-authority and lucide-react although their registry npm dependency metadata declared only cn and radix-ui; ensure imported packages exist and review imports alongside metadata.",
+    "Screen-reader testing was not performed. axe's open-dialog aria-hidden-focus result was incomplete rather than a confirmed violation.",
+    "The pinned development CLI dependency graph reported seven high-severity audit findings; do not apply npm's breaking forced downgrade without a reviewed upstream fix."
+  ],
+  "changed_paths": [
+    "docs/integrations/shadcn-ui.md (new)",
+    "integrations/evidence/shadcn-ui.json (new)"
+  ],
+  "external_fixture_paths": [
+    "~/creative-engineering-os-upstreams/shadcn-ui-fixture/package.json",
+    "~/creative-engineering-os-upstreams/shadcn-ui-fixture/package-lock.json",
+    "~/creative-engineering-os-upstreams/shadcn-ui-fixture/src/components/ui/button.tsx",
+    "~/creative-engineering-os-upstreams/shadcn-ui-fixture/src/components/ui/dialog.tsx"
+  ],
+  "unchanged_paths": [
+    "agents/creative-auditor.md",
+    "integrations/manifest.json",
+    "integrations/routes.json",
+    "skills/ceos-start-here",
+    "skills/ceos-studio-workflow",
+    ".github",
+    "scripts/verify.sh",
+    "provider/auth/subscription/T3/settings"
+  ],
+  "id": "shadcn-ui",
+  "repository": "https://github.com/shadcn-ui/ui",
+  "revision": "ba1503c64472b82256d9de95e2e62c5901a38e8b",
+  "localPath": "~/creative-engineering-os-upstreams/shadcn-ui",
+  "license": "MIT",
+  "integrationType": "Project-level CLI source generator that copies editable component code into a consuming React project.",
+  "supportedAgents": [
+    "Any shell-capable coding agent working in a compatible React project; npm CLI use was verified.",
+    "The upstream Agent Skill is symlinked into Claude, .agents, and OpenCode skill roots; provider runtime discovery was not independently tested."
+  ],
+  "technologies": [
+    "shadcn CLI 4.22.1",
+    "React 19",
+    "Vite 8",
+    "Tailwind CSS 4",
+    "TypeScript 7",
+    "Radix UI",
+    "npm"
+  ],
+  "triggers": [
+    "Add or adapt an editable React UI component inside an existing compatible project.",
+    "Use project-owned tokens, aliases, CSS, package manager, and component source ownership."
+  ],
+  "updateMethod": "Pin a reviewed upstream commit and project-local shadcn CLI version with its lockfile. Inspect each intended component using the local CLI with --dry-run and --view or --diff, review generated imports/dependencies, then apply and repeat build, production browser, keyboard, responsive, and axe checks.",
+  "rollbackMethod": "Restore the consuming project's package manifest, lockfile, components.json, CSS/config, and generated components from its prior commit or private backup. Remove the external fixture and this integration's docs/evidence if reverting this record. Keep the upstream checkout while observed skill symlinks point into it.",
+  "audit": {
+    "initialClassification": {
+      "value": "REFERENCE_ONLY",
+      "source": "docs/integrations/PRE-INSTALL-AUDIT.md",
+      "details": "The initial audit found only references and no pinned checkout or operational component verification."
+    },
+    "currentClassification": "Verified project-level source generator; the upstream Agent Skill is also linked into three local skill roots.",
+    "duplicates": [
+      "No separate duplicate general shadcn skill was found. The Claude, .agents, and OpenCode entries are symlinks to one upstream source and their SKILL.md hashes match.",
+      "Other references in design-analysis, building-web-artifacts, migrate-radix-to-base, React Bits, and UI UX Pro Max are narrow guidance/data, not duplicate shadcn registrations."
+    ],
+    "conflicts": [
+      "The upstream skill recommends npx shadcn@latest, which can bypass a consuming project's explicit version pin. Use the project's local pinned CLI as in this fixture.",
+      "At this pinned registry revision, Button and Dialog source import class-variance-authority and lucide-react although registry npm dependency metadata lists only cn and radix-ui; the fixture declared the imports before adding components."
+    ],
+    "initial_and_current_scope": "Initial inventory classified shadcn/ui as REFERENCE_ONLY. The current operational fixture verifies the project-local CLI path. Existing agent skill links were observed when this work resumed; their provenance is unknown and they were not changed in this continuation."
+  },
+  "registrations": {
+    "skills": [
+      {
+        "path": "~/.claude/skills/shadcn",
+        "target": "~/creative-engineering-os-upstreams/shadcn-ui/skills/shadcn",
+        "status": "present symlink; current target content matches pinned revision",
+        "sha256": "93951e5e83f616a3e046491c00d770bd54c0a64164706cd1191822a233d27592",
+        "provenance": "present when work resumed; attribution unknown; not modified in this continuation"
+      },
+      {
+        "path": "~/.agents/skills/shadcn",
+        "target": "~/creative-engineering-os-upstreams/shadcn-ui/skills/shadcn",
+        "status": "present symlink; current target content matches pinned revision",
+        "sha256": "93951e5e83f616a3e046491c00d770bd54c0a64164706cd1191822a233d27592",
+        "provenance": "present when work resumed; attribution unknown; not modified in this continuation"
+      },
+      {
+        "path": "~/.config/opencode/skills/shadcn",
+        "target": "~/creative-engineering-os-upstreams/shadcn-ui/skills/shadcn",
+        "status": "present symlink; current target content matches pinned revision",
+        "sha256": "93951e5e83f616a3e046491c00d770bd54c0a64164706cd1191822a233d27592",
+        "provenance": "present when work resumed; attribution unknown; not modified in this continuation"
+      }
+    ],
+    "directCodexSkillsEntry": {
+      "path": "~/.codex/skills/shadcn",
+      "status": "not found; runtime discovery through other roots not independently tested"
+    },
+    "mcp": {
+      "registeredInAuditedSkillRoots": false,
+      "status": "No shadcn MCP registration found in the four audited skill roots; provider configuration was not inspected or modified."
+    },
+    "projectCli": {
+      "path": "~/creative-engineering-os-upstreams/shadcn-ui-fixture/node_modules/.bin/shadcn",
+      "version": "4.22.1",
+      "scope": "fixture local development dependency",
+      "globalRuntimeAdded": false
+    },
+    "existingGlobalCliObservation": {
+      "path": "/opt/homebrew/bin/shadcn",
+      "version": "4.22.1",
+      "attribution": "unknown",
+      "action": "observed only; not invoked, installed, or modified by this task"
+    }
+  }
+}

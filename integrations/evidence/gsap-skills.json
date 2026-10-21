@@ -1,0 +1,398 @@
+{
+  "slug": "gsap-skills",
+  "status": "integrated; official skills already installed and current; duplicate generic activation narrowed",
+  "audited_at": "2026-10-21",
+  "upstream": {
+    "repository": "https://github.com/greensock/gsap-skills",
+    "pinned_revision": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+    "revision_url": "https://github.com/greensock/gsap-skills/tree/aed9cfd3277740755f6bfc1155c7aa645403b760",
+    "branch_ref_verified": "main",
+    "fetched_main_matches_pinned_revision": true,
+    "checkout_path": "~/creative-engineering-os-upstreams/gsap-skills",
+    "checkout_clean": true,
+    "commit_date": "2026-04-21",
+    "commit_subject": "Added Google Antigravity Support",
+    "repository_pushed_at": "2026-07-29T17:36:08Z",
+    "version_policy": "No package runtime version is installed; revision is pinned by full Git commit SHA.",
+    "license": {
+      "spdx": "MIT",
+      "verified_by": [
+        "GitHub repository API",
+        "upstream LICENSE file"
+      ]
+    },
+    "format": "Agent Skills markdown; each of the eight official skill directories contains only SKILL.md.",
+    "upstream_supported_agents_claim": "README documents the skills CLI as supporting 40+ agents and manual paths for Claude Code, Cursor, OpenCode, Codex, Google Antigravity, and Pi; Copilot instructions are documented separately.",
+    "upstream_install_options": [
+      "npx skills add https://github.com/greensock/gsap-skills (documented, not executed)",
+      "manual copy of skills/ into the native provider skills directory (documented)"
+    ],
+    "remote_installer_executed": false
+  },
+  "local_installation": {
+    "runtime": "No GSAP runtime library or project package was installed.",
+    "native_installation": "All eight official skills were already present and byte-identical to the pinned commit, so none was reinstalled or updated.",
+    "opencode_root": "~/.config/opencode/skills",
+    "agent_skills_root": "~/.agents/skills",
+    "observed_operational_discovery": {
+      "codex_t3_session": "All eight gsap-* slugs were present in the injected skill catalog at session start.",
+      "codex_cli": "codex --help exposes no dedicated skill discovery/list command; runtime catalog is the discovery evidence.",
+      "opencode_cli": "opencode debug skill gsap-core returns Unknown subcommand \"skill\"; OpenCode runtime discovery not verified.",
+      "codex_cli_debug_commands": [
+        "models",
+        "app-server",
+        "prompt-input",
+        "help"
+      ],
+      "opencode_cli_error": "Unknown subcommand \"skill\""
+    },
+    "official_skill_slugs": [
+      "gsap-core",
+      "gsap-timeline",
+      "gsap-scrolltrigger",
+      "gsap-plugins",
+      "gsap-utils",
+      "gsap-react",
+      "gsap-frameworks",
+      "gsap-performance"
+    ],
+    "native_plugin_added": false
+  },
+  "skills": [
+    {
+      "slug": "gsap-core",
+      "trigger_summary": "JavaScript/vanilla/React/Vue GSAP tweens, easing, stagger, responsive and reduced-motion animation.",
+      "upstream_path": "skills/gsap-core/SKILL.md",
+      "opencode_path": "~/.config/opencode/skills/gsap-core/SKILL.md",
+      "agents_link": "~/.agents/skills/gsap-core",
+      "agents_link_target": "~/.config/opencode/skills/gsap-core",
+      "vendored_reference_path": "library/skills/gsap-core/SKILL.md",
+      "sha256": "3887b47e050ab5afbe2a9a820f23d39fa02ab785e06a343be44c6f91d84d12b3",
+      "installed_and_vendored_bytes_match_pinned_commit": true
+    },
+    {
+      "slug": "gsap-timeline",
+      "trigger_summary": "Sequencing GSAP animations with timelines, labels, nesting, and position parameters.",
+      "upstream_path": "skills/gsap-timeline/SKILL.md",
+      "opencode_path": "~/.config/opencode/skills/gsap-timeline/SKILL.md",
+      "agents_link": "~/.agents/skills/gsap-timeline",
+      "agents_link_target": "~/.config/opencode/skills/gsap-timeline",
+      "vendored_reference_path": "library/skills/gsap-timeline/SKILL.md",
+      "sha256": "1a8b0f39cc4be3ed3d834b89672e4ae2f151b901dc3450bebf10bbc45379fe02",
+      "installed_and_vendored_bytes_match_pinned_commit": true
+    },
+    {
+      "slug": "gsap-scrolltrigger",
+      "trigger_summary": "Scroll-linked animation, pinning, scrubbing, ScrollTrigger refresh, and cleanup.",
+      "upstream_path": "skills/gsap-scrolltrigger/SKILL.md",
+      "opencode_path": "~/.config/opencode/skills/gsap-scrolltrigger/SKILL.md",
+      "agents_link": "~/.agents/skills/gsap-scrolltrigger",
+      "agents_link_target": "~/.config/opencode/skills/gsap-scrolltrigger",
+      "vendored_reference_path": "library/skills/gsap-scrolltrigger/SKILL.md",
+      "sha256": "9351b6666a4749c0740406ea363aaccb99a087ff45cc5e8b99a0f367facf3ef4",
+      "installed_and_vendored_bytes_match_pinned_commit": true
+    },
+    {
+      "slug": "gsap-plugins",
+      "trigger_summary": "GSAP plugin registration and plugin APIs such as Flip, Observer, SplitText, and Draggable.",
+      "upstream_path": "skills/gsap-plugins/SKILL.md",
+      "opencode_path": "~/.config/opencode/skills/gsap-plugins/SKILL.md",
+      "agents_link": "~/.agents/skills/gsap-plugins",
+      "agents_link_target": "~/.config/opencode/skills/gsap-plugins",
+      "vendored_reference_path": "library/skills/gsap-plugins/SKILL.md",
+      "sha256": "5838b856c74c07fbc9fa99b6dfd1eee34ea554c3e530c30e0d58014b707d70a4",
+      "installed_and_vendored_bytes_match_pinned_commit": true
+    },
+    {
+      "slug": "gsap-utils",
+      "trigger_summary": "GSAP utility methods such as clamp, mapRange, normalize, random, snap, wrap, and pipe.",
+      "upstream_path": "skills/gsap-utils/SKILL.md",
+      "opencode_path": "~/.config/opencode/skills/gsap-utils/SKILL.md",
+      "agents_link": "~/.agents/skills/gsap-utils",
+      "agents_link_target": "~/.config/opencode/skills/gsap-utils",
+      "vendored_reference_path": "library/skills/gsap-utils/SKILL.md",
+      "sha256": "1927bcc4ea95b38203404ad5ea1d060b15c4a886c65ae53e885ff1793aabe0ba",
+      "installed_and_vendored_bytes_match_pinned_commit": true
+    },
+    {
+      "slug": "gsap-react",
+      "trigger_summary": "GSAP in React/Next.js, useGSAP, scoping, SSR, and component cleanup.",
+      "upstream_path": "skills/gsap-react/SKILL.md",
+      "opencode_path": "~/.config/opencode/skills/gsap-react/SKILL.md",
+      "agents_link": "~/.agents/skills/gsap-react",
+      "agents_link_target": "~/.config/opencode/skills/gsap-react",
+      "vendored_reference_path": "library/skills/gsap-react/SKILL.md",
+      "sha256": "88e2a5312b45e8cc7b3c496637ff5bc9af2ae9c925b555c8b235b34cbc989d74",
+      "installed_and_vendored_bytes_match_pinned_commit": true
+    },
+    {
+      "slug": "gsap-frameworks",
+      "trigger_summary": "GSAP in Vue, Svelte, and similar frameworks; lifecycle and unmount cleanup.",
+      "upstream_path": "skills/gsap-frameworks/SKILL.md",
+      "opencode_path": "~/.config/opencode/skills/gsap-frameworks/SKILL.md",
+      "agents_link": "~/.agents/skills/gsap-frameworks",
+      "agents_link_target": "~/.config/opencode/skills/gsap-frameworks",
+      "vendored_reference_path": "library/skills/gsap-frameworks/SKILL.md",
+      "sha256": "842d9d3659ec3ddc8abbdc524708f8facf81f468ac25d0577f48c759c4fa31e6",
+      "installed_and_vendored_bytes_match_pinned_commit": true
+    },
+    {
+      "slug": "gsap-performance",
+      "trigger_summary": "Animation performance, transforms, batching, and reducing jank.",
+      "upstream_path": "skills/gsap-performance/SKILL.md",
+      "opencode_path": "~/.config/opencode/skills/gsap-performance/SKILL.md",
+      "agents_link": "~/.agents/skills/gsap-performance",
+      "agents_link_target": "~/.config/opencode/skills/gsap-performance",
+      "vendored_reference_path": "library/skills/gsap-performance/SKILL.md",
+      "sha256": "cb5408d6fba707aabcbfe3320317a14c1f8fca6070074e5261047930f50d441e",
+      "installed_and_vendored_bytes_match_pinned_commit": true
+    }
+  ],
+  "dependencies": {
+    "integration_dependencies": [],
+    "consumer_runtime_dependencies": "None added. A consuming project may import gsap; React projects may additionally use @gsap/react, as documented upstream.",
+    "mcp_servers_added": []
+  },
+  "technical_guidance": {
+    "api_precedence": "For GSAP API behavior, plugin support, lifecycle, and version details, official pinned gsap-* skills and current GSAP docs take precedence over generic design guidance and the retained legacy reference. CEOS/project direction still governs whether animation is appropriate; accessibility and reduced-motion requirements remain mandatory.",
+    "reduced_motion": {
+      "source": "skills/gsap-core/SKILL.md, Accessibility and responsive (gsap.matchMedia())",
+      "verified_guidance": "Use gsap.matchMedia() for prefers-reduced-motion: reduce; reduce to duration 0 or skip animation, and call mm.revert() when disposing the media context.",
+      "browser_behavior_verified": false
+    },
+    "cleanup": {
+      "react": "Use useGSAP or gsap.context and ctx.revert on unmount; separately remove event listeners created outside the context.",
+      "vue_svelte": "Scope work to the component and revert context on unmount/destroy.",
+      "scrolltrigger": "Clean up/kill triggers and refresh after layout changes that affect trigger positions.",
+      "runtime_behavior_verified": false
+    },
+    "performance": "Prefer transform properties; avoid layout thrash; clean up off-screen animations; refresh ScrollTrigger only when layout changes."
+  },
+  "support_and_link_checks": {
+    "agent_reach_route": "GitHub via gh API/git; GSAP documentation pages via the installed Agent Reach Jina Reader workflow.",
+    "official_docs": [
+      {
+        "key": "matchmedia",
+        "capture": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/https-gsap-com-docs-v3-gsap-gsap-matchmedia.md",
+        "bytes": 5711,
+        "url_present": true,
+        "expected_term_present": true,
+        "title": "GSAP | Docs & Learning"
+      },
+      {
+        "key": "scrolltrigger",
+        "capture": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/https-gsap-com-docs-v3-plugins-scrolltrigger.md",
+        "bytes": 59823,
+        "url_present": true,
+        "expected_term_present": true,
+        "title": "ScrollTrigger | GSAP | Docs & Learning"
+      },
+      {
+        "key": "react",
+        "capture": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/https-gsap-com-resources-react.md",
+        "bytes": 12504,
+        "url_present": true,
+        "expected_term_present": true,
+        "title": "React & GSAP | GSAP | Docs & Learning"
+      }
+    ],
+    "repository_local_links_checked": 2,
+    "all_repository_local_links_exist": true,
+    "upstream_llms_index_lists_all_eight": true,
+    "per_skill_support_assets_required": false,
+    "retained_generic_skill_support_files": [
+      "REFERENCES.md",
+      "demo/PROMPT.md",
+      "demo/assets/page-01-4f5668c5-fc4a-44e0-bc5e-a664189d3c31-800w.jpg",
+      "demo/assets/page-02-0d868fef-f560-45ca-ab35-5dad4fc29059-800w.webp",
+      "demo/assets/source-preview.jpg",
+      "demo/index.html",
+      "demo/preview.jpg",
+      "demo/source.json"
+    ]
+  },
+  "duplicate_resolution": {
+    "retained_skill_path": "~/.agents/skills/gsap/SKILL.md",
+    "classification": "separate local generic skill with broad overlapping triggers; not official GSAP upstream content",
+    "before_sha256": "eb9a0a84f0747fa19ce693cf776328945aebee1205ddc42c518c133c2ab6cb42",
+    "after_sha256": "79f9d3e540d2f9aef9a7c3a05ca26254193b9f5c9f0ce85234b314e0959f243a",
+    "semantic_change": "Narrowed activation to explicit requests about the local demo/reference assets; routed API and implementation questions to official gsap-* skills. Kept remaining instructional content and all support files unchanged.",
+    "all_other_local_skill_files_preserved": true,
+    "private_before_backup": "~/.local/state/creative-engineering-os/integration-v2-20261021/backups/gsap-skills/agents-gsap-SKILL.md.before",
+    "private_backup_mode": "0o600",
+    "rollback": "Restore the private before-backup to the original SKILL.md path.",
+    "unrelated_library_upstream_catalog_entry": "library/UPSTREAM.md identifies another gsap reference as license-unknown; it remains a non-installed catalog reference and was not altered."
+  },
+  "changed_paths": [
+    "docs/integrations/gsap-skills.md (new)",
+    "integrations/evidence/gsap-skills.json (new)",
+    "~/.agents/skills/gsap/SKILL.md (frontmatter activation description and When to use scope only; private backup recorded)"
+  ],
+  "unchanged_paths": [
+    "library/skills/gsap-* vendored references",
+    "~/.agents/skills/gsap-* official links",
+    "~/.config/opencode/skills/gsap-* official folders",
+    "provider/auth/subscription/T3/settings",
+    "shared manifests, router, entry skills, and CI"
+  ],
+  "rollback": {
+    "private_before_backup": "~/.local/state/creative-engineering-os/integration-v2-20261021/backups/gsap-skills/agents-gsap-SKILL.md.before",
+    "restore_command": "cp <private backup path> ~/.agents/skills/gsap/SKILL.md",
+    "repository_artifacts": "Revert only docs/integrations/gsap-skills.md and integrations/evidence/gsap-skills.json if removing this integration record.",
+    "no_backup_needed_for_official_skills": "No official install files changed."
+  },
+  "verification": [
+    {
+      "check": "Official main ref fetched from GitHub and matches exact pinned commit",
+      "result": "pass",
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/source-fetch.log"
+    },
+    {
+      "check": "All eight installed skill files and vendored references match exact upstream hashes",
+      "result": "pass",
+      "evidence": "hashes recorded in skills array"
+    },
+    {
+      "check": "MIT license matches GitHub metadata and upstream LICENSE",
+      "result": "pass"
+    },
+    {
+      "check": "Official GSAP docs links for matchMedia, ScrollTrigger, and React",
+      "result": "pass",
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/support-links.json"
+    },
+    {
+      "check": "All checked repository-local links and upstream skill index entries resolve",
+      "result": "pass",
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/support-links.json"
+    },
+    {
+      "check": "Private before-backup matches generic skill pre-edit SHA and has 0600 mode",
+      "result": "pass",
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/duplicate-resolution.json"
+    },
+    {
+      "check": "Codex/T3 current catalog discovery",
+      "result": "pass",
+      "note": "Current session exposes the eight official skills; new generic-scope text requires a new session to reflect in its injected catalog."
+    },
+    {
+      "check": "OpenCode runtime discovery",
+      "result": "not verified",
+      "note": "Installed CLI has no debug skill subcommand; filesystem entries are present."
+    },
+    {
+      "check": "Actual GSAP animation/browser behavior, responsive visuals, and runtime reduced-motion behavior",
+      "result": "not verified",
+      "note": "This integration contains guidance only; no consuming page or GSAP runtime was installed."
+    },
+    {
+      "check": "Pre-existing dirty creative-auditor file preserved",
+      "result": "pass",
+      "path": "agents/creative-auditor.md",
+      "initial_git_status": "M",
+      "initial_sha256": "7a40cb83c8bbfc77c4d81702c1f735ed8cd4bff4f5249a56228cd4cadb4498c6",
+      "final_sha256": "7a40cb83c8bbfc77c4d81702c1f735ed8cd4bff4f5249a56228cd4cadb4498c6",
+      "final_git_status": "M agents/creative-auditor.md"
+    },
+    {
+      "check": "official source remains clean at fetched pin",
+      "result": "pass",
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/final-validation.json"
+    },
+    {
+      "check": "eight upstream, installed, and vendored skill hashes match",
+      "result": "pass",
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/final-validation.json"
+    },
+    {
+      "check": "MIT license, upstream index, reduced-motion, and cleanup guidance verified",
+      "result": "pass",
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/final-validation.json"
+    },
+    {
+      "check": "legacy skill scope narrowed; same files remain; private backup exists mode 0600",
+      "result": "pass",
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/final-validation.json"
+    },
+    {
+      "check": "official docs and repository support links verified",
+      "result": "pass",
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/final-validation.json"
+    },
+    {
+      "check": "guide and evidence JSON exist and parse",
+      "result": "pass",
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/final-validation.json"
+    },
+    {
+      "check": "pre-existing dirty creative-auditor.md unchanged",
+      "result": "pass",
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/final-validation.json"
+    },
+    {
+      "check": "three documented project health checks completed with exit 0",
+      "result": "pass",
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/final-validation.json"
+    },
+    {
+      "check": "Project verification script",
+      "result": "pass",
+      "details": {
+        "command": "scripts/verify.sh",
+        "exit_code": 0,
+        "check": "read-only structure and available tools"
+      },
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/project-health.log"
+    },
+    {
+      "check": "Project script tests",
+      "result": "pass",
+      "details": {
+        "command": "python3 tests/scripts.test.py",
+        "tests": 4,
+        "exit_code": 0
+      },
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/project-health.log"
+    },
+    {
+      "check": "Project mirror test",
+      "result": "pass",
+      "details": {
+        "command": "node --test tests/mirror.test.mjs",
+        "exit_code": 0
+      },
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/project-health.log"
+    },
+    {
+      "check": "Codex CLI read-only skill discovery capability",
+      "result": "pass",
+      "note": "codex debug --help exposes models, app-server, prompt-input, and help; no skill discovery command. T3 session catalog remains the live discovery evidence.",
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/host-discovery.log"
+    },
+    {
+      "check": "OpenCode CLI read-only skill discovery capability",
+      "result": "not verified",
+      "note": "opencode debug skill gsap-core returns Unknown subcommand \"skill\".",
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/host-discovery.log"
+    },
+    {
+      "check": "Final preservation and artifact validation",
+      "result": "pass",
+      "evidence": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/final-validation.json"
+    }
+  ],
+  "limitations": [
+    "OpenCode CLI discovery could not be tested with its available read-only commands.",
+    "The current Codex/T3 session does not reload its injected skill catalog after the generic skill description change.",
+    "No project page was available to exercise runtime animation or reduced-motion behavior."
+  ],
+  "audit_record": "~/.local/state/creative-engineering-os/integration-v2-20261021/audit/gsap-skills.json",
+  "reports": {
+    "source_fetch": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/source-fetch.log",
+    "support_links": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/support-links.json",
+    "host_discovery": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/host-discovery.log",
+    "project_health": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/project-health.log",
+    "final_validation": "~/.local/state/creative-engineering-os/integration-v2-20261021/reports/gsap-skills/final-validation.json"
+  }
+}

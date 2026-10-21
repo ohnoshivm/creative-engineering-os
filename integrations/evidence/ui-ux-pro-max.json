@@ -1,0 +1,163 @@
+{
+  "id": "ui-ux-pro-max",
+  "repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+  "revision": "56ea9cf174ed86786187daa9de0e6247cb0747e4",
+  "localPath": "~/creative-engineering-os-upstreams/ui-ux-pro-max",
+  "license": "MIT",
+  "licenseReview": {
+    "evidence": [
+      "GitHub repository metadata reports MIT.",
+      "LICENSE, skill.json, .claude-plugin/plugin.json, cli/package.json, and current main cli/README.md report MIT."
+    ],
+    "caveat": "The v2.15.0 release tag's cli/README.md says CC-BY-NC-4.0 while the same tag's cli/package.json says MIT. Current main changed the README to MIT. Confirm licensing before redistributing files specifically from the v2.15.0 tag."
+  },
+  "latestRelease": {
+    "tag": "v2.15.0",
+    "revision": "a38d04c3d5c298c851dbe5e6ee1965ee3de42cb5",
+    "publishedAt": "2026-08-13T17:10:40Z"
+  },
+  "mainCommitDate": "2026-10-15T09:04:34+07:00",
+  "integrationType": "Existing OpenCode skill tree retained and verified against current upstream main; the .agents entry remains a symlink to that tree; the existing Claude Code Marketplace plugin remains in place.",
+  "supportedAgents": [
+    "OpenCode (existing local skills directory)",
+    "Codex and other .agents-compatible clients (existing Agent Skills symlink)",
+    "Claude Code (existing enabled Marketplace plugin per initial audit)"
+  ],
+  "technologies": [
+    "Python 3.x standard library search and design-system retrieval",
+    "CSV and JSON local design data",
+    "Optional ui-ux-pro-max-cli 2.5.0 (Node.js/npm; not installed or used)"
+  ],
+  "triggers": [
+    "Designing, building, reviewing, or fixing UI structure and visual direction",
+    "Product-wide design systems, color, typography, layout, responsive behavior, and interaction",
+    "Accessibility, UX quality, forms, navigation, charts, and animation guidance",
+    "Stack-specific UI implementation guidance when the project stack is known"
+  ],
+  "dependencies": {
+    "required": ["Python 3.x; standard library only"],
+    "optionalCli": {
+      "package": "ui-ux-pro-max-cli@2.5.0",
+      "runtimeDependencies": ["chalk", "commander", "ora", "prompts"],
+      "installed": false,
+      "note": "The CLI is not required for local search. Its current docs recommend a global npm install and uipro init/update; those commands were not run."
+    },
+    "network": "Upstream README documents the Python search scripts as local and network-free. The optional CLI init/update flow can contact GitHub and npm."
+  },
+  "sourceReview": {
+    "readme": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/README.md",
+    "cliReadme": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/cli/README.md",
+    "cliPackage": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/cli/package.json",
+    "cliAssetCheck": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/cli/scripts/sync-assets.mjs",
+    "installReview": "Reviewed init, update, uninstall, template, and package lifecycle behavior. Init writes assistant skill files; update can install the CLI globally and refresh files with force; uninstall removes selected skill directories. package.json has no preinstall/install/postinstall/prepare hook; prepublishOnly runs asset sync, data verification, typecheck, and build. None of those install/update/uninstall/publish commands were executed."
+  },
+  "verification": {
+    "status": "passed",
+    "checks": [
+      {
+        "name": "Official source identity and pin",
+        "command": "git ls-remote origin HEAD refs/heads/main refs/tags/v2.15.0",
+        "result": "Current main is 56ea9cf174ed86786187daa9de0e6247cb0747e4; latest GitHub release is v2.15.0 at a38d04c3d5c298c851dbe5e6ee1965ee3de42cb5. The upstream checkout is detached at the full main commit."
+      },
+      {
+        "name": "OpenCode skill tree comparison",
+        "method": "Recursive per-file SHA-256 comparison of the active OpenCode data/ and scripts/ directories against src/ui-ux-pro-max at HEAD; compared SKILL.md after applying only the upstream Claude-plugin-root to OpenCode absolute-path substitution, plus both reference documents byte-for-byte.",
+        "result": "39/39 data files and 31/31 script/support files match. SKILL.md and references/quick-reference.md and references/pro-rules.md match after the documented path substitution."
+      },
+      {
+        "name": "Official CLI bundled asset check",
+        "command": "node cli/scripts/sync-assets.mjs --check",
+        "result": "Assets are in sync."
+      },
+      {
+        "name": "Official Python tests",
+        "command": "python3 -m unittest discover -s src/ui-ux-pro-max/scripts/tests -p 'test_*.py'",
+        "result": "Ran 164 tests in 5.253s; OK."
+      },
+      {
+        "name": "Official semantic data validator",
+        "command": "python3 src/ui-ux-pro-max/scripts/validate_data.py",
+        "result": "OK: validated 12 domain files, 22 stack files, and ui-reasoning.csv."
+      },
+      {
+        "name": "All stack smoke probes",
+        "command": "bash scripts/smoke-stacks.sh",
+        "result": "22/22 registered stacks returned at least one result."
+      },
+      {
+        "name": "Installed OpenCode-path design-system retrieval",
+        "command": "python3 ~/.config/opencode/skills/ui-ux-pro-max/scripts/search.py 'healthcare patient portal appointment accessible' --design-system --json --project-name 'CEOS Integration Smoke'",
+        "workingDirectory": "~/creative-engineering-os-upstreams/.tests/ui-ux-pro-max",
+        "result": "Valid JSON returned; category Healthcare App; required project_name/category/pattern/style/colors/typography/key_effects/anti_patterns fields present; persistence was null and no files were written."
+      },
+      {
+        "name": "Installed OpenCode-path UX and stack queries",
+        "commands": [
+          "python3 ~/.config/opencode/skills/ui-ux-pro-max/scripts/search.py 'error summary keyboard focus' --domain ux --json",
+          "python3 ~/.config/opencode/skills/ui-ux-pro-max/scripts/search.py 'server component suspense streaming' --stack nextjs --json"
+        ],
+        "workingDirectory": "~/creative-engineering-os-upstreams/.tests/ui-ux-pro-max",
+        "result": "UX query returned 3 results; top result Focusable Error Summary. Next.js stack query returned 3 results; top result Use streaming for better UX, applies to nextjs 16.2."
+      },
+      {
+        "name": "Existing Claude plugin cache script retrieval",
+        "commands": [
+          "python3 <existing Claude plugin cache>/scripts/search.py 'wellness booking premium' --design-system --json",
+          "python3 <existing Claude plugin cache>/scripts/search.py 'server component suspense streaming' --stack nextjs --json"
+        ],
+        "result": "Local cached script calls returned Luxury/Premium Brand design-system output and 3 Next.js stack results. This checks the Python assets at the plugin cache path, not Claude host discovery or a model invocation."
+      },
+      {
+        "name": "Existing registration inventory",
+        "result": "OpenCode path exists; ~/.agents/skills/ui-ux-pro-max is a symlink to it; no manual ~/.claude/skills/ui-ux-pro-max directory exists. The initial audit records the Claude Marketplace plugin as enabled. No provider configuration was read or changed."
+      },
+      {
+        "name": "Existing Claude cache parity",
+        "result": "The cached 2.13.0 plugin SKILL.md and all 39 data files match current main; 30/31 script/support files match, with only scripts/tests/fixtures/relevance-thresholds.json differing. All production search/runtime scripts match."
+      }
+    ],
+    "limitations": [
+      "No fresh Claude plugin-host discovery or model invocation was performed; only direct local script calls on its existing cache path were exercised.",
+      "The enabled Claude plugin cache remains in a 2.13.0 version directory while official metadata is 2.15.0. Its runtime skill/data/scripts are current except for one test fixture, so the manager-owned registration was preserved without refresh.",
+      "No global npm CLI install, CLI init/update/uninstall, package build, or provider/plugin configuration change was performed.",
+      "One exploratory assertion initially expected fields named effects and checklist; the official output uses key_effects and has no checklist field. The corrected schema assertion passed, and retrieval itself returned valid JSON."
+    ]
+  },
+  "updateMethod": "Review a pinned official commit and license, back up the full OpenCode skill tree privately outside discovery before any replacement, then compare and copy only changed owned files. The .agents symlink follows the OpenCode tree. The official CLI docs recommend updating ui-ux-pro-max-cli and running uipro init for a client; avoid that global flow when preserving this scoped, standard-library runtime. Refresh the existing Claude plugin through its own manager if its metadata version must be advanced; do not add a manual Claude skill copy.",
+  "rollbackMethod": "No active skill tree was changed, so no backup or rollback was needed. For a future OpenCode tree replacement, restore the private full-tree backup to ~/.config/opencode/skills/ui-ux-pro-max; the .agents symlink will continue to resolve to it. Roll back Claude through its plugin manager, not by creating a second ~/.claude/skills installation.",
+  "audit": {
+    "initialClassification": "ACTIVE / REFERENCE_ONLY",
+    "currentClassification": "ACTIVE / UPSTREAM_ALIGNED",
+    "duplicates": {
+      "opencodeAndAgents": "One underlying skill tree: ~/.agents/skills/ui-ux-pro-max symlinks to ~/.config/opencode/skills/ui-ux-pro-max.",
+      "claude": "Existing enabled Marketplace plugin is retained. No manual ~/.claude/skills/ui-ux-pro-max copy exists.",
+      "otherCheckedRoots": "No separate ui-ux-pro-max entry was found in ~/.codex/skills or ~/.gemini/antigravity/skills."
+    },
+    "conflicts": [
+      "The Claude plugin cache directory is versioned 2.13.0, older than official 2.15.0 metadata; runtime files were compared and are current apart from one test fixture.",
+      "The v2.15.0 tag's CLI README license line conflicts with that tag's MIT package metadata; current main and repository metadata say MIT.",
+      "The official CLI installation flow uses Node/npm and may write or remove assistant skill directories; this integration uses the existing Python standard-library skill and did not run those operations."
+    ]
+  },
+  "registrations": [
+    {
+      "agent": "OpenCode",
+      "path": "~/.config/opencode/skills/ui-ux-pro-max",
+      "type": "existing native skill directory",
+      "status": "retained; content verified against pinned upstream"
+    },
+    {
+      "agent": "Codex and .agents-compatible clients",
+      "path": "~/.agents/skills/ui-ux-pro-max",
+      "type": "symlink",
+      "target": "~/.config/opencode/skills/ui-ux-pro-max",
+      "status": "retained"
+    },
+    {
+      "agent": "Claude Code",
+      "path": "~/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.13.0/.claude/skills/ui-ux-pro-max",
+      "type": "existing Marketplace plugin cache",
+      "status": "retained; enabled per initial audit; no manual skill registration added"
+    }
+  ]
+}

@@ -181,7 +181,7 @@ def main(dry):
             if f.is_file() and f.suffix.lower() in {'.md', '.txt', '.json', '.py', '.js', '.mjs', '.ts', '.sh', '.yml', '.yaml', '.toml', '.csv', '.html', '.css'}:
                 try:
                     t = f.read_text()
-                    t2 = re.sub(r'/Users/[A-Za-z0-9._-]+/', '~/', t)
+                    t2 = re.sub(r'/' + r'Users/[A-Za-z0-9._-]+/', '~/', t)
                     if t2 != t: f.write_text(t2)
                 except (UnicodeDecodeError, PermissionError): pass
 

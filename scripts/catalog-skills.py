@@ -406,7 +406,7 @@ def main():
     args.output_dir.mkdir(parents=True,exist_ok=True)
     for name,doc in [("ecosystem-skills.json",skills),("ecosystem-plugins.json",plugins)]:
         content=json.dumps(doc,indent=2,ensure_ascii=False)+"\n"
-        if str(args.home.resolve()) in content or re.search(r"/Users/[^/]+/",content):
+        if str(args.home.resolve()) in content or re.search(r"/" + r"Users/[^/]+/",content):
             raise SystemExit("Refusing to write inventory containing an absolute home path")
         (args.output_dir/name).write_text(content,encoding="utf-8")
     print(json.dumps({"skills":skills["summary"],"plugins":plugins["summary"],"issues":len(skills["completeness"]["issues"])}))

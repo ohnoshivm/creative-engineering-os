@@ -3,7 +3,7 @@
 import argparse,pathlib,re,shutil,json
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 FILES={'.gitignore','AGENTS.md','LICENSE','THIRD_PARTY_NOTICES.md','Brewfile','.mcp.json','START-HERE.md','llms.txt','CREDITS.md'}
-TREES={'.github','.claude-plugin','skills','standards','references','mcp','manifests','scripts','tooling','templates','demo','tests','library'}
+TREES={'.github','.claude-plugin','skills','standards','references','mcp','manifests','scripts','tooling','templates','demo','tests','library','integrations'}
 DOCS={'INSTALL.md','USE.md','PLUGINS.md','SECURITY.md','ECOSYSTEM.md','RELEASE-VALIDATION.md','OPTIONAL-TOOLING.md'}
 EXCLUDED={'.git','node_modules','dist','.astro','test-results','playwright-report','.lighthouseci','backups','.playwright-cli','__pycache__','release','publication'}
 TEXT={'.md','.py','.mjs','.sh','.ts','.astro','.html','.css','.json','.toml','.glsl','.frag','.vert','.yml','.yaml'}
@@ -27,7 +27,7 @@ def include(rel):
  if sensitive_name(rel):return False
  if rel.parts[0]=='library':return True
  if rel.name.startswith('.env') or rel.name in {'auth.json','.credentials.json','service.json'}:return False
- if rel.parts[0]=='docs':return len(rel.parts)==2 and rel.name in DOCS
+ if rel.parts[0]=='docs':return (len(rel.parts)==2 and rel.name in DOCS) or (len(rel.parts)==3 and rel.parts[1]=='integrations' and rel.suffix in {'.md','.json'})
  if len(rel.parts)==1:return rel.name in FILES
  if rel.parts[0]=='agents':return rel.as_posix() in {'agents/creative-auditor.md','agents/opencode/creative-auditor.md'}
  if rel.parts[0] not in TREES:return False
@@ -36,7 +36,7 @@ def include(rel):
  return True
 
 def clean(s):
- return re.sub(r"/Users/[A-Za-z0-9._-]+(?=/)","~",s).replace('docs/AGENT-TEAM.md','docs/AGENT-TEAM.md')
+ return re.sub(r"/" + r"Users/[A-Za-z0-9._-]+(?=/)","~",s).replace('docs/AGENT-TEAM.md','docs/AGENT-TEAM.md')
 
 def export(destination):
  if destination.exists() or destination.is_symlink():raise ValueError('destination already exists')

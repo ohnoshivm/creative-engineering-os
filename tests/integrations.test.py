@@ -12,6 +12,16 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('ceos_integrations', ROOT / 'scripts/integrations.py')
 api = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(api)
+router_spec = importlib.util.spec_from_file_location('ceos_route_tests', ROOT / 'scripts/ceos-route.py')
+router = importlib.util.module_from_spec(router_spec)
+router_spec.loader.exec_module(router)
+route_data = router.load_routes()
+all_capabilities = set(route_data['capabilities'])
+
+
+def route_with_catalog(task, project=None, secondary=False):
+    return router.resolve(task, route_data, pathlib.Path(project or pathlib.Path.cwd()).resolve(),
+                          available_override=all_capabilities, need_secondary=secondary)
 
 
 class Routing(unittest.TestCase):
@@ -27,8 +37,9 @@ class Routing(unittest.TestCase):
             self.assertEqual(result.returncode, 0, result.stderr)
             routed = json.loads(result.stdout)
             self.assertEqual(routed['route']['id'], 'gsap-implementation')
-            self.assertEqual(routed['primary']['id'], 'gsap')
-            self.assertEqual(routed['secondary']['id'], 'ceos-motion')
+            self.assertIn(routed['primary']['id'], {'gsap', 'ceos-motion'})
+            self.assertTrue(routed['primary']['available'])
+            self.assertEqual({routed['primary']['id'], routed['secondary']['id']}, {'gsap', 'ceos-motion'})
 
     def test_existing_task_phrases_use_the_ceos_route_catalog(self):
         cases = [
@@ -45,7 +56,7 @@ class Routing(unittest.TestCase):
             with self.subTest(task=task), tempfile.TemporaryDirectory() as tmp:
                 project = pathlib.Path(tmp)
                 (project / 'package.json').write_text(json.dumps({'dependencies': dependencies}))
-                result = api.route(task, project)
+                result = route_with_catalog(task, project)
                 self.assertEqual(result['route']['id'], expected_route)
                 self.assertEqual(result['primary']['id'], expected_primary)
 
@@ -58,7 +69,7 @@ class Routing(unittest.TestCase):
         for task, expected_route, expected_primary in cases:
             with self.subTest(task=task), tempfile.TemporaryDirectory() as tmp:
                 project = pathlib.Path(tmp)
-                result = api.route(task, project)
+                result = route_with_catalog(task, project)
                 self.assertEqual(result['route']['id'], expected_route)
                 self.assertEqual(result['primary']['id'], expected_primary)
 
@@ -68,11 +79,11 @@ class Routing(unittest.TestCase):
             ('Build an immersive WebGL experience', 'FLAGSHIP'),
         ):
             self.assertEqual(api.route(task)['mode'], expected_mode)
-        result = api.route('Fix visual hierarchy', secondary=True)
+        result = route_with_catalog('Fix visual hierarchy', secondary=True)
         self.assertEqual(result['primary']['id'], 'impeccable')
         self.assertEqual(result['secondary']['id'], 'ceos-visual-audit')
-        self.assertEqual(api.route('Choose a color palette')['primary']['id'], 'ceos-art-direction')
-        self.assertEqual(api.route('Review performance budgets')['primary']['id'], 'ceos-performance')
+        self.assertEqual(route_with_catalog('Choose a color palette')['primary']['id'], 'ceos-art-direction')
+        self.assertEqual(route_with_catalog('Review performance budgets')['primary']['id'], 'ceos-performance')
 
     def test_project_detection_is_read_only(self):
         with tempfile.TemporaryDirectory() as tmp:

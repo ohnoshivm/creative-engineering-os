@@ -79,6 +79,20 @@ def read_tree_hash(path):
     return skill_hash, tree_hash.hexdigest()
 
 
+def checkout_revision_matches(checkout, current, pinned):
+    """Match exact upstream pins, or descendants of an explicitly recorded local base."""
+    revision = pinned.get('revision')
+    if current == revision:
+        return True
+    if not str(pinned.get('revisionScope', '')).startswith('Base CEOS commit recorded by pre-install-state.json;'):
+        return False
+    result = subprocess.run(
+        ['git', '-C', str(checkout), 'merge-base', '--is-ancestor', revision, current],
+        capture_output=True, text=True, timeout=15,
+    )
+    return result.returncode == 0
+
+
 def verify_integration_records(installed=False):
     """Check checked-in records; installed checks are opt-in and never mutate or fetch."""
     errors = verify_manifest()
@@ -140,8 +154,11 @@ def verify_integration_records(installed=False):
                 capture_output=True, text=True, timeout=15, check=True,
             )
             current = result.stdout.strip()
-            if current != pinned.get('revision'):
-                errors.append(f'{integration_id}: checkout HEAD {current} does not match lock {pinned.get("revision")}')
+            if not checkout_revision_matches(checkout, current, pinned):
+                if str(pinned.get('revisionScope', '')).startswith('Base CEOS commit recorded by pre-install-state.json;'):
+                    errors.append(f'{integration_id}: checkout HEAD {current} does not descend from locked base {pinned.get("revision")}')
+                else:
+                    errors.append(f'{integration_id}: checkout HEAD {current} does not match lock {pinned.get("revision")}')
         except (OSError, subprocess.SubprocessError) as exc:
             errors.append(f'{integration_id}: checkout revision unavailable ({type(exc).__name__})')
 

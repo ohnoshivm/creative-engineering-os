@@ -159,6 +159,42 @@ class Evidence(unittest.TestCase):
             self.assertEqual(next_skill_hash, skill_hash)
             self.assertNotEqual(next_tree_hash, tree_hash)
 
+    def test_router_base_revision_accepts_descendants_but_not_unrelated_histories(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = pathlib.Path(tmp)
+
+            def git(*args):
+                return subprocess.check_output(['git', '-C', str(repo), *args], text=True).strip()
+
+            subprocess.run(['git', 'init', '-q', str(repo)], check=True)
+            git('config', 'user.name', 'Integration Test')
+            git('config', 'user.email', 'integration@example.test')
+            file = repo/'state.txt'
+            file.write_text('base')
+            git('add', 'state.txt')
+            git('commit', '-qm', 'base')
+            base = git('rev-parse', 'HEAD')
+            file.write_text('descendant')
+            git('commit', '-qam', 'descendant')
+            descendant = git('rev-parse', 'HEAD')
+            pin = {
+                'revision': base,
+                'revisionScope': 'Base CEOS commit recorded by pre-install-state.json; descendants are allowed.',
+            }
+            self.assertTrue(api.checkout_revision_matches(repo, descendant, pin))
+            self.assertTrue(api.checkout_revision_matches(repo, base, pin))
+
+            with tempfile.TemporaryDirectory() as other_tmp:
+                other = pathlib.Path(other_tmp)
+                subprocess.run(['git', 'init', '-q', str(other)], check=True)
+                subprocess.run(['git', '-C', str(other), 'config', 'user.name', 'Integration Test'], check=True)
+                subprocess.run(['git', '-C', str(other), 'config', 'user.email', 'integration@example.test'], check=True)
+                (other/'state.txt').write_text('unrelated')
+                subprocess.run(['git', '-C', str(other), 'add', 'state.txt'], check=True)
+                subprocess.run(['git', '-C', str(other), 'commit', '-qm', 'unrelated'], check=True)
+                unrelated = subprocess.check_output(['git', '-C', str(other), 'rev-parse', 'HEAD'], text=True).strip()
+                self.assertFalse(api.checkout_revision_matches(other, unrelated, pin))
+
 
 if __name__ == '__main__':
     unittest.main()

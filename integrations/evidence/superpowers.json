@@ -246,6 +246,11 @@
         "status": "partial",
         "command": "CLAUDE_CONFIG_DIR=~/.claude claude -p --model haiku \"Answer only YES or NO: does your context contain the exact phrase 'You have superpowers'?\"",
         "result": "Could not run: Not logged in \u00b7 Please run /login (exit 1). Authentication was not changed."
+      },
+      {
+        "check": "2026-10-22 CEOS push-gate suite",
+        "status": "passed",
+        "result": "integrations.test.py: 11 tests passed; integrations-routing.test.py: 7 passed; integrations-manifest.test.py: 2 passed; scripts/integrations.py verify --installed returned passed=true with no errors."
       }
     ],
     "limitations": [
@@ -253,7 +258,8 @@
       "No model-driven invocation of the five individual skills was performed; link targets and SKILL.md files were verified on disk.",
       "OpenCode 2.1.2 CLI plugin inventory remains inconsistent and exposes no skill-list diagnostic; no model-driven skill invocation was attempted.",
       "Antigravity runtime invocation remains unavailable because agy is missing and the previously recorded Google account verification gate blocks runtime testing."
-    ]
+    ],
+    "completedAt": "2026-10-22"
   },
   "runtimeLimitations": [
     "The bootstrap phrase check returned NO in ~/.claude_second. The same prompt could not run in ~/.claude because that config is not logged in; no auth changes were made.",
@@ -379,7 +385,8 @@
       "maintenanceScripts": "No end-user install script exists. bump-version.sh writes declared version fields; lint-shell.sh can format files only with --format; render-antigravity-logo.sh writes a PNG. sync-to-codex-plugin.sh can clone, rsync, commit, push, and open a PR; package-codex-plugin.sh stages files and writes an archive. None was executed.",
       "remoteInstallersExecuted": false,
       "pi": "The Pi extension discovers native skills and injects using-superpowers context on session start and compaction; it was not installed.",
-      "upstreamIntegrationGuidance": "AGENTS.md says manual skill copies without using-superpowers bootstrap are incomplete and requires a new-harness acceptance test that auto-triggers brainstorming. CEOS intentionally does not add that bootstrap, so this work verifies skill discovery only."
+      "upstreamIntegrationGuidance": "AGENTS.md says manual skill copies without using-superpowers bootstrap are incomplete and requires a new-harness acceptance test that auto-triggers brainstorming. CEOS intentionally does not add that bootstrap, so this work verifies skill discovery only.",
+      "ceosVerification": "The required installed check validates the recorded router base as an ancestor of the current checkout. UPSTREAM-LOCK.json records current React Bits and pmndrs shim hashes and all 20 retained Superpowers skill links; the generated manifest was refreshed."
     }
   },
   "registrations": [

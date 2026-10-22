@@ -260,11 +260,14 @@
       ],
       "triggers": [
         "test-driven-development: Before implementing any feature or bug fix.",
-        "verification-before-completion: Before claiming completion, a fix, or passing verification."
+        "verification-before-completion: Before claiming completion, a fix, or passing verification.",
+        "writing-plans: When a task needs a multi-step implementation plan.",
+        "executing-plans: When executing an approved implementation plan.",
+        "systematic-debugging: For debugging outside gstack-led investigation workflows."
       ],
       "dependencies": {
-        "selectedCodexAndOpenCodeSkills": "None beyond provider native Markdown skill discovery; the five directories contain SKILL.md files and are symlinked to the pinned checkout.",
-        "claudePluginHook": "Bash for SessionStart context injection; the active plugin manager supplies the plugin.",
+        "selectedCodexAndOpenCodeSkills": "Five native Markdown skills are direct symlinks to the pinned checkout in both .agents and OpenCode roots; existing links were reused.",
+        "claudePluginHook": "The synced plugin hook remains in the managed cache, but superpowers@synced is disabled by the supported Claude CLI in both ~/.claude and ~/.claude_second configs.",
         "codexPlugin": "Official Codex plugin marketplace; not installed.",
         "openCodePlugin": "OpenCode V1 or V2.0.4+ plugin host; no plugin was added, and pre-change CLI inventory was inconsistent.",
         "antigravity": "agy CLI and an eligible signed-in runtime; unavailable here."
@@ -276,7 +279,7 @@
         "Fetch the official main branch, review license, dependencies, hooks, and selected skill changes, then pin a reviewed full commit.",
         "Codex/OpenCode skill links follow the checkout; no provider configuration is required."
       ],
-      "rollbackMethod": "Remove only the four new direct links. Keep the pre-existing Claude plugin, pinned checkout, and bundled references."
+      "rollbackMethod": "Re-enable the synced plugin, remove only the ten Claude skill symlinks created for this change, and restore both settings backups. Keep the app-managed cache, pinned checkout, and pre-existing .agents/OpenCode links."
     },
     {
       "id": "shadcn-ui",

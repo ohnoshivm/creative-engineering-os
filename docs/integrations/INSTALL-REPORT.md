@@ -94,6 +94,8 @@ The CI source commands in `verify.yml` passed: structure, installer, routing (**
 
 All five CI build targets passed `npm run build` using their existing `node_modules`. `npm ci` was not run because it would install packages and run package installation hooks; the task prohibited remote install scripts. The standalone `python3 -I tests/verify-structure.py --installed` check still fails on its pre-existing expectation that Claude has a manual `ceos-3d-asset-pipeline` link; the audit recorded this limitation. The wrapper's `--installed` mode checks the actual integration lock and registered skill trees instead.
 
+For the 2026-10-22 push gate, `python3 -I tests/integrations.test.py` passed (**11 tests**), `tests/integrations-routing.test.py` passed (**7 tests**), `tests/integrations-manifest.test.py` passed (**2 tests**), and `python3 -I scripts/integrations.py verify --installed` returned `passed: true` with no errors. The lock now records the current React Bits/pmndrs shim hashes and all 20 Superpowers skill links; installed verification treats the router SHA as its recorded base and checks ancestry.
+
 ## Final status
 
 ### Fully working in the verified scope
